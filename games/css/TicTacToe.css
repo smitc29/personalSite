@@ -1,0 +1,136 @@
+body
+{
+   /* Set font for page */
+   font-family: 'Noto Sans', sans-serif;  
+}
+
+h3
+{
+    /* Used solely to communicate info with players */
+    margin: 30px auto;
+    text-align: center;
+}
+
+button
+{
+    /* Buttons to reset board, toggle autoplay */
+    position: relative;
+    bottom: -110%;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+#Board
+{
+    /* Game board divided into 9 tiles/boxes */
+    margin: 0 auto;
+    background-color: white;
+    
+    position: absolute;
+    width: 100vw;
+    max-width: 500px;
+    height: 100vw;
+    max-height: 500px;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+	display: inline-block;
+    list-style-type: none;
+    text-align: center;
+    
+    animation-name: Grow;
+    animation-direction: normal;
+    animation-duration: 0.45s;
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+}
+
+.box
+{
+    /* A single tile an X/O can occupy in the game */
+    width: 33%;
+    height: 33%;
+    position:absolute;
+    top: 0;
+    left: 0;
+    transform: scale(1);
+    text-align: center;
+    line-height: 300%;
+    
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+    
+    /* Color will change based on X/O status */
+    background-color:beige;
+}
+
+.X
+{
+    /* Properties used to indicate X occupation */
+    background: url(../img/X.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: aliceblue;
+    
+    animation-name: Expander;
+    animation-direction: normal;
+    animation-duration: 0.25s;
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+}
+
+.O
+{
+    /* Properties used to indicate O occupation */
+    background: url(../img/O.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: antiquewhite;
+    
+    animation-name: Expander;
+    animation-direction: normal;
+    animation-duration: 0.25s;
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+}
+
+#Counter
+{
+    /* Unseen value used to track current turn/player */
+    position: absolute;
+    z-index: -3;
+    opacity: 0;
+}
+
+.Auto
+{
+    /* Button has been toggled to trigger autoplay */
+    filter: invert(100%);
+}
+
+/* Animations for different elements */
+
+-webkit-@keyframes Expander {
+    0% {background-size: 0% 0%; background-position: center;}
+    100% {background-size: 100% 100%; background-position: center;}
+}
+
+@keyframes Expander {
+    0% {background-size: 0% 0%; background-position: center;}
+    100% {background-size: 100% 100%; background-position: center;}
+}
+
+-webkit-@keyframes Grow {
+    0% {transform:translate(-50%, -50%) scale(0);}
+    100% {transform:translate(0%, 0%) scale(1, 1);}
+}
+
+@keyframes Grow {
+    0% {transform:translateX(-50%) scale(0);}
+    100% {transform: translateX(-50%) scale(1, 1);}
+}
