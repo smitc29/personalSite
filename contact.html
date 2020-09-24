@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="Homepage for computer scientist/computer artist Christopher Smith">
+    <meta name="keywords" content="Chris,Smith,code,computer, Computer, Science, art, NY, Graphic Design, Web Design">
+    <meta name="author" content="Christopher Smith">
+    
+    <title>Christopher Smith portfolio home</title>
+    
+    <!-- Reference files for gallery pictures -->
+    <link href="hobby/css/thumbnail-gallery.css" rel="stylesheet">
+    <link href="hobby/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="hobby/css/Custom.css" rel="stylesheet">
+    
+    <!-- ICO picture -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/Logo.ico">
+	<link rel="icon" type="image/x-icon" href="images/Logo.ico">
+    
+    <!-- External CSS Files -->
+    <link href="css/Home.css" rel="stylesheet" type="text/css">
+    <link href="css/accordian.css" rel="stylesheet" type="text/css">
+    <link href="css/form.css" rel="stylesheet" type="text/css">
+    
+    <!-- Accordion -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <!-- Script for Dropdown Menu -->
+    <script src="js/Mechanics.js"></script> 
+    
+    <!-- Import Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet"> 
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- Captcha -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+	
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111410323-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-111410323-1');
+</script>
+    
+</head>
+
+<body>   
+	
+<div class="flipMenu"> </div>
+<div class="panelMenu">
+     <ul>
+     	<a href="index.html"><li id="opt1">Home</li></a>
+     	<a href="resume.html"><li id="opt2">Resume</li></a>
+     	<a href="/projects/index.html"><li id="opt3">Web Design</li></a>
+     	<a href="maingallery.html"><li id="opt4">Digital Art</li></a>
+     	<a href="https://github.com/smitc29"><li id="opt5">Code</li></a>
+     </ul>
+</div>
+
+<form id="submit-form" action="php/form.php" method="POST" style="display: inline; top: 150px; display: block; opacity: 1;">
+
+        <fieldset>
+            
+                
+<input style="" id="name" name="name" type="text" placeholder="Name" required="" />
+
+<input id="email" name="email" type="email" placeholder="Email" required=""/>
+		 
+<input id="topic" name="topic" type="text" placeholder="Topic"/>
+
+<textarea id="comments" name="comments" placeholder="What's on your mind?" style="height:100px" required></textarea>
+
+<div class="CenterMe">
+         <div style="width: 300px; margin: 0 auto; text-align: center;" class="g-recaptcha" data-sitekey="6Lc8-lsUAAAAALAFmGnM9h-vrh_63tnZeWYVU4Fj"></div>
+</div>
+         
+
+<button name="submit" type="submit" value="SUBMIT">Send Message</button>
+           
+      </fieldset>
+    </form>	
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Advanced Web Design 306 - Smith - CART 306</title>
+        
+<link rel="shortcut icon" href="favicon.jpg" type="image/x-icon">
+<link rel="icon" href="favicon.jpg" type="image/x-icon">
+
+<link rel="shortcut icon" href="favicon.jpg" type="image/x-icon">
+<link rel="icon" href="favicon.jpg" type="image/x-icon">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- RobotoFont -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/modern-business.css" rel="stylesheet">
+    
+    <meta name="description" content="CART306 Homepage">
+    <meta name="keywords" content="Chris,Smith,code,JavaScript, Computer, Science, Oneonta, NY, Graphic Design, Web Design">
+    <meta name="author" content="Christopher Smith, Web Design">
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116643115-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-116643115-1');
+</script>
+
+</head>
+
+<body>   
+
+ <!-- Navigation -->
+ 
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <center> <a class="navbar-brand" href="index.html">CART 306, Christopher Smith</a> </center>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+           <!-- <ul class="navbar-nav ml-auto">
+               <li class="nav-item">
+                    <a class="nav-link" href="class-list.html"><img src="images/back.png" width="30" height="30" alt="Current Students"></a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="syllabus.html">Syllabus</a>
+                </li>
+            
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#assignments"> Assignments</a></li>
+                    
+   <li class="nav-item"> 
+    <a class="nav-link" href="calendar.html">Calendar</a>
+                </li>
+                    
+               
+            </ul> -->
+        </div>
+    </nav>
+    <!-- end nav -->
+    
+     <header>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner" role="listbox">
+                <!-- Slide One - Set the background image for this slide in the line below -->
+                <div class="carousel-item active" style="background-image:url(https://www.hd-wallpapersdownload.com/script/bulk-upload/full-hd-wallpaper-beach-3D.jpg); background-position: 50% 55%; ">
+                  
+                </div>
+        </div>
+          </div>
+
+    </header>
+
+    <!-- Page Content -->
+    <div class="container">
+<div>
+   <font face = "Roboto" size = "5"><h1 class="my-4"> Christopher Smith - Advanced Web Design</h1></font> 
+    
+    
+         <!-- Small info block right -->  
+   <!--     <div class="col-lg-4 mb-4" style="float:right; ">
+                <div class="card h-100">
+                              <h3  class="card-header">Getting Started</h3>
+                    <div class="card-body">
+        <p>Lets setup our home page for our CART306 projects. This will be a landing page to post information and link to eacch assignment.</p>
+        <a href="getting-started.html" class="btn btn-primary">Learn More</a>
+                  </div>
+                </div>
+        </div> -->
+        
+    <p>This is the home page for CART 306, Advanced web design, for student Christopher Smith during the Spring 2018 semester.</p>
+       
+    
+    
+
+      </div>
+        <div class="clearfix"></div>
+                <a id="assignments"></a>     
+
+          <br> 
+      <h2>Projects</h2>
+
+      <p> The following projects are simply demonstrations of my work and are not specific endorsements for individuals or companies. 
+        <!-- Marketing Icons Section -->      </p>
+      <div class="row">
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <h4 class="card-header">Assignment 1</h4>
+                    <div class="card-body">
+                        <p class="card-text">Responsive Website Design Review, Small Business Website Design, and setting up your own hosting. </p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="Artware/index.html" class="btn btn-primary">Original</a>
+                        <a href="ArtwareRevised/index.html" class="btn btn-secondary">Revision</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <h4 class="card-header">Assignment 2                    </h4>
+                    <div class="card-body">
+                      <p class="card-text">Mobile-centric site featuring an Olympic athlete and their statistics.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="olympic/index.html" class="btn btn-primary">Go To Site</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <h4 class="card-header">Assignment 3                    </h4>
+                    <div class="card-body">
+                      <p class="card-text">Website template designed for teaching something, ie. Photoshop, Illustrator, etc..                     </p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="hobby/index.html" class="btn btn-primary">Go To Site</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <h4 class="card-header">Assignment 4                    </h4>
+                    <div class="card-body">
+                      <p class="card-text">Posted after completion of Assignment 3.                    </p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="archives.html" class="btn btn-primary">Go To Site</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <h4 class="card-header">Final Project</h4>
+                    <div class="card-body">
+                      <p class="card-text">Posted after completion of Assignment 4.                    </p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-primary">Go To Site</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <h4 class="card-header">Personal Home Page</h4>
+                    <div class="card-body">
+                      <p class="card-text">Resume, art, code, etc.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="home.html" class="btn btn-primary">Go To Site</a>
+                    </div>
+                </div>
+        </div>
+        </div>
+        
+         <div style="height:50px;"><a name="Contact" id="C"></a></div> 
+ <div class="clearfix"></div>
+      <!-- Features Section -->
+        <div class="row">
+            
+           
+        </div>
+        <!-- /.row -->
+ 
+ <div class="clearfix"></div>
+        <!-- Call to Action Section -->
+        
+            
+           <center>  <div class="col-md-4">
+                <a class="btn btn-lg btn-secondary btn-block" href="mailto:smitc29@oneonta.edu">Contact Me</a>
+            </div> </center>
+            <br>
+            <br>
+            <br>
+            
+     
+
+    </div>
+    <!-- /.container -->
+      <!-- /.row -->
+      
+      
+        <div class="clearfix"></div>
+
+
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; SUNY Oneonta, Christopher Smith<br>
+            CART 306 | 2018</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

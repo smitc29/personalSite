@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contact Chris</title>
+
+<!-- ICO picture -->
+<link rel="shortcut icon" type="image/x-icon" href="images/Logo.ico">
+<link rel="icon" type="image/x-icon" href="images/Logo.ico">
+	
+	
+<!-- CSS styling -->
+<link href="css/Home.css" rel="stylesheet" type="text/css">
+<link href="css/form.css" rel="stylesheet" type="text/css">
+
+<!-- Script for Dropdown Menu -->
+    <script src="js/Mechanics.js"></script>
+    
+    <!-- Accordion -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Captcha -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+<script src="https://www.google.com/recaptcha/api.js"></script>
+	
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111410323-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-111410323-1');
+</script>
+
+	
+</head>
+
+<body>
+	
+	<form id="submit-form" action="php/form.php" method="POST">
+
+        <fieldset style="">
+            
+                
+<input style="" id="name" name="name" type="text" placeholder="Name" required="" />
+
+<input id="email" name="email" type="email" placeholder="Email" required=""/>
+		 
+<input id="topic" name="topic" type="text" placeholder="Topic"/>
+
+<textarea id="comments" name="comments" placeholder="What's on your mind?" style="height:100px" required></textarea>
+
+<div class="CenterMe">
+         <div style="width: 300px; margin: 0 auto; text-align: center;" class="g-recaptcha" data-sitekey="6LcSbFIUAAAAANByagRFFIOAu3uwqmGecUFR0Qtq"></div>
+</div>
+         
+
+<button name="submit" type="submit" value="SUBMIT">Send Message</button>
+           
+      </fieldset>
+    </form>
+	
+	
+	
+	
+</body>
+	
+
+	
+	<script	  src="https://code.jquery.com/jquery-3.2.1.js"
+			  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+			  crossorigin="anonymous"></script>
+			  
+	<script type="text/javascript">$(document).ready(function () {
+	$('.navbutton').click(function () {
+		$('.navbutton').toggleClass('active');
+	})
+})
+
+$(document).ready(function(){
+	
+	$(".navbutton").on("click", function(){
+		
+		$("header").toggleClass("open");
+		
+	})
+	
+});
+</script>
+
+	<script src="js/recaptcha.js"></script>
+	
+</html>
