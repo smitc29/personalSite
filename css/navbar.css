@@ -1,0 +1,246 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#buttons
+{
+	
+    text-align: center;
+}
+#buttons ul {
+	list-style-type: none; 
+	text-decoration-line: none;
+	width: 95%;
+	margin-left: 20vw;
+    margin: -10px auto;
+    padding: 0;
+
+text-align: center;
+}
+#buttons ul li {
+	font-size: 18px;
+	width: 19.25%; 
+	height: 50px; 
+	margin-top: -10px;
+	text-align: center; 
+	vertical-align:middle;
+ float: left; 
+	margin: 0 auto 0;
+display:inline-block;
+}
+
+#buttons ul li:first-of-type 
+{
+	margin-left: 2vw;
+}
+
+
+
+ul li a{
+	line-height: 50px;
+	background-color:rgba(196,49,51,1.00);
+	margin: 0 auto;
+	border-radius: 25px;  
+	height: 50px; color: white; 
+	display: block;
+	text-align: center;
+	padding: 0;
+	width: 90%;
+
+}
+
+a
+{
+	transition: 0.4s;
+	-webkit-transition: 0.4s;
+	-mozilla-transition: 0.4s;
+	-o-transition: 0.4s;
+}
+
+a:hover
+{
+	transition: 0.4s;
+	-webkit-transition: 0.4s;
+	-mozilla-transition: 0.4s;
+	-o-transition: 0.4s;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color:rgba(228,17,20,1.00);
+    color: white;
+    font-size: 16px;
+	height: 75px;
+    border: none;
+    cursor: pointer;
+	margin-top: 14px;
+	position: relative;
+	left: 50px;
+    width: 75px;
+    padding: 10px;
+	background-image: url(../images/ExpandOptions.png);
+	background-repeat: no-repeat;
+	background-size: contain; 
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: rgba(167,12,14,1.00);
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+	height: 100px;
+    width: 100%;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+	border-radius: 0px 0 20px 0;
+    position: absolute;
+	left: 0%;
+	top: 100px;
+	width: 50%;
+    background-color:rgba(191,48,50,1.00);
+    min-width: 200px;
+	min-height: 80px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+	
+-webkit-animation-name: bounceInDown;
+  animation-name: bounceInDown;
+	
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+	
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: white;
+	text-align: center;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color:rgba(167,12,14,1.00); border-radius: 0 20px 20px 0;}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+.MrDropDown
+{
+	display: none;
+	border-radius: 0px 0 20px 0;
+    position: absolute;
+	left: 0%;
+	top: 100px;
+	width: 50%;
+    background-color:rgba(191,48,50,1.00);
+    min-width: 200px;
+	min-height: 80px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+
+
+@media only screen and (min-width:640px)  							/* Media Screen for tablet at 640px */
+{
+	.dropdown
+	{
+		position: relative;
+		top: -100vh;
+		height: 0;
+		width: 0;
+	}
+	
+}
+
+@media only screen and (max-width:640px)  							/* Media Screen for tablet at 640px */
+{
+	nav
+	{
+		position: relative;
+		top: -10vh;
+	}
+}
+
+@-webkit-keyframes bounceInDown {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+    transform: translate3d(0, -3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes bounceInDown {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+    transform: translate3d(0, -3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
