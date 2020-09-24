@@ -18,7 +18,7 @@
 
 .about-wrap {
 	position: relative;
-	margin: 25px 40px 0 20px;
+	margin: 25px 20px 0 40px;
 	max-width: 1050px; /* readability */
 	font-size: 15px;
 }
@@ -81,14 +81,14 @@
 .about-wrap .wp-badge {
 	position: absolute;
 	top: 0;
-	right: 0;
+	left: 0;
 }
 
 /* Tabs */
 
 .about-wrap .nav-tab {
-	padding-right: 15px;
 	padding-left: 15px;
+	padding-right: 15px;
 	font-size: 18px;
 }
 
@@ -101,12 +101,12 @@
 
 .about-wrap .feature-section p {
 	max-width: 55em;
-	margin-left: auto;
 	margin-right: auto;
+	margin-left: auto;
 }
 
 .about-wrap h1 {
-	margin: 0.2em 200px 0 0;
+	margin: 0.2em 0 0 200px;
 	padding: 0;
 	color: #32373c;
 	line-height: 1.2em;
@@ -135,7 +135,7 @@
 .about-wrap .changelog h2 {
 	font-size: 1.4em;
 	font-weight: 600;
-	text-align: left;
+	text-align: right;
 }
 
 .about-wrap .changelog h3 {
@@ -160,7 +160,7 @@
 }
 
 .about-wrap .about-text {
-	margin: 1em 200px 1em 0;
+	margin: 1em 0 1em 200px;
 	min-height: 60px;
 	color: #555d66;
 }
@@ -289,7 +289,7 @@
 .about-wrap .feature-video embed {
 	position: absolute;
 	top: 0;
-	left: 0;
+	right: 0;
 	width: 100%;
 	height: 100%;
 }
@@ -342,7 +342,7 @@
 /* Return to Dashboard Home link */
 
 .about-wrap .return-to-dashboard {
-	margin: 30px 0 0 -5px;
+	margin: 30px -5px 0 0;
 	font-size: 14px;
 	font-weight: 600;
 }
@@ -374,7 +374,7 @@
 
 .about-wrap .floating-header-section h2 {
 	margin: 0;
-	text-align: left;
+	text-align: right;
 	position: absolute;
 }
 
@@ -435,7 +435,7 @@
 }
 
 .about-wrap .floating-header-section.has-long-title .section-item + .section-item {
-	margin-left: 60px;
+	margin-right: 60px;
 }
 
 /*------------------------------------------------------------------------------
@@ -453,7 +453,7 @@
 
 .about-wrap .wp-people-group {
 	padding: 0 5px;
-	margin: 0 -15px 0 -5px;
+	margin: 0 -5px 0 -15px;
 }
 
 .about-wrap .compact {
@@ -463,7 +463,7 @@
 .about-wrap .wp-person {
 	display: inline-block;
 	vertical-align: top;
-	margin-right: 10px;
+	margin-left: 10px;
 	padding-bottom: 15px;
 	height: 70px;
 	width: 280px;
@@ -477,8 +477,8 @@
 }
 
 .about-wrap .wp-person .gravatar {
-	float: left;
-	margin: 0 10px 10px 0;
+	float: right;
+	margin: 0 0 10px 10px;
 	padding: 1px;
 	width: 60px;
 	height: 60px;
@@ -542,7 +542,7 @@
 
 	.about-wrap .floating-header-section.has-long-title .section-item:nth-child(2),
 	.about-wrap .floating-header-section.has-long-title .section-item:nth-child(4) {
-		margin-left: 60px;
+		margin-right: 60px;
 	}
 }
 
@@ -579,13 +579,13 @@
 
 @media only screen and (max-width: 500px) {
 	.about-wrap {
-		margin-right: 20px;
-		margin-left: 10px;
+		margin-left: 20px;
+		margin-right: 10px;
 	}
 
 	.about-wrap h1,
 	.about-wrap .about-text {
-		margin-right: 0;
+		margin-left: 0;
 	}
 
 	.about-wrap .about-text {
