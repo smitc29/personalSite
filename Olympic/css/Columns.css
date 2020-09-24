@@ -1,0 +1,100 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+* { box-sizing: border-box; margin:0 auto;}
+
+.clear {clear:both;}
+
+/* STRUCTURE */
+
+header {
+	padding: 0 15px;
+}
+aside {float:right;display: flex;}
+
+.columns {
+	background-color: white;
+	color: black;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	margin: 5px 0 40px 0;
+}
+
+.column {
+	color: black;
+	flex:1;
+	/* border: 1px solid gray; */
+	margin: 2px;
+	padding: 10px;
+}
+	.columns .column:first-child { margin-left: 0; }
+	.columns .column:last-child { margin-right: 0; }
+.columns .column h2 {margin-left: 10px; margin-top: 10px}
+
+.column ul
+{
+	float: left;
+	list-style-type: none;
+	margin-bottom: 10px;
+	color: black;
+}
+
+.column ul li
+{
+	color: black;
+	margin-top: 1px;
+	width: 100%;
+	font-size: 16px;
+	float: left;
+}
+
+.column embed
+{
+	margin: 0 auto;
+}
+
+.products .columns 
+{
+	background-color: white;
+}
+
+.products .column 
+{
+	color: black;
+	background-color: white;
+}
+
+.products .columns p
+{
+	color: black;
+}
+
+.products .columns .column:first-child { margin-left: 0; }
+	.products .columns .column:last-child { margin-right: 0; }
+
+@media screen and (max-width: 960px) {
+  .columns .column {
+		margin-bottom: 5px;
+    flex-basis: 40%;
+	}
+	
+		.columns .column:nth-last-child(2) {
+			margin-right: 0;
+		}
+		.columns .column:last-child {
+			flex-basis: 100%;
+			margin: 0;
+		}
+	
+  
+  aside {float:right;display: flex;}
+}
+
+@media screen and (max-width: 640px) {
+	.columns .column {
+		flex-basis: 100%;
+		margin: 0 0 5px 0;
+	}
+  
+  aside {float:right;display: flex;}
+}

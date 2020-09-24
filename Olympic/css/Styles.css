@@ -1,0 +1,678 @@
+@charset "UTF-8";
+/* CSS Document */
+body
+{
+	background: #bfd7ff;
+	background: linear-gradient(to bottom, #bfd7ff, white);
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size:auto;
+	font-family: 'Karma', serif;
+}
+
+.screenhideLeft
+{
+	position: fixed;
+	top: -50vh;
+	left: -60vw;
+	width: 110vw;
+	height: 200vh;
+	background-color: aliceblue;
+	transform:rotate(-10deg);
+	z-index: 8;
+	
+	/* Safari 4.0 - 8.0 */
+    -webkit-animation-name: ScreenShieldLeft;
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-iteration-count: 1; /*infinite*/ 
+
+    /* Standard syntax */
+    animation-name: ScreenShieldLeft;
+    animation-duration: 1.5s;
+    animation-timing-function:ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1; /*infinite*/ 
+	animation-direction: forwards;
+	animation-fill-mode: forwards;
+}
+
+.screenhideRight
+{
+	position: fixed;
+	top: -50vh;
+	right: -55vw;
+	width: 110vw;
+	height: 200vh;
+	background-color:rgba(144,148,195,1.00);
+	transform:rotate(-10deg);
+	z-index: 8;
+	
+	/* Safari 4.0 - 8.0 */
+    -webkit-animation-name: ScreenShieldRight;
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-iteration-count: 1; /*infinite*/ 
+
+    /* Standard syntax */
+    animation-name: ScreenShieldRight;
+    animation-duration: 1.5s;
+    animation-timing-function:ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1; /*infinite*/ 
+	animation-direction: forwards;
+	animation-fill-mode: forwards;
+}
+
+#mySidebar
+{
+	height: 105%;
+}
+
+.copyright
+{
+	width: 100%;
+	margin: 0 auto;
+	text-align:center;	
+}
+
+#wrapper
+{
+	top: 0;
+	line-height: 1.0;
+	width:100%;
+	height: 100%;
+	background-color: white;
+	margin-top: -20px; 
+	/* font-family: 'Merriweather', serif; */
+	font-weight: 300;
+	overflow: hidden;
+}
+
+p {
+	padding: 2px 0 5px 0;
+	font-size: 18px;
+	line-height: 130%;
+}
+
+/* Headers */
+h1
+{
+	font-size: 30px;
+	text-align: center;
+	margin: 20px;
+	padding: 10px;
+}
+
+h2
+{
+	font-size: 28px;
+	font-family: 'Karma', serif;
+	font-weight: 550;
+	width: 100%;
+	vertical-align: bottom;
+	margin-top: 15px;
+}
+
+h3
+{
+	font-size: 26px;
+	font-family: 'Karma', serif;
+	font-weight: 450;
+	margin: 10px auto 15px;
+}
+
+h4
+{
+	font-size: 24px;
+	font-family: 'Karma', serif;
+	width: 90%;
+	text-align: left;
+	margin: 10px 2% 0 2%;
+	padding-top: 20px;
+}
+
+h5
+{
+	font-size: 20px;
+	font-family: 'Karma', serif;
+	float: right;
+	margin-top: 25px;
+	padding: 0 5%;
+}
+
+h6
+{
+	font-size: 20px;
+	font-family: 'Karma', serif;
+}
+
+.bold
+{
+	font-size: 22px;
+	font-weight: 550;
+	font-weight: 600px;
+	color:rgba(44,52,59,1.00);
+}
+
+table { /* Reactive Table Code */
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+	padding: 10px;
+}
+
+table th {
+min-width: 80px;
+padding: 15px 10px 10px;
+background-color:rgba(224,232,237,1.00);	
+}
+
+table td {
+text-align:center;
+padding: 10px;	
+font-size:16px;
+
+}
+
+table tr
+{
+	padding: 10px;
+}
+
+
+table tr:nth-child(2n)
+{
+	background-color:rgba(212,234,255,1.00);	
+}
+
+.OFlowTable /* Reactive Table Code */
+{
+	overflow:auto;	
+}
+
+article
+{
+	padding: 10px 20px 50px 20px;
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+
+section
+{
+	background-color: lightsteelblue;
+	
+}
+
+section p
+{
+	width: 90%;
+	text-align: left;
+	margin: 5px 4% 10px 4%;
+	padding: 10px 0 10px 0;
+}
+
+aside
+{
+	background-color: lightsteelblue;
+	width: 100%;
+	padding: 17px 10px 10px 10px; 
+	float: left;
+	margin-bottom: 10px;
+	overflow: hidden;
+	min-height:90px;
+	postion:relative;
+}
+
+aside img
+{
+	width: 100%;
+	min-width: 700px;
+	height: 360px;
+	padding: 0 10px 10px 10px;
+	position: 0% 20%;
+	max-width: 1000px;
+	margin: 0 -20%;
+	overflow: hidden;
+	min-height: 200px;
+	max-height: 400px;
+	float: left;
+	
+}
+
+
+.smallimage 
+{ 	
+	width: 100%;
+	max-height: 550px;
+	padding: 10px 10px 20px 10px;
+	float: left;
+	border-radius: 30px 30px 0 0;
+	overflow: hidden;
+}
+
+
+ul li
+{
+	padding: 5px;
+	clear:left; /* This line fixes an issue where the dot floats to the right */
+}
+
+
+/* Accordion menus */
+#panel, #flip {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px; 
+}
+	
+#flip
+{
+	transition: 0.4s;
+}
+
+#panel {
+    padding: 20px 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+}
+	
+#flip:hover
+{
+	background-color: #ccc;
+}
+	
+.panel, .panel01, .panel02, .panel03, .panel04, .panel05, .panel06, .panel07, .panel08 {
+    color: #444;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+	padding: 20px 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+}
+	
+.flip, .flip01, .flip02, .flip03, .flip04, .flip05, .flip06, .flip07, .flip08 {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 20px 18px 16px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+	transition: 0.2s;
+}
+	
+.flip:hover, .flip01:hover, .flip02:hover, .flip03:hover, .flip04:hover, .flip05:hover, .flip06:hover, .flip07:hover, .flip08:hover
+{
+	background-color: #ccc;
+		border-radius: 18px;
+}
+
+.w3-sidebar .w3-bar-block .w3-collapse .w3-card .w3-animate-left .w3-bar-item:hover
+{
+	background-color: #509AAF;
+}
+
+/* Images */
+.banner
+{
+	
+	background: linear-gradient(to right, #65d3ff , #51707c);
+	background-position: 0% 20%;
+	max-width: 1000px;
+	margin: 0 auto;
+	overflow:hidden;
+	/* min-height: 200px; */
+	max-height: 400px;
+}
+
+.banner img
+{
+	position: 0 50%;
+	width: 100%;
+	max-width: 2500px;
+}
+
+.bannerbackdrop
+{
+	background-color: gainsboro;
+}
+
+
+footer
+{ 
+	width: 100%;
+	height: 170px;
+	float: left;
+	color: black;
+	background-color: white;
+	position: relative;
+    bottom: 0px;
+	padding-bottom: 200px;
+	margin: 10px;
+}
+
+footer .sm-YT 
+{
+	float: right;
+	width: 50px;
+	height: 50px;
+	margin: 5px;
+	background-size: 100% 100%;
+	background-image: url(../images/Youtube.png);
+	 -webkit-transition:.3s;
+	transition:.3s; 
+}
+
+footer a.sm-YT:hover {
+		background-image: url(../images/YoutubeRoll.png);
+}
+
+footer .sm-FB {
+	float: right;
+	width: 50px;
+	height: 50px;
+	margin: 5px;
+	background-size: 100% 100%;
+	background-image: url(../images/Facebook.png);
+	 -webkit-transition:.3s;
+	transition:.3s; 
+}
+
+
+footer a.sm-FB:hover {
+		background-image: url(../images/FacebookRoll.png);
+}
+
+footer .sm-IG {
+	float: right;
+	width: 50px;
+	height: 50px;
+	margin: 5px;
+	background-size: 100% 100%;
+	background-image:url(../images/InstaGram.png);
+	 -webkit-transition:.3s;
+	transition:.3s; 
+}
+
+footer a.sm-IG:hover {
+		background-image:url(../images/InstaGramRoll.png);
+}
+
+footer .sm-TT {
+	float: right;
+	width: 50px;
+	height: 50px;
+	margin: 5px;
+	background-size: 100% 100%;
+	background-image: url(../images/Twitter.png);
+    -webkit-transition:.3s;
+	transition:.3s; 
+	
+}
+
+footer a.sm-TT:hover {
+		background-image: url(../images/TwitterRoll.png);
+}
+
+footer li {
+	display: block;
+	color: white;
+	font-size: 20px;
+	float: left;	
+	padding: 1px;
+	margin: 5px 10px;
+}
+
+footer li a {
+	text-decoration: none;
+	color: black;
+	font-size: 15px;
+	float: left;	
+	display:block;
+	border-radius: 10px;
+	
+	margin: auto;
+	min-width: 70px;
+	padding: 2px;
+	text-align:center;
+
+
+}
+
+.mySlides {display:none} /* Slideshow CSS */
+.demo {cursor:pointer}
+
+.slidedisplay
+{
+	position: absolute;
+	bottom: 100px;
+	/* background-color:rgba(48,88,117,1.00); */
+	overflow: hidden;  
+	height:auto;
+	padding: 5px;
+	background-color:white;
+	margin: auto;  
+}
+
+.slideimg
+{
+	max-height: 400px;
+	width: 100%;	
+	overflow: hidden;
+}
+
+.slideselect
+{
+	height: 50px;
+	width: 50px;	
+}
+
+.galleryspace
+{
+	position:relative;
+	height: 450px;
+	width: 100%;
+	padding-top:100px;	
+}
+
+.Miniscreenimg
+{
+	width: 0;	
+	padding:0px;
+	z-index: -1; 
+	position: absolute;
+	bottom: 100px;
+	/* background-color:rgba(48,88,117,1.00); */
+	overflow: hidden;  
+	height:auto;
+	background-color:white;
+	margin: auto;  
+}
+
+@media only screen and (max-width: 400px)      						 /* Mini Screen Mode */
+{
+	.galleryspace
+{
+	position:relative;
+	height: 0px;
+	width: 100%;	
+	padding-top:0px;
+}
+	
+	.slidedisplay
+{
+	height: 0px;
+	width: 0;
+	padding:0px;
+}
+	.mySlides
+{
+	height: 0px;
+}
+	
+.s4
+	{
+		height: 0;
+	}
+	
+.Miniscreenimg
+{
+ 	margin-top: 5px;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+	position:relative;
+	width: 100%;	
+	padding-bottom: 8px;
+	z-index: 1;
+}
+	
+.Miniscreenimg:nth-of-type(2)
+{
+	 margin-top: 120px; 
+}	
+	
+.Miniscreenimg img
+{
+		width: 100%;
+}
+		
+.w3-sidebar h2
+{
+	font-size: 20px;
+	width: 100%;
+	vertical-align: bottom;
+	margin-top: 15px;
+	padding: -10px;
+}
+	
+.w3-bar-item
+{
+	padding: 20px;	
+		
+}
+	
+.w3-sidebar
+{
+	width: 100px;
+	z-index: 3;
+}
+	
+.w3-bar-block
+{
+	width: 100px;	
+}
+	
+#mySidebar
+{
+	max-width: 50%;	
+	height: 105%;
+}
+	
+} 								/* End Mini Screen Mode */
+
+@media only screen and (min-width: 601px)      						 /* Tablet Screen Mode */
+{
+	
+.slidedisplay
+{
+	position: absolute;
+	bottom: 100px;
+	padding: 20px;
+	/* background-color:rgba(48,88,117,1.00); */
+	overflow: hidden; 
+	margin: auto; 
+	height:auto;  
+}
+	
+.galleryspace
+{
+	position:relative;
+	height: 530px;
+	width: 100%;	
+	padding-top:0px;
+}
+	
+}
+
+
+@media only screen and (min-width: 960px)      						 /* Full Screen Mode */
+{
+#wrapper
+{
+	width:100%;
+	max-width: 960px;
+	margin: auto;
+	margin-top: 10px;
+	background-color: white;
+}
+	
+footer
+{
+	width:100%;
+	max-width: 960px;
+	margin: auto;
+	margin-top: 0px;
+}
+	
+	
+.leftcol {width:50%; float:left;}
+
+.rightcol {width:50%; float:left;}
+	
+}	/* End Full Screen Mode */
+
+.leftcol {width:100%; float:left;}
+
+.rightcol {width:100%; float:left;}
+
+/* Animate screen shield */
+@-webkit-keyframes ScreenShieldLeft {
+   0%   {top: -50vh; left: -60vw;}
+	
+	100%   {left: -200vw;}
+}
+
+/* Standard syntax */
+@keyframes ScreenShieldLeft {
+   0%   {top: -50vh; left: -60vw;}
+	
+	100%   {left: -200vw;}
+}
+
+@-webkit-keyframes ScreenShieldRight {
+   0%   {top: -50vh; right: -55vw;}
+	
+	100%   {right: -200vw;}
+}
+
+/* Standard syntax */
+@keyframes ScreenShieldRight {
+   0%   {top: -50vh; right: -55vw;}
+	
+	100%   {right: -200vw;}
+}
+

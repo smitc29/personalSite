@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+    $(".flip").click(function(){
+        $(".panel").slideToggle("fast");
+    });
+});
+	
+$(document).ready(function(){
+    $(".flip01").click(function(){
+        $(".panel01").slideToggle("fast");
+    });
+});
+	
+$(document).ready(function(){
+    $(".flip02").click(function(){
+        $(".panel02").slideToggle("fast");
+    });
+});	
+</script> <!-- Script for Dropdown Menu -->
+<style> 	
+#panel, #flip {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px; 
+}
+	
+#flip
+{
+	transition: 0.4s;
+}
+
+#panel {
+    padding: 20px 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+    display: none;
+}
+	
+#flip:hover
+{
+	background-color: #ccc;
+}
+	
+.panel{
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px; 
+}
+	
+.flip, .flip01, .flip02 {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px; 
+}
+	
+.flip, .flip01, .flip02
+{
+	transition: 0.2s;
+}
+
+.panel, .panel01, .panel02 {
+    padding: 20px 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+    display: none;
+}
+	
+.flip:hover, .flip01:hover, .flip02:hover
+{
+	background-color: #ccc;
+}	
+</style> <!-- Script for Dropdown Menu -->
+</head>
+<body> 
+ 
+<!-- Script for Dropdown Menu --> 
+<div class="flip">Click to slide the panel down or up</div>
+<div class="panel">Hello world!</div>
+<div class="flip01">Click to slide the panel down or up</div>
+<div class="panel01">Hello world!</div>
+<div class="flip02">Click to slide the panel down or up</div>
+<div class="panel02">Hello world!</div>
+
+</body>
+</html>
