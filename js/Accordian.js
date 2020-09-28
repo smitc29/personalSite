@@ -7,7 +7,7 @@ function showMe(input)
 {
 	var buttons = document.getElementsByClassName("accordion");
 	var panels = document.getElementsByClassName("panel");
-	var i = 0, pick = -1;
+	var i = 0;
 	
 	for(i = 0; i < buttons.length; i++)
 	{
@@ -16,24 +16,14 @@ function showMe(input)
 			console.log("Button " + i + " was clicked on!");
 			console.log(panels[i].style.display);
 			
-			$(panels[i]).slideToggle("fast");			
+			$(panels[i]).slideToggle("fast"); // token jQuery line for animations
+			panels[i].style.display = "block";
 			
-		}
-		
-		if(panels[i].style.display)
-	    {
-
-	    }
-		
-		
-		
+			console.log(i);
+			buttons[i].classList.toggle("active");
 			
+		} // End of IF statement
+			
+	} // End of For loop
 		
-	}
-	
-	
-	
-	
-	
-	
-}
+} // End of function showMe()
