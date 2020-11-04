@@ -74,7 +74,7 @@ img {
 
 <body>
 
-<img src="images/404.png" style="position: relative; width: 80vw; max-width: 800px; top: 50vh; transform: translateY(-50%);">
+<img src="images/404.png" style="position: relative; width: 80vw; max-width: 800px; top: 50vh; transform: translateY(-50%);" alt="I'm afraid this isn't a valid page!">
 
 <div class="container text-center" id="error">
   <!-- <svg height="100" width="100">
