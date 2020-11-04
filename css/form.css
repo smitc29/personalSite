@@ -84,14 +84,13 @@ button
 }
 
 
-input[type=text], [type=email], [type=password], textarea{
+input[type=text], [type=email], [type=password], [type=number], textarea{
 	font-family: 'Roboto Slab', serif;
   min-width: 200px; /* this width is your initial width - padding-left - padding-right; */
 	width: 80%;
 	max-width: 600px; /* Shouldn't ever actually reach this value, max should be 480px */
 height:30px;
   padding:0 8px;
-  /*border-radius: 50px;*/
   font-size: 18px;
   display: block;
 	margin: 20px auto;
