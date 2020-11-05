@@ -33,10 +33,9 @@
 
 <body style="background-color: blanchedalmond">
 	
-	<div class="Display" style="position: relative; top: 100px; margin-bottom: 0px; background-color: none; min-height: 100px;">
+	<div class="Display" style="position: relative; top: 100px; margin-bottom: -200px; background-color: none; min-height: 100px;">
 	<h2>Job Hunter</h2>
-	<p>Fed up with having to browse multiple job application sites while unemployed, I decided to develop a javascript application that could scrape
-		information from multiple different job search sites. To find relevant positions, please select which platforms you'd like looked at, then fill in the provided forms with data relevant to what you're interested in. Adding a location and key words is necessary to provide accurate results, and will help more than you might think! (Please note that this application is designed to help applicants in the United States, and isn't designed to accomodate other countries at the moment) </p>
+	<p>Enter a zip code or city/state combo, and we'll try to look for available openings for you.</p>
 	</div>
 	
 <!-- Search Fields -->
@@ -46,14 +45,32 @@
 <form id="submit-form" class="panelContact" autocomplete="on" style="margin-top: 0px;">
 
 	<fieldset>
+		
+<!-- Select which host site(s) to look under for available openings -->
+<ul>
+	<li>
+		<input type="checkbox" id="vehicle1" name="indeed" value="Bike">
+		<label for="indeed"> Indeed </label><br>	
+	</li>
+	<li>
+		<input type="checkbox" id="vehicle1" name="indeed" value="Bike">
+		<label for="indeed"> Indeed </label><br>	
+	</li>
+
+</ul>
+
 			
+<!-- Determine what location(s) to look under -->
 <input style="" id="location" name="location" type="text" placeholder="Zip Code or City" required=""/>
 
+<!-- Determine what job titles or keywords to search for -->
 <input id="keyword" name="keyword" type="text" placeholder="Title, Position, or Keywords" />
 		 
+<!-- Determine the range within to look for openings -->
 <input id="distance" name="distance" type="number" placeholder="Range (in miles, optional)"/>
 
-<button name="submit"  value="SUBMIT">Send Message</button>
+<!-- Trigger the search function to provide information -->
+<input id="search" type="button" onClick="beginSearch();" value=" Search ">
            
 	</fieldset>
 	
