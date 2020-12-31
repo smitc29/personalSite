@@ -311,7 +311,7 @@ nav.is-visible
 	margin: 0 auto;
 	 left: -168px; 
 	background-image:none;
-	background-color: black;
+	background-color: none;
 	/* Safari 4.0 - 8.0 */
     -webkit-animation-name: TitleSetChris;
     -webkit-animation-duration: 2s;
@@ -399,6 +399,8 @@ nav.is-visible
 
 .SmithPart
 {
+	width: 100%;
+	height: 20%;
 	display: block;
 	background-color:black;
 	position: absolute;
@@ -406,8 +408,6 @@ nav.is-visible
 
 #SmithPart1
 {
-	width: 100%;
-	height: 20%;
 	right: 0%;
 	top: 0%;
 }
@@ -422,8 +422,6 @@ nav.is-visible
 
 #SmithPart3
 {
-	width: 100%;
-	height: 20%;
 	right: 0%;
 	top: 41%;
 }
@@ -438,10 +436,28 @@ nav.is-visible
 
 #SmithPart5
 {
-	width: 100%;
-	height: 20%;
 	right: 0%;
 	top: 82%;
+}
+
+#ChrisPart1
+{
+	right: 0%;
+	top: -2%;
+}
+
+#ChrisPart2
+{
+	right: 0%;
+	top: 82%;
+}
+
+#ChrisPart3
+{
+	width: 20%;
+	height: 104%;
+	left: -2%;
+	top: -2%;
 }
 
 #SmithNameBottomWhiteSpace
@@ -1093,30 +1109,6 @@ a:hover
 	 left: -130px; }
 }
 
-@-webkit-keyframes GalleryOut {
-  0%   {transform:scale(1); opacity: 1; z-index: -1;}
-    100% {transform:scale(0.01); opacity: 0;}
-}
-
-/* Standard syntax */
-@keyframes GalleryOut {
-    0%   {transform:scale(1); opacity: 1; z-index: -1;}
-    100% {transform:scale(0.01); opacity: 0;}
-}
-
-
-@-webkit-keyframes GalleryDown {
-  0%   {transform: translateY(-100%); z-index: 3;}
-    100% {transform: translateY(0%); z-index: 3;}
-}
-
-/* Standard syntax */
-@keyframes GalleryDown {
-    0%   {transform: translateY(-100%); z-index: 3;}
-    100% {transform: translateY(0%); z-index: 3;}
-}
-
-
 @media only screen and (min-width:830px)
 {
 	aside
@@ -1172,7 +1164,8 @@ a:hover
 	
 }
 
-@media only screen and (max-width:500px)  							/* Media Screen for phone at ~500px */
+/* Media Screen for phone at ~500px */
+@media only screen and (max-width:500px)  							
 {
 	h2
 	{
@@ -1239,7 +1232,7 @@ a:hover
   50% {
     opacity: 1;
 	  width: 60px;
-	  border-radius:displa 30px;
+	  border-radius: 30px;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
@@ -1285,41 +1278,18 @@ a:hover
 	}
 }
 
-	
-@-webkit-keyframes TitleSetChris {
-   0%   {margin: 0 auto; left: 5px;}
-	
-	100%   {margin: 0 auto; left: 5px;}
-}
-
-/* Standard syntax */
-@keyframes TitleSetChris {
-   0%   {margin: 0 auto; left: 5px;}
-	
-	100%   {margin: 0 auto; left: 5px;}
-}
-
-@-webkit-keyframes TitleSetSmith {
-    0%   {top: -44px;	margin: 0 auto; left: 15px;}
-	
-	100%   {top: -44px;	margin: 0 auto; left: 15px;}
-}
-
-/* Standard syntax */
-@keyframes TitleSetSmith {
-    0%   {top: -74px;	margin: 0 auto; left: 15px;}
-	
-	100%   {top: -74px;	margin: 0 auto; left: 15px;}	
-}
-
 #Chris01
 	{
+		animation: none;
 		top: 20px;
+		left: 1vw;
 	}
 	
 #Smith01
 	{
-		top: -24px;
+		animation: none;
+		top: -74px;
+		left: 3vw;
 	}
 	
 	.Descriptor
@@ -1372,44 +1342,6 @@ a:hover
 		margin-left: 4px;
 	}
 	
-	#DesignDescription
-	{
-		top: 50px;
-	}
-	
-	#GalleryDisplay01
-	{
-		width: 80%;
-		left: 10%;
-	}
-	
-	.GallerySelector
-	{
-		display: table;
-		margin: 0 auto;
-		left: 0%;
-		width: 80%;
-		padding: 20px;
-	}
-	
-	.GallerySubImg
-	{
-		width: 100%;
-		padding-left: 40px;
-		padding-right: 40px;
-		background-color: none;
-	}
-	
-	#GalleryDisplay04
-	{
-		display: none;
-	}
-	
-	#GalleryDisplay05
-	{
-		display: none;
-	}
-	
 	#DesignDisplay
 	{
 		padding-bottom: 250px;
@@ -1417,21 +1349,22 @@ a:hover
 	}
 	
 	
-} /* Media Screen for phone at ~500px */
+	
+} 
+/* Media Screen for phone at ~500px */
 
-@media only screen and (max-width:1100px)  							/* Media Screen for tablet at 640px */
+/* Media Screen for tablet at 1100px */
+@media only screen and (max-width:1100px)  							
 {
 	.leftbox
 	{
-		opacity: 0;
 		display: none;
 	}
 	
 	.rightbox
 	{
-		opacity: 0;
 		display: none;
 	}
-	
-	
+
 }
+/* Media Screen for tablet at 1100px */
