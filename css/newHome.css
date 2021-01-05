@@ -810,7 +810,7 @@ a:hover
 {
 	height: 110vh; 
 	padding-top: 50px;  
-	overflow: hidden;
+	overflow: visible;
 }
 
 #Contact .Display
@@ -1327,7 +1327,7 @@ span.CC
 	
 	#Contact .Display
 	{
-		bottom: 0;
+		bottom: 10px;
 	}
 	
 }
