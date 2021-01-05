@@ -163,8 +163,6 @@ nav a:hover
 	color: white;
 }
 
-
-
 nav.is-visible
 {
 	opacity: 1;
@@ -574,8 +572,8 @@ a:hover
 	line-height: 40px;
 	text-align: center;
 	margin-left: -20%;
-	-webkit-animation-duration: 0.4s;
-  	animation-duration: 0.4s;
+	-webkit-animation-duration: 0.2s;
+  	animation-duration: 0.2s;
   	-webkit-animation-name: fadeInLeft;
   	animation-name: fadeInLeft;
 	animation-fill-mode: both;
@@ -720,10 +718,6 @@ a:hover
 	margin-top: 0;
 	border-radius: 15px;
 	margin-bottom: 20px;
-
-	
-
-	
 	
 	/* Safari 4.0 - 8.0 */
     -webkit-animation-name: SlowFade; 
@@ -812,14 +806,21 @@ a:hover
 	display: block;
 }
 
+#Contact
+{
+	height: 110vh; 
+	padding-top: 50px;  
+	overflow: hidden;
+}
+
 #Contact .Display
 {
 	border: 2px black solid; 
 	padding-top: 50px; 
 	margin: 90px 5px 0; 
 	position: relative; 
-	height: 10px;
-	bottom: 0px; 
+	height: 300px;
+	bottom: -25vh; 
 	left -5px; 
 	display: flex; 
 	flex-wrap: wrap; 
@@ -833,7 +834,7 @@ a:hover
 {
 	width: 100px;
 	height: 100px;
-	max-width: 80%;
+	max-width: 90%;
 	max-height: 80%;
 	min-width: 60px;
 	min-height: 60px;
@@ -846,8 +847,6 @@ a:hover
 	flex-direction: row;
 	align-content: center;
 	justify-content:space-between;
-	
-	border: red 2px solid;
 	
 	text-align: center;
 	margin: 0 10px 0;
@@ -928,6 +927,164 @@ a.LC:hover
 	color: white;
 	background-color: #f79f1c;
 }
+
+a.LC span, a.CC span
+{
+	background-size: 70%;
+	background-repeat: no-repeat;
+	background-position: 51% 44%;
+	border-radius: 50%;
+	
+	position: relative;
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;	
+	transition: 0.1s;
+	transition-timing-function: linear;
+}
+
+span.LC
+{
+	background-image: url("../images/leetcode.png");
+}
+
+span.LC:hover
+{
+	filter: brightness(10);
+	transition: 0.1s;
+}
+
+span.CC
+{
+	background-image: url("../images/codeCademy.png");
+}
+
+/* Mobile Navbar */
+#mobileNav
+{
+	position: fixed;
+	display: none;
+	flex-direction: column;
+	
+	top: 2px;
+	left: -10px;
+	width: 100px;
+	height: 100px;
+	z-index: 4;
+	max-width: 100px;
+	max-height: 100px;
+	
+	cursor:pointer;
+}
+
+#mobileNav span
+{
+	display: block;
+	position: relative;
+	margin: 10px auto 0;
+	opacity: 1.0;
+	
+	background-color: rgba(248,243,243,1.00);
+	width: 60px;
+	height: 12px;
+	border-radius: 10px;
+	
+	transition: 0.1s;
+	transition-timing-function: ease-in-out;
+}
+
+.southWest
+{
+	transform: rotate(45deg) translate(25%, 145%) scaleX(1.3);
+	
+	transition: 0.2s;
+	transition-timing-function: ease-in-out;
+}
+
+.northEast
+{
+	transform: rotate(-45deg) translate(22%, -130%) scaleX(1.3);
+	
+	transition: 0.2s;
+	transition-timing-function: ease-in-out;
+}
+
+.hidden
+{
+	opacity: 0.0;
+	transition: 0.2s;
+	transition-timing-function: ease-in-out;
+	background-color: transparent;
+}
+
+#mobileNavMenu
+{
+	transition: 0.3s;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100%;
+	opacity: 0.0;
+	visibility: hidden;
+	text-align: center;
+	
+	background-color: rgba(0,0,0,0.9);
+	z-index: 3;
+	
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap; 
+	justify-content: center; 
+	text-align: center; 
+	vertical-align: middle;
+}
+
+#mobileMenu
+{
+	height: 100%;
+	text-align: center;
+	position: absolute;
+	top: 10vh;
+	
+	display: flex;
+	flex-direction: column;
+	width: 50vw;
+	margin: 0 auto 0;
+}
+
+#mobileMenu a
+{
+	display: inline;
+	text-align: center;
+	width: 100%;
+	font-size: 170%;
+	height: auto;
+	padding: 2vh 0 0px;
+	
+	position: relative;
+	top: 10%;
+}
+
+#mobileMenu a:hover
+{
+	background-color: transparent;
+}
+
+#mobileNavPartner
+{
+	display:none;
+	position: fixed;
+	background-image: linear-gradient(to bottom, rgba(255,255,255,1.0), rgba(255,255,255,0.0));
+	width: 100%;
+	height: 20vw;
+	top: 0;
+	z-index: 2;	
+}
+
+/* end of Mobile Navbar */
 
 
 .leftbox
@@ -1093,11 +1250,27 @@ a.LC:hover
 
 @media only screen and (min-width:830px)
 {
+	nav
+	{
+		display: none;
+	}
+	
 	aside
 	{
 		display: none;
 		opacity: 0;
 	}
+	
+	#mobileNav
+	{
+		display: none;
+	}
+	
+	#mobileNavMenu
+	{
+		display: none;
+	}
+	
 }
 
 @media only screen and (max-width:830px)
@@ -1114,7 +1287,7 @@ a.LC:hover
 	
 	.flipMenu
 	{
-		display: block;
+		display: none;
 	}
 	
 	aside
@@ -1142,7 +1315,20 @@ a.LC:hover
 		border-radius: 0px;
 	}
 	
+	#mobileNav
+	{
+		display: block;
+	}
 	
+	#mobileNavMenu
+	{
+		display: flex;
+	}
+	
+	#Contact .Display
+	{
+		bottom: 0;
+	}
 	
 }
 
@@ -1347,3 +1533,19 @@ a.LC:hover
 
 }
 /* Media Screen for tablet at 1100px */
+
+/* Media Screen for tablet at 1100px */
+@media only screen and (max-height:500px)  							
+{
+	#mobileMenu
+	{
+		top: 0vh;
+	}
+	
+	#mobileMenu a
+	{
+		margin: 0% auto 2%;
+	}
+}
+/* Media Screen for tablet at 1100px */
+

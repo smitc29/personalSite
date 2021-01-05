@@ -1,3 +1,4 @@
+/* Author: Christopher Smith */
 /*eslint-env browser*/
 /* eslint-disable no-console */ //Enables console output
 
@@ -91,3 +92,47 @@ function checkIfCookiePresent()
 		
 }
 // End function checkIfCookiePresent()
+
+/* Toggles X icon and mobile nav menu on click  */
+function navToggle()
+{
+	var bars = document.getElementById("mobileNav").getElementsByTagName("span");
+	var anchors = document.getElementById("mobileNavMenu").getElementsByTagName("a");
+	var menu = document.getElementById("mobileNavMenu");
+	var i = 0;
+	console.log(anchors.length);
+	
+	if(bars[1].style.opacity != 0.0) // mobileNavMenu isn't visible, let's change that
+    {
+		// Toggle middle sandwich bar, make the menu backdrop visible
+		bars[1].style.opacity = 0.0;
+		menu.style.opacity = 1.0;
+		menu.style.visibility = "visible";
+		menu.style.display = "flex";
+		
+		
+		// Displays and enables all links on nav Menu to enable easier navigation
+		for(i = 0; i < anchors.length; i ++)
+		{
+			anchors[i].style.visibility = "visible";
+		}
+			
+    }
+	else // mobileNavMenu is visible, so let's hide it & menu items
+	{
+		// Show middle sandwich bar, make the menu backdrop invisible
+		bars[1].style.opacity = 1.0;
+		menu.style.opacity = 0.0;
+		menu.style.visibility = "hidden";
+		
+		// Hides all links on nav Menu to prevent accidental clicks
+		for(i = 0; i < anchors.length; i ++)
+		{
+			anchors[i].style.visibility = "hidden";
+		}
+	
+	}
+	bars[0].classList.toggle("southWest");
+	bars[2].classList.toggle("northEast");
+		
+} // End of function navToggle()
