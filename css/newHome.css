@@ -845,6 +845,7 @@ a:hover
 	display:inline-flex;
 	flex-direction: row;
 	align-content: center;
+	justify-content:space-between;
 	
 	border: red 2px solid;
 	
@@ -852,6 +853,12 @@ a:hover
 	margin: 0 10px 0;
 	
 	transition: 0.3s;
+}
+
+a.socialMedia:hover
+{
+	color: white;
+	background-color: rgba(151,0,2,1.00);
 }
 
 .socialMedia i
@@ -862,31 +869,38 @@ a:hover
 	width: 80%;
 	height: 80%;
 	
-	font-size: 40pt;
-}
-
-.LI
-{
+	font-size: 50pt;
 	position: relative;
-	top: 20%;
-	left: 15%;
+	top: 16%;
+	left: 10%;
 }
 
-.LC
+a.LI
 {
-	background-image: url("../images/leetcode.png");
-	background-repeat: no-repeat;
-	background-size: 56.25px 67px;
-	background-position: 50% 40%;
-	font-size: 25pt;
-	left: 20px;
-	top: 13px;
+	color: #0077B5;
 }
 
-.LC:hover
+a.LI:hover
 {
-	background-image: url("../images/leetcodeHov.png");
-	background-color: rgba(247,159,27,1.00);
+	color: white;
+	background-color: #0077B5;
+}
+
+a.LC
+{
+	color: #f79f1c;
+}
+
+a.LC i
+{
+	font-size: 42pt;
+	top: 20px;
+}
+
+a.LC:hover
+{
+	color: white;
+	background-color: #f79f1c;
 }
 
 

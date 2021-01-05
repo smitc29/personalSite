@@ -22,6 +22,9 @@
 	<!-- Font Awesome Icons -->
 	<script src="https://kit.fontawesome.com/fd01c64fc2.js" crossorigin="anonymous"></script>
 	
+	<!-- Iconify Icons for social media -->
+	<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+	
 	<!-- Accordion -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	
@@ -41,7 +44,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'UA-111410323-1');
 </script>
     
@@ -238,16 +240,17 @@
 		</section> 
 	<!-- End of Education -->
 	
-<section id="Contact" style="height: 100vh; padding-top: 50px; border: 2px black solid;">	
+<section id="Contact" style="height: 100vh; padding-top: 50px; border: 2px black solid; overflow: hidden;">	
 	
 	<div class="Display" style="">
 			
-		<a class="socialMedia"><i class="fab fa-linkedin LI"></i></a>
+		<a class="socialMedia"><i class="fas fa-envelope-square"></i></a>
+		<a class="socialMedia LI"><i class="fab fa-linkedin"></i></a>
 		
-		<a class="socialMedia"><i class="fab fa-github LI"></i></a>
-		<a class="socialMedia"><i class="fab fa-hackerrank LI"></i></a>
-		<a href="https://leetcode.com/" class="socialMedia LC" target="_blank"></a>
-		
+		<a class="socialMedia GH"><i class="fab fa-github"></i></a>
+		<a class="socialMedia LI"><i class="fab fa-hackerrank"></i></a>
+		<a href="https://leetcode.com/" class="socialMedia LC" target="_blank"><i class="fas fa-code"></i></a>
+		<a class="socialMedia LI"><i class="fab fa-facebook"></i></a>
 		</div>
 	
 	</section>
@@ -255,7 +258,8 @@
 </article> <!-- End article -->
 	
 <!-- Small, simple animation that looks nice when idling on the main area; might alter to be constant? -->
-<div class="leftbox"></div>
+	<span id="titleEffect">
+	<div class="leftbox"></div>
 	<div class="leftbox" style="top: 15vh; -webkit-animation-delay: 2.4s; animation-delay: 2.4s;"></div>
 	<div class="leftbox" style="top: 25vh; -webkit-animation-delay: 5.75s; animation-delay: 5.75s;"></div>
 	<div class="leftbox" style="top: 35vh; -webkit-animation-delay: 3.5s; animation-delay: 3.5s;"></div>
@@ -275,7 +279,9 @@
 	<div class="rightbox" style="top: 55vh; -webkit-animation-delay: 3.5s; animation-delay: 3.5s;"></div>
 	<div class="rightbox" style="top: 65vh; -webkit-animation-delay: 5.75s; animation-delay: 5.75s;"></div>
 	<div class="rightbox" style="top: 75vh; -webkit-animation-delay: 2.4s; animation-delay: 2.4s;"></div>
-	<div class="rightbox" style="top: 85vh; -webkit-animation-delay: 0s; animation-delay: 0s;"></div>	
+	<div class="rightbox" style="top: 85vh; -webkit-animation-delay: 0s; animation-delay: 0s;"></div>
+		
+</span>
  
 <br style="position: absolute; height: 50px; width: 100vw; left: 0; bottom: 0; margin-top: 20px;">
 	
