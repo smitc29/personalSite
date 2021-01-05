@@ -875,6 +875,19 @@ a.socialMedia:hover
 	left: 10%;
 }
 
+/* GitHub link */
+a.GH
+{
+	color: black;
+}
+
+a.GH:hover
+{
+	color: white;
+	background-color: black;
+}
+
+/* LinkedIn link */
 a.LI
 {
 	color: #0077B5;
@@ -886,6 +899,19 @@ a.LI:hover
 	background-color: #0077B5;
 }
 
+/* HackerRank link */
+a.HR
+{
+	color: #29bb5c;
+}
+
+a.HR:hover
+{
+	color: white;
+	background-color: #29bb5c;
+}
+
+/* LeetCode link */
 a.LC
 {
 	color: #f79f1c;
