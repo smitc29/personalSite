@@ -130,9 +130,36 @@ function navToggle()
 		{
 			anchors[i].style.visibility = "hidden";
 		}
-	
 	}
+	
 	bars[0].classList.toggle("southWest");
 	bars[2].classList.toggle("northEast");
 		
 } // End of function navToggle()
+
+/* Hide mobile nav menu whenever browser is rescaled, likely flipping mobile device */
+$(window).resize(function() {
+  //console.log('window was resized');
+	if(document.body.clientWidth <= 830)
+	{
+		var bars = document.getElementById("mobileNav").getElementsByTagName("span");
+		var anchors = document.getElementById("mobileNavMenu").getElementsByTagName("a");
+		var menu = document.getElementById("mobileNavMenu");
+		var i = 0;
+		
+		// Show middle sandwich bar, make the menu backdrop invisible
+		bars[1].style.opacity = 1.0;
+		menu.style.opacity = 0.0;
+		menu.style.visibility = "hidden";
+		
+		// Hides all links on nav Menu to prevent accidental clicks
+		for(i = 0; i < anchors.length; i ++)
+		{
+			anchors[i].style.visibility = "hidden";
+		}
+		
+		bars[0].classList.remove("southWest");
+		bars[2].classList.remove("northEast");
+		
+	}
+});

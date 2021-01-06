@@ -815,7 +815,7 @@ a:hover
 
 #Contact .Display
 {
-	border: 2px black solid; 
+	/* border: 2px black solid;*/ 
 	padding-top: 50px; 
 	margin: 90px 5px 0; 
 	position: relative; 
@@ -854,10 +854,15 @@ a:hover
 	transition: 0.3s;
 }
 
+a.socialMedia
+{
+	color: firebrick;
+}
+
 a.socialMedia:hover
 {
 	color: white;
-	background-color: rgba(151,0,2,1.00);
+	background-color:firebrick;
 }
 
 .socialMedia i
@@ -1060,9 +1065,12 @@ span.CC
 	display: inline;
 	text-align: center;
 	width: 100%;
-	font-size: 170%;
 	height: auto;
 	padding: 2vh 0 0px;
+	
+	font-size: 190%;
+	font-weight: 500;
+	
 	
 	position: relative;
 	top: 10%;
@@ -1267,6 +1275,13 @@ span.CC
 	}
 	
 	#mobileNavMenu
+	{
+		display: none;
+		opacity: 0;
+		background-color: none;
+	}
+	
+	#mobileMenu
 	{
 		display: none;
 	}
