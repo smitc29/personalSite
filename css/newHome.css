@@ -11,12 +11,17 @@ body
 	min-height: 500vh;
 	max-width: 100vw;
 	font-family: 'Roboto Slab', serif;
-	background-color:rgba(248,243,243,1.00);
 	
 	overflow-y: hidden;
 	overflow-x: hidden;
 	z-index: -3;
 	/*outline: 1px solid red;*/
+}
+
+#titleEffect
+{
+	position: fixed;
+	width: 100%;
 }
 
 aside
