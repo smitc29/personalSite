@@ -8,8 +8,8 @@
     <meta name="keywords" content="Chris,Smith,code,computer, Computer, Science, art, NY, Graphic Design, Web Design">
     <meta name="author" content="Christopher Smith">
     
-    
-    <title>Chris Smith!</title>
+    <!-- Title is visible in the tab -->
+    <title>Chris Smith</title>
     
     <!-- ICO picture -->
     <link rel="shortcut icon" type="image/x-icon" href="images/Logo.ico">
@@ -17,15 +17,14 @@
     
     <!-- External CSS Files -->
     <link href="css/newHome.css" rel="stylesheet" type="text/css">
-	<link href="css/form.css" rel="stylesheet" type="text/css">
 	
 	<!-- Font Awesome Icons -->
 	<script src="https://kit.fontawesome.com/fd01c64fc2.js" crossorigin="anonymous"></script>
 	
-	<!-- Accordion -->
+	<!-- JQuery code for dropdown/nav/mobile menus and cookie features -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	
-	<!-- Script for Dropdown Menu -->
+	<!-- Script for Dropdown and Mobile Menu, uses JQuery -->
     <script src="js/Mechanics.js"></script>
     
     <!-- Import Google Fonts -->
@@ -41,7 +40,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'UA-111410323-1');
 </script>
     
@@ -76,6 +74,26 @@
 	</div>
 	</aside>
 	
+	<!-- Navigation bar for mobile users here -->
+	<div id="mobileNav" onclick="navToggle()">
+		<span></span>
+		<span style="opacity: 1.0;"></span>
+		<span></span>
+	</div>
+	<div id="mobileNavPartner">
+	
+	</div> 
+<nav id="mobileNavMenu">
+	<span id="mobileMenu">
+	<a href="#About" onclick="navToggle()">About</a>
+	<a href="#Design" onclick="navToggle()">Design</a>
+	<a href="#Experience" onclick="navToggle()">Experience</a>
+	<a href="#Education" onclick="navToggle()">Education</a>
+	<a href="#Contact" onclick="navToggle()">Contact</a>	
+	</span>	
+</nav>
+	
+	<!-- End mobile Navigation bar for mobile users here -->
 	
 <div id="NameDrop">	
 	<div id="Chris01">
@@ -238,16 +256,15 @@
 		</section> 
 	<!-- End of Education -->
 	
-<section id="Contact" style="height: 100vh; padding-top: 50px; border: 2px black solid;">	
+<section id="Contact">	
 	
 	<div class="Display" style="">
-			
-		<a class="socialMedia"><i class="fab fa-linkedin LI"></i></a>
-		
-		<a class="socialMedia"><i class="fab fa-github LI"></i></a>
-		<a class="socialMedia"><i class="fab fa-hackerrank LI"></i></a>
-		<a href="https://leetcode.com/" class="socialMedia LC" target="_blank"></a>
-		
+		<a href="mailto:smithchrisgraphics@gmail.com" class="socialMedia"><i class="fas fa-envelope-square"></i></a>
+		<a href="https://github.com/smitc29" class="socialMedia HR" target="_blank"><i class="fab fa-github-alt"></i></a>
+		<a href="https://www.linkedin.com/in/smithchrisgraphics/" class="socialMedia LI" target="_blank"><i class="fab fa-linkedin"></i></a>	
+		<a href="https://www.behance.net/smitc29" class="socialMedia" target="_blank"><i class="fab fa-behance-square"></i></a>
+		<a href="https://www.hackerrank.com/smithchrisgraph1" class="socialMedia HR" target="_blank"><i class="fab fa-hackerrank"></i></a>
+		<a href="https://www.facebook.com/profile.php?id=100002191987102" class="socialMedia LI" target="_blank"><i class="fab fa-facebook"></i></a>
 		</div>
 	
 	</section>
@@ -255,7 +272,8 @@
 </article> <!-- End article -->
 	
 <!-- Small, simple animation that looks nice when idling on the main area; might alter to be constant? -->
-<div class="leftbox"></div>
+	<span id="titleEffect">
+	<div class="leftbox"></div>
 	<div class="leftbox" style="top: 15vh; -webkit-animation-delay: 2.4s; animation-delay: 2.4s;"></div>
 	<div class="leftbox" style="top: 25vh; -webkit-animation-delay: 5.75s; animation-delay: 5.75s;"></div>
 	<div class="leftbox" style="top: 35vh; -webkit-animation-delay: 3.5s; animation-delay: 3.5s;"></div>
@@ -275,7 +293,9 @@
 	<div class="rightbox" style="top: 55vh; -webkit-animation-delay: 3.5s; animation-delay: 3.5s;"></div>
 	<div class="rightbox" style="top: 65vh; -webkit-animation-delay: 5.75s; animation-delay: 5.75s;"></div>
 	<div class="rightbox" style="top: 75vh; -webkit-animation-delay: 2.4s; animation-delay: 2.4s;"></div>
-	<div class="rightbox" style="top: 85vh; -webkit-animation-delay: 0s; animation-delay: 0s;"></div>	
+	<div class="rightbox" style="top: 85vh; -webkit-animation-delay: 0s; animation-delay: 0s;"></div>
+		
+</span>
  
 <br style="position: absolute; height: 50px; width: 100vw; left: 0; bottom: 0; margin-top: 20px;">
 	
