@@ -4,130 +4,33 @@ html
 {
 	overflow-x:hidden;
 	scroll-behavior: smooth;
-	z-index: -4;
 }
 
 body
 {
-	min-height: 500vh;
 	max-width: 100vw;
 	width: 100%;
 	font-family: 'Roboto Slab', serif;
-	
-	overflow: hidden;
+	background-color:antiquewhite;
 	position: absolute;
-	left: -13px;
-	z-index: -3;
+	left: 0;
+	top: 0;
+	
 	/*outline: 1px solid red;*/
 }
 
-.displaySection
+#portrait
 {
-	position: relative;
-	top: 100vh;
-	left: 0;
+	background-color: firebrick;
+	position: absolute;
+	top: -10px;
+	left: -9px;
 	
-	width: 100%;	
-	background-color: red;
-	padding: 20px 0 20px;
-	margin: 5px 0 5px 5px;
+	width: 23vw;
+	height: 23vw;
+	max-width: 300px;
+	max-height: 300px;
 	
-	min-height: 100vh;
-	overflow-y: visible;
-	overflow-x: hidden;
-}
-
-a
-{
-	text-decoration: none;
-}
-
-ul
-{
-	list-style: none;
-}
-
-hr
-{
-	margin: 50px 10px 10px 10px;
-}
-
-#wrapper
-{	
-	width:100vw;	
-}
-
-#NameDrop
-{
-	position: relative;
-	top: 50vh;
-	transform: translateY(-60%);
+	padding: 20px;
 	
-	list-style:none;
-    margin:0;
-    padding:0;
-    text-align:center;
-	z-index: 5;
-		
-}
-
-#NameDrop ul 
-{
-	text-decoration-line: none;
-	list-style-type: none;
-	margin: 0 auto;
-	left: 40%;
-}
-
-#NameDrop ul li
-{
-	text-decoration-line: none;
-	display: inline;
-	text-align: center;
-	width: 25%;
-	margin: 0 auto;
-	
-}
-
-#NameDrop li a
-{
-	display:inline-block;
-	position: relative;
-    padding:10px 20px;
-	left: -20px;
-	color: black;
-	text-decoration-line: none;
-	font-size: 14pt;
-	border-radius: 30px;
-	
-	opacity: 1;
-	
-	/* Safari 4.0 - 8.0 */
-    -webkit-animation-name: SlowFade;
-    -webkit-animation-duration: 1s;
-    -webkit-animation-timing-function: linear;
-    -webkit-animation-delay: 0.7s;
-    -webkit-animation-iteration-count: 1;
-
-    /* Standard syntax */
-   animation-name: SlowFade; 
-    animation-duration: 1s;
-    animation-timing-function: linear;
-    animation-delay: 0.7s;
-    animation-iteration-count: 1;
-	animation-direction: forwards;
-	animation-fill-mode: forwards;
-	
-	-webkit-transition: 0.3s;
-	-o-transition: 0.3s;
-	-mozilla-transition: 0.3s;
-	transition: 0.3s;
-	
-}
-
-#NameDrop li a:hover
-{
-	background-color:rgba(151,0,2,1.00);
-	color: white;
-	text-decoration-line: none;
 }
