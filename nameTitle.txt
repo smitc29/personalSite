@@ -1,0 +1,19 @@
+<div id="Chris01">
+		<span class="SmithPart" id="ChrisPart1"></span>
+		<span class="SmithPart" id="ChrisPart2"></span>
+		<span class="SmithPart" id="ChrisPart3"></span>
+	</div>
+	
+	<!-- Last name is entirely CSS to enable faster load times -->
+	<div id="Smith01">
+		<span class="SmithPart" id="SmithPart1"></span>
+		<span class="SmithPart" id="SmithPart2"></span>
+		<span class="SmithPart" id="SmithPart3"></span>
+		<span class="SmithPart" id="SmithPart4"></span>
+		<span class="SmithPart" id="SmithPart5"></span>
+	</div>
+	
+	<div class="ChrisName"></div>
+	<div class="SmithName"></div>
+	
+	

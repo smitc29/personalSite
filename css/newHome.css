@@ -4,16 +4,19 @@ html
 {
 	overflow-x:hidden;
 	scroll-behavior: smooth;
+	z-index: -4;
 }
 
 body
 {
 	min-height: 500vh;
 	max-width: 100vw;
+	width: 100%;
 	font-family: 'Roboto Slab', serif;
 	
-	overflow-y: hidden;
-	overflow-x: hidden;
+	overflow: hidden;
+	position: absolute;
+	left: -13px;
 	z-index: -3;
 	/*outline: 1px solid red;*/
 }
@@ -38,14 +41,17 @@ article /* Only include one of these, everything else goes inside */
 	background-color: none;	
 }
 
-section
+.displaySection
 {
 	position: relative;
+	top: 100vh;
+	left: 0;
+	
 	width: 100%;	
-	/*background-color: rgba(151,0,2,1.00) ;*/
-	padding-top: 120px;
-	padding-bottom: 40px;
-	margin-top: 240px;
+	background-color: red;
+	padding: 20px 0 20px;
+	margin: 5px 0 5px 5px;
+	
 	min-height: 100vh;
 	overflow-y: visible;
 	overflow-x: hidden;
@@ -276,33 +282,6 @@ nav.is-visible
 	background-color:rgba(151,0,2,1.00);
 	color: white;
 	text-decoration-line: none;
-}
-
-@-webkit-keyframes NDrop {
-    0%   {top: 50vh; transform: translateY(-50%);}
-	25%   {top: 50vh; transform: translateY(-50%);}
-    100% {top: 0; transform: translateY(0%);}
-}
-
-/* Standard syntax */
-@keyframes NDrop {
-   0%   {top: 50vh; transform: translateY(-50%);}
-	25%   {top: 50vh; transform: translateY(-50%);}
-    100% {top: 0; transform: translateY(0%);}
-}
-
-.RelativeCenter
-{
-	position: relative;
-	margin: 0 auto;
-	top: 110px;
-	
-	text-align: center;
-	vertical-align: middle;
-	line-height: 20px;
-	width: 60%;
-	min-width: 100px;
-	max-width: 400px;
 }
 
 #Chris01

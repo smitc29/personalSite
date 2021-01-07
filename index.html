@@ -16,70 +16,60 @@
 	<link rel="icon" type="image/x-icon" href="images/Logo.ico">
     
     <!-- External CSS Files -->
-    <link href="css/newHome.css" rel="stylesheet" type="text/css">
-    
-    <!-- Import Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet"> 
+    <link href="css/home.css" rel="stylesheet" type="text/css">
+	
+	<!-- Need script for anchors due to HTML5 Bug on browsers -->
+	<script>
+	function snapToAnchor(anchor)
+	{
+		document.getElementById(anchor).scrollIntoView(true);
+	}
+	
+	
+	</script>
     
 </head>
 
-<body onload="checkIfCookiePresent()"> 
+<body> 
+	
+
 	
 <div id="NameDrop">	
-	<div id="Chris01">
-		<span class="SmithPart" id="ChrisPart1"></span>
-		<span class="SmithPart" id="ChrisPart2"></span>
-		<span class="SmithPart" id="ChrisPart3"></span>
-	</div>
 	
-	<!-- Last name is entirely CSS to enable faster load times -->
-	<div id="Smith01">
-		<span class="SmithPart" id="SmithPart1"></span>
-		<span class="SmithPart" id="SmithPart2"></span>
-		<span class="SmithPart" id="SmithPart3"></span>
-		<span class="SmithPart" id="SmithPart4"></span>
-		<span class="SmithPart" id="SmithPart5"></span>
-	</div>
-	
-	<div class="ChrisName"></div>
-	<div class="SmithName"></div>
+	<!-- Name goes here -->	
 	
 	
 	<ul>
-		<li style="text-decoration-line: none;"><a href="#About" style="text-decoration-line: none;">About</a></li>
-		<li><a href="#Design" style="-webkit-animation-delay: 0.9s; animation-delay: 0.9s;">Design</a></li>
-		<li><a href="#Experience" style="-webkit-animation-delay: 1.1s; animation-delay: 1.1s;">Experience</a></li>
-		<li><a href="#Education" style="-webkit-animation-delay: 1.3s; animation-delay: 1.3s;">Education</a></li>
-		<li><a href="#Contact" style="-webkit-animation-delay: 1.5s; animation-delay: 1.5s;">Contact</a></li>
+		<li><a href="#link01">About</a></li>
+		<li><a onclick="snapToAnchor('link02')">Design</a></li>
+		<li><a onclick="snapToAnchor('link03')">Experience</a></li>
+		<li><a href="#link04">Education</a></li>
+		<li><a onclick="snapToAnchor('link05')">Contact</a></li>
 	</ul>
 </div>
 	
-<!-- Small, simple animation that looks nice when idling on the main area; might alter to be constant? -->
-	<span id="titleEffect">
-	<div class="leftbox"></div>
-	<div class="leftbox" style="top: 15vh; -webkit-animation-delay: 2.4s; animation-delay: 2.4s;"></div>
-	<div class="leftbox" style="top: 25vh; -webkit-animation-delay: 5.75s; animation-delay: 5.75s;"></div>
-	<div class="leftbox" style="top: 35vh; -webkit-animation-delay: 3.5s; animation-delay: 3.5s;"></div>
-	<div class="leftbox" style="top: 45vh; -webkit-animation-delay: 8s; animation-delay: 8s;"></div>
-	<div class="leftbox" style="top: 55vh; -webkit-animation-delay: 1s; animation-delay: 1s;"></div>
-	<div class="leftbox" style="top: 65vh; -webkit-animation-delay: 4.4s; animation-delay: 4.4s;"></div>
-	<div class="leftbox" style="top: 75vh; -webkit-animation-delay: 9s; animation-delay: 9s;"></div>
-	<div class="leftbox" style="top: 85vh; -webkit-animation-delay: 3s; animation-delay: 3s;"></div>
-	<!--<div class="leftbox" style="top: 90vh; -webkit-animation-delay: 6s; animation-delay: 3s;"></div>-->
-		
+	<!-- Each section should take up a minimum of at least 1 full screen -->
+	<div id="link01" class="displaySection">
 	
-	<div class="rightbox" style="-webkit-animation-delay: 3s; animation-delay: 3s;"></div>
-	<div class="rightbox" style="top: 15vh; -webkit-animation-delay: 9s; animation-delay: 9s;"></div>
-	<div class="rightbox" style="top: 25vh; -webkit-animation-delay: 4.4s; animation-delay: 4.4s;"></div>
-	<div class="rightbox" style="top: 35vh; -webkit-animation-delay: 1s; animation-delay: 1s;"></div>
-	<div class="rightbox" style="top: 45vh; -webkit-animation-delay: 8s; animation-delay: 8s;"></div>
-	<div class="rightbox" style="top: 55vh; -webkit-animation-delay: 3.5s; animation-delay: 3.5s;"></div>
-	<div class="rightbox" style="top: 65vh; -webkit-animation-delay: 5.75s; animation-delay: 5.75s;"></div>
-	<div class="rightbox" style="top: 75vh; -webkit-animation-delay: 2.4s; animation-delay: 2.4s;"></div>
-	<div class="rightbox" style="top: 85vh; -webkit-animation-delay: 0s; animation-delay: 0s;"></div>
-		
-</span>
- 
-<br style="position: absolute; height: 50px; width: 100vw; left: 0; bottom: 0; margin-top: 20px;">
+	</div>
+	
+	<div id="link02" class="displaySection">
+	
+	</div>
+	
+	<div id="link03" class="displaySection">
+	
+	</div>
+	
+	<div id="link04" class="displaySection">
+	
+	</div>
+	
+	<div id="link05" class="displaySection">
+	
+	</div>
+	
+<!-- Small, simple animation that looks nice when idling on the main area; might alter to be constant? -->
+	
 	
 </body>
