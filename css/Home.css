@@ -10,8 +10,9 @@ body
 {
 	max-width: 100vw;
 	width: 100%;
+	height: 99%;
 	font-family: 'Roboto Slab', serif;
-	background-color:antiquewhite;
+	background-color:white;
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -19,18 +20,79 @@ body
 	/*outline: 1px solid red;*/
 }
 
-#portrait
+.centralArea
 {
-	background-color: firebrick;
 	position: absolute;
-	top: -10px;
-	left: -9px;
+	top: 49.5%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	
-	width: 23vw;
-	height: 23vw;
-	max-width: 300px;
-	max-height: 300px;
 	
-	padding: 20px;
+	width: 100vh;
+	max-width: 2000px;
+	height: 100vh;
+	max-height: 2000px;
+	margin: 0 auto;
+	background-color: aquamarine;
 	
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
+}
+
+.box
+{
+	background-color:white;	
+	position: relative;
+	top: 0;
+	
+	width: 23%;
+	height: 23%;
+	padding: 1%;
+	
+	text-align: center;
+}
+
+.box:nth-child(8n+1),
+.box:nth-child(8n+3),
+.box:nth-child(8n+6),
+.box:nth-child(8n) {
+    background-color:   #6ad9e8;
+}
+
+.boxword
+{
+	width: 75%;
+	margin: 0 auto;
+	text-align: center;
+	
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	
+	font-size: 500%;
+
+}
+
+.databox
+{
+	position: absolute;
+	top: 0%;
+	left: 50%;
+	
+	width: 48%;
+	height: 98%;
+	padding: 1%;
+	opacity: 0.5;
+	
+
+	background-color: darkseagreen;
+}
+
+#box10
+{
+	background-image: 
 }
