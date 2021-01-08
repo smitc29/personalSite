@@ -140,6 +140,10 @@ function navToggle()
 /* Hide mobile nav menu whenever browser is rescaled, likely flipping mobile device */
 $(window).resize(function() {
   //console.log('window was resized');
+	
+
+	
+	
 	if(document.body.clientWidth <= 830)
 	{
 		var bars = document.getElementById("mobileNav").getElementsByTagName("span");
