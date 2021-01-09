@@ -1,6 +1,10 @@
 /* Author: Christopher Smith */
-/*eslint-env browser*/
 /* eslint-disable no-console */ //Enables console output
+
+
+$(document).ready(function() {
+    console.log("page loaded");
+});
 
 /* Toggles X icon and mobile nav menu on click  */
 function navToggle()
@@ -58,8 +62,24 @@ function navToggle()
 $(window).resize(function() {
   //console.log('window was resized');
 	var vid = document.getElementsByTagName("iframe")[0];
+	
+	scaleBoxText();
+	
 	if(document.body.clientWidth <= 700)
 	{
 		vid.style.height = document.body.clientWidth * 0.5625 + "px";
 	}
 });
+
+/* Scales text size in boxes relative to proportions of box width */
+function scaleBoxText()
+{
+	var boxes = document.getElementsByClassName("box");
+	console.log(boxes[0].clientWidth);
+	var i = 0;
+	for(i = 0; i < boxes.length; i++)
+	{
+		boxes[i].style.fontSize = (parseInt(boxes[0].clientWidth)/6) + "pt";
+	}
+	
+} // End of function scaleBoxText
