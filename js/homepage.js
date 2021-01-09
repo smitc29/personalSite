@@ -3,7 +3,7 @@
 
 
 $(document).ready(function() {
-    console.log("page loaded");
+    //scaleBoxText();
 });
 
 /* Toggles X icon and mobile nav menu on click  */
@@ -60,26 +60,23 @@ function navToggle()
 
 /* Adjust size of video player whenever browser window changes size with JQuery */
 $(window).resize(function() {
-  //console.log('window was resized');
-	var vid = document.getElementsByTagName("iframe")[0];
-	
+
 	scaleBoxText();
 	
-	if(document.body.clientWidth <= 700)
-	{
-		vid.style.height = document.body.clientWidth * 0.5625 + "px";
-	}
 });
 
 /* Scales text size in boxes relative to proportions of box width */
 function scaleBoxText()
 {
-	var boxes = document.getElementsByClassName("box");
-	console.log(boxes[0].clientWidth);
+	// EDIT THIS for mobile site!!! It needs to be completely different for mobile users
+	var boxWidth = parseInt(document.getElementById("box01").clientWidth);
+	var boxWords = document.getElementsByClassName("boxword");
+	
+	// Loop through and change every instance of boxWord font size to fit box best
 	var i = 0;
-	for(i = 0; i < boxes.length; i++)
+	for(i = 0; i < boxWords.length; i++)
 	{
-		boxes[i].style.fontSize = (parseInt(boxes[0].clientWidth)/6) + "pt";
+		boxWords[i].style.fontSize = (boxWidth/8) + "pt";
 	}
 	
 } // End of function scaleBoxText

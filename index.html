@@ -22,17 +22,14 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="js/homepage.js" type="text/javascript"></script>
 	
-	<!-- Need script for anchors due to HTML5 Bug on browsers -->
-	<script>
-	function snapToAnchor(anchor)
-	{
-		document.getElementById(anchor).scrollIntoView(true);
-	}	
-	</script>
+	<!-- Google fonts for aesthetics -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet"> 
     
 </head>
 
-<body> 
+<body onload="scaleBoxText()"> 
 	
 <div class="centralArea">
 	<div id="box01" class="box">
