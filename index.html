@@ -7,9 +7,11 @@
 	<meta name="description" content="Christopher Smith: Computer Scientist/Digital Artist ">
     <meta name="keywords" content="Chris,Smith,code,computer, Computer, Science, art, NY, Graphic Design, Web Design">
     <meta name="author" content="Christopher Smith">
+    <meta name="google-site-verification" content="prost9fF0Zme8R-xeIv0tRrncC0wobLIfDtGVvqHjaU" /><!-- Link to google suite email -->
+	
+	
     
-    <!-- Title is visible in the tab -->
-    <title>Chris Smith</title>
+    <title>Chris Smith!</title>
     
     <!-- ICO picture -->
     <link rel="shortcut icon" type="image/x-icon" href="images/Logo.ico">
@@ -17,27 +19,42 @@
     
     <!-- External CSS Files -->
     <link href="css/newHome.css" rel="stylesheet" type="text/css">
+	<link href="css/form.css" rel="stylesheet" type="text/css">
 	
 	<!-- Font Awesome Icons -->
 	<script src="https://kit.fontawesome.com/fd01c64fc2.js" crossorigin="anonymous"></script>
 	
-	<!-- JQuery code for dropdown/nav/mobile menus and cookie features -->
+	<!-- Accordion -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	
-	<!-- Script for Dropdown and Mobile Menu, uses JQuery -->
+	<!-- Script for Dropdown Menu -->
     <script src="js/Mechanics.js"></script>
+	<script src="js/vanish.js"></script>
     
     <!-- Import Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet"> 
     
+    <!-- Captcha -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+<script src="https://www.google.com/recaptcha/api.js"></script>
+	
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111410323-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-111410323-1');
+</script>
+    
 </head>
 
-<body onload="checkIfCookiePresent()"> 
+<body> 
 	
-	<header> <!-- Used for initial site load for fading effect -->
+	<header> <!-- Used in correcting visual bug with nav -->
 	</header>
 	
-	<!-- Desktop nav links -->
 	<nav>
 		<div class="flipMenu"> </div>
 		<a href="#" style="float: left; margin-left: 15px;">Christopher Smith</a> 
@@ -46,50 +63,27 @@
 		<a href="#Experience">Experience</a>
 		<a href="#Design">Design</a>
 		<a href="#About">About</a>
+	
+	
 	</nav>
 	
-	<!-- Mobile nav links -->
-	<aside>
-	<div class="panelMenu">
-		 <ul>
-			<a href="#About"><li id="opt1">About</li></a>
-			<a href="#Design"><li id="opt2">Design</li></a>
-			<a href="#Experience"><li id="opt3">Experience</li></a>
-			<a href="#Education"><li id="opt4">Education</li></a>
-			<a href="#Contact"><li id="opt5">Contact</li></a>
-		 </ul>
-	</div>
-	</aside>
+<aside>
+<div class="panelMenu">
+     <ul>
+     	<a href="#About"><li id="opt1">About</li></a>
+		<a href="#Design"><li id="opt2">Design</li></a>
+     	<a href="#Experience"><li id="opt3">Experience</li></a>
+     	<a href="#Education"><li id="opt4">Education</li></a>
+     	<a href="#Contact"><li id="opt5">Contact</li></a>
+     </ul>
+</div>
+</aside>
 	
-	<!-- Navigation bar for mobile users here -->
-	<div id="mobileNav" onclick="navToggle()">
-		<span></span>
-		<span style="opacity: 1.0;"></span>
-		<span></span>
-	</div>
-	<div id="mobileNavPartner">
-	
-	</div> 
-<nav id="mobileNavMenu">
-	<span id="mobileMenu">
-	<a href="#About" onclick="navToggle()">About</a>
-	<a href="#Design" onclick="navToggle()">Design</a>
-	<a href="#Experience" onclick="navToggle()">Experience</a>
-	<a href="#Education" onclick="navToggle()">Education</a>
-	<a href="#Contact" onclick="navToggle()">Contact</a>	
-	</span>	
-</nav>
-	
-	<!-- End mobile Navigation bar for mobile users here -->
 	
 <div id="NameDrop">	
 	<div id="Chris01">
-		<span class="SmithPart" id="ChrisPart1"></span>
-		<span class="SmithPart" id="ChrisPart2"></span>
-		<span class="SmithPart" id="ChrisPart3"></span>
+		<span id="ChrisNameWhiteSpace"/>
 	</div>
-	
-	<!-- Last name is entirely CSS to enable faster load times -->
 	<div id="Smith01">
 		<span class="SmithPart" id="SmithPart1"></span>
 		<span class="SmithPart" id="SmithPart2"></span>
@@ -97,7 +91,6 @@
 		<span class="SmithPart" id="SmithPart4"></span>
 		<span class="SmithPart" id="SmithPart5"></span>
 	</div>
-	
 	<div class="ChrisName"></div>
 	<div class="SmithName"></div>
 	
@@ -145,10 +138,34 @@
 	<section id="Design" style="overflow-x: hidden;">
 	
 		
-		<div class="Display">
-		
+		<div class="Display" >
+			
+				
+			
+			<!--<ul id="GallerySelector01" class="GallerySelector">
+	<li id="Button1" onClick="UpdateGallery(1)" ></li>
+	<li id="Button2" onClick="UpdateGallery(2)" style="background-image: url(images/articons/web.png);"></li>
+	<li id="Button3" onClick="UpdateGallery(3)" style="background-image: url(images/articons/dungeons.png);"></li>
+	<li id="Button4" onClick="UpdateGallery(4)" style="background-image: url(images/articons/lamp.png);"></li>
+	<li id="Button5" onClick="UpdateGallery(5)" style="background-image: url(images/articons/lair.png);"></li>
+	<li id="Button6" onClick="UpdateGallery(6)" style="background-image: url(images/articons/figures.png)"></li>
+	<li id="Button7" onClick="UpdateGallery(7)" style="background-image: url(images/articons/text.png);"></li>
+	</ul> 
+			<div class="Buffer"></div>
+			
+			<div id="GalleryDisplay01">
+				<a href="https://www.behance.net/gallery/67911447/Autumn-Gallery" target="_blank"><div id="Design01" class="HideMe"></div></a>
+				<a href="https://www.behance.net/gallery/66602273/Type-in-Motion" target="_blank"><div id="Design02" class="HideMe"></div></a>
+				<div id="Design03" class="HideMe"></div>
+				<div id="Design04" class="HideMe"></div>
+				<div id="Design05" class="HideMe"></div>
+				<div id="Design06" class="HideMe"></div>
+				<div id="Design07" class="HideMe"></div>
+				<div id="Design00" class="ShowMe">Click on a project to learn more!</div> 
+			</div>-->
+			
 			<h2 style="margin-top: 20px;"><a href="games/Match3.html" target="_blank"><i class="fas fa-puzzle-piece"></i></a> Match 3</h2>
-			<p>A game taking the standard match-3 formula and adding a few tweaks to make the game more interesting. Code is currently being developed privately, but I'll try to post the most recent version of the game here. <a href="games/Match3.html" target="_blank">Play here!</a>  </p>	
+			<p>(Under development) A game taking the standard match-3 formula and adding a few tweaks to make the game more interesting. Code is currently being developed privately, but I'll try to post the most recent version of the game here. <a href="games/Match3.html" target="_blank">Play here!</a>  </p>	
 			<hr>
 			
 			<h2 style="margin-top: 20px;"><a href="Encrypter.html" target="_blank"><i class="fas fa-user-lock"></i></a> Encrypters</h2>
@@ -156,11 +173,33 @@
 			<hr>
 			
 			<h2><a href="games/Checkers.html" target="_blank"><i class="fa fa-ring"></i></a> Checkers</h2>
-			<p>A simple version of American Checkers (or Draughts). There's buttons so you can play against an AI partner, or set the computer to play against itself. Everything is hard-coded with no external libraries used for the calculations. <a href="games/Checkers.html" target="_blank">Play here!</a> </p>
+			<p>A simple version of American Checkers (or Draughts). There's buttons so you can play against algorithms, or set the computer to play against itself. Everything is hard-coded with no external libraries used for the calculations. <a href="games/Checkers.html" target="_blank">Play here!</a> </p>
 			<hr>
 			
+			<h2 style="margin-top: 20px;"><a href="games/TicTacToe.html" target="_blank"><i class="fas fa-th"></i></a> Tic Tac Toe</h2>
+			<p> The classic game of Tic-Tac-Toe. I mostly developed this to make sure javascript ran properly on this site, and decided to keep it up for reference. Nothing too special, but it can be fun to play every now and then. <a href="games/TicTacToe.html" target="_blank">Play here!</a> </p>	
 			
+			<h2 id="GalleryTitle01">
+			 
+			</h2>
 			
+			<p id="GalleryDesc01" style="position: relative;">
+			  
+			</p>
+			
+			<div class="GallerySubImg">
+				<img id="GalleryDisplay02" src="images/subimages/quiet.png" alt="Gallery Img TL"/>
+			</div>
+			<div class="GallerySubImg">
+				<img id="GalleryDisplay03" src="images/subimages/fireball.png" alt="Gallery Img TL"/>
+			</div>
+			<div class="GallerySubImg">
+				<img id="GalleryDisplay04" src="images/subimages/owl.png" alt="Gallery Img TL"/>
+			</div>
+			<div class="GallerySubImg">
+				<img id="GalleryDisplay05" src="images/subimages/without.png" alt="Gallery Img TL"/>
+			</div>
+						
 			
 			
 			
@@ -183,7 +222,7 @@
 			<h3> Programmer / Analyst - <a href="https://suny.oneonta.edu/mathematics-computer-science-and-statistics" target="_blank">State University of New York</a> </h3>
 			<p>January 2018 - June 2018</p>
 			<p>
-			Coded math questions for students to take via <a href="http://webwork.maa.org/" target="_blank" >Webwork</a>, an online quiz and homework database professors use. Translated mathematical formulas into code. Content included consumer mathematics, set theory, and sequencial math. Used Perl, HTML5, LaTeX. 
+			Coded math questions for students to take via <a href="http://webwork.maa.org/" target="_blank" >Webwork</a>, an onlne quiz and homework database professors use. Translated mathematical formulas into code. Content included consumer mathematics, set theory, and sequencial math. Used Perl, HTML5, LaTeX. 
 			</p>
 			<hr>
 			<img src="images/Logo-iDTech.png" alt="iD Tech logo"/>
@@ -243,30 +282,64 @@
 		</section> 
 	<!-- End of Education -->
 	
-<section id="Contact">	
-	
-	<div class="Display" style="">
-		<a href="mailto:smithchrisgraphics@gmail.com" class="socialMedia"><i class="fas fa-envelope-square"></i></a>
-		<a href="https://github.com/smitc29" class="socialMedia HR" target="_blank"><i class="fab fa-github-alt"></i></a>
-		<a href="https://www.linkedin.com/in/smithchrisgraphics/" class="socialMedia LI" target="_blank"><i class="fab fa-linkedin"></i></a>	
-		<a href="https://www.behance.net/smitc29" class="socialMedia" target="_blank"><i class="fab fa-behance-square"></i></a>
-		<a href="https://www.hackerrank.com/smithchrisgraph1" class="socialMedia HR" target="_blank"><i class="fab fa-hackerrank"></i></a>
-		<a href="https://www.facebook.com/profile.php?id=100002191987102" class="socialMedia LI" target="_blank"><i class="fab fa-facebook"></i></a>
-		</div>
-	
+<section id="Contact" style="height: 100vh; padding-bottom: 1000px; padding-top: 50px;">	
+	<form id="submit-form" class="panelContact" action="php/form.php" method="POST" >
+
+        <fieldset>
+            
+<!--<div class="flipContact Cancel">
+			<div class="cancel01"></div>
+			<div class="cancel02"></div>
+			</div>   --> 
+			
+<input style="" id="name" name="name" type="text" placeholder="Name" required=""/>
+
+<input id="email" name="email" type="email" placeholder="Email" required=""/>
+		 
+<input id="topic" name="topic" type="text" placeholder="Topic"/>
+
+<textarea id="comments" name="comments" placeholder="What's on your mind?" style="height:100px" required></textarea>
+
+<div class="CenterMe">
+         <div style="width: 300px; margin: 0 auto; text-align: center;" class="g-recaptcha" data-sitekey="6Le7-mwUAAAAAOd6ERKjemtODY4BESzq0dMBj_s1"></div>
+</div>
+         
+
+<button name="submit" type="submit" value="SUBMIT">Send Message</button>
+			<br>
+           
+		<div id="buttons">
+    	
+           <ul>
+           
+  <li><a href="mailto:smithchrisgraphics@gmail.com" target="_blank"><i class="fa fa-envelope" style="font-size: 28px; margin-top: 10px"></i></a></li>
+  <li class="facebook"><a href="https://www.facebook.com/people/Chris-Smith/100002191987102" target="_blank"><i class="fab fa-facebook-square" style="margin-top: 10px"></i></a></li>
+  <li class="twitter"><a href="https://twitter.com/BishopGameDev" target="_blank" ><i class="fab fa-twitter" style="margin-top: 10px"></i></a></li>
+  <li class="linkedin"><a href="https://www.linkedin.com/in/smithchrisgraphics" target="_blank"><i class="fab fa-linkedin" style="margin-top: 10px"></i></a></li>
+  
+          
+           </ul>
+          
+</div>
+			
+      </fieldset>
+    </form>
 	</section>
 	
 </article> <!-- End article -->
 	
-<!-- Small, simple animation that looks nice when idling on the main area; might alter to be constant? -->
-	<span id="titleEffect">
-	<div class="leftbox"></div>
+	
+		 
+	
+	
+		
+<div class="leftbox"></div>
 	<div class="leftbox" style="top: 15vh; -webkit-animation-delay: 2.4s; animation-delay: 2.4s;"></div>
-	<div class="leftbox" style="top: 25vh; -webkit-animation-delay: 5.75s; animation-delay: 5.75s;"></div>
+	<div class="leftbox" style="top: 25vh; -webkit-animation-delay: 6s; animation-delay: 6s;"></div>
 	<div class="leftbox" style="top: 35vh; -webkit-animation-delay: 3.5s; animation-delay: 3.5s;"></div>
 	<div class="leftbox" style="top: 45vh; -webkit-animation-delay: 8s; animation-delay: 8s;"></div>
 	<div class="leftbox" style="top: 55vh; -webkit-animation-delay: 1s; animation-delay: 1s;"></div>
-	<div class="leftbox" style="top: 65vh; -webkit-animation-delay: 4.4s; animation-delay: 4.4s;"></div>
+	<div class="leftbox" style="top: 65vh; -webkit-animation-delay: 4s; animation-delay: 4s;"></div>
 	<div class="leftbox" style="top: 75vh; -webkit-animation-delay: 9s; animation-delay: 9s;"></div>
 	<div class="leftbox" style="top: 85vh; -webkit-animation-delay: 3s; animation-delay: 3s;"></div>
 	<!--<div class="leftbox" style="top: 90vh; -webkit-animation-delay: 6s; animation-delay: 3s;"></div>-->
@@ -274,17 +347,19 @@
 	
 	<div class="rightbox" style="-webkit-animation-delay: 3s; animation-delay: 3s;"></div>
 	<div class="rightbox" style="top: 15vh; -webkit-animation-delay: 9s; animation-delay: 9s;"></div>
-	<div class="rightbox" style="top: 25vh; -webkit-animation-delay: 4.4s; animation-delay: 4.4s;"></div>
+	<div class="rightbox" style="top: 25vh; -webkit-animation-delay: 4s; animation-delay: 4s;"></div>
 	<div class="rightbox" style="top: 35vh; -webkit-animation-delay: 1s; animation-delay: 1s;"></div>
 	<div class="rightbox" style="top: 45vh; -webkit-animation-delay: 8s; animation-delay: 8s;"></div>
 	<div class="rightbox" style="top: 55vh; -webkit-animation-delay: 3.5s; animation-delay: 3.5s;"></div>
-	<div class="rightbox" style="top: 65vh; -webkit-animation-delay: 5.75s; animation-delay: 5.75s;"></div>
+	<div class="rightbox" style="top: 65vh; -webkit-animation-delay: 6s; animation-delay: 6s;"></div>
 	<div class="rightbox" style="top: 75vh; -webkit-animation-delay: 2.4s; animation-delay: 2.4s;"></div>
 	<div class="rightbox" style="top: 85vh; -webkit-animation-delay: 0s; animation-delay: 0s;"></div>
-		
-</span>
+	
+	<!--<div class="DropLine"></div>-->
+	
  
 <br style="position: absolute; height: 50px; width: 100vw; left: 0; bottom: 0; margin-top: 20px;">
+	
 	
 </body>
 
