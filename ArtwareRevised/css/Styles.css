@@ -1,0 +1,1048 @@
+
+
+/* CSS Document */
+
+body
+{
+	background-color: whitesmoke;
+	overflow-x: hidden;
+}
+
+#wrapper
+{
+	line-height: 1.0;
+	width:100%;
+	background-color: black;
+	margin-top: 10px; 
+	font-family: 'Merriweather', serif;
+	font-weight: 300;
+}
+
+#Logo
+{
+	align-content: center;
+	background-image:url(../images/logo.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	margin: 10px auto;
+	width: 161px;
+	height: 123px;
+}
+
+#ContactInfo
+{
+	vertical-align: text-bottom;
+	float:right;
+	text-align:right;
+	color:rgba(84,81,81,1.00);
+	margin: 5px auto;
+	width: 60%;
+	position: relative;
+	bottom: -50px;
+	
+}
+
+#ContactInfo ol li
+{
+	list-style-type: none;
+	padding-bottom: 6px;
+}
+
+#ContactInfo a
+{
+	color: rgba(84,81,81,1.00);
+	text-decoration: none;
+}
+
+label
+{
+	margin: 20px 20px 50px 10px;	
+}
+
+input, textarea
+{
+	margin: 10px 10px 10px 10px;
+	padding: 5px;
+	height: 25px;
+	font-size: 15px;
+}
+
+iframe
+{
+	max-height: 450px;
+	left: 0;
+}
+
+.column iframe
+{
+	height: 250px;
+}
+
+img.bottom {
+    vertical-align: text-bottom;
+}
+
+header
+{
+	overflow:hidden;
+	width:100%;
+	float:left;
+	height: 150px;
+	background-color: gainsboro;
+	position: relative;
+	z-index: 2;
+	
+}
+
+nav
+{
+	overflow:hidden;
+	position: relative;
+	width:100%;
+	height: 0;
+	padding-top: 16px;
+	margin-bottom: -10px;
+	float:left;
+	background-color:black ;
+}
+
+nav ul {
+	padding-top: 0%;
+	list-style-type: none;
+	width: 100%;
+
+	
+}
+
+nav li {
+	min-width: 100px;
+	text-align: center;
+	display: inline-block;
+	height: 100%;
+	color: white;
+	margin: 0 0 5% 0;
+	margin-bottom: 10px;
+	padding: 12px 0 10px 0;
+	float: left;
+	border-radius: 30px;
+	
+	/* -webkit-transition:.2s; */
+	/* transition:.2s; */
+}
+
+nav li .about {
+	margin-left: 0;
+}
+
+nav li:hover {
+	/* color: #03929B; */
+	text-decoration:none;
+}
+
+/*.fade a:hover {  -webkit-transition: background 2s ease-out;
+  -moz-transition: background 2s ease-out;
+  -o-transition: background 2s ease-out;
+  -ms-transition: background 2s ease-out;
+  transition: background 2s ease-out;
+}*/
+
+.redlink  {
+	/*background: linear-gradient(to right, rgba(202,20,23,0.8), rgba(192,121,18,0.9));*/
+	background: rgba(160, 8, 8, 0.0);
+	margin: 4px;
+	-webkit-transition: background 1s ease-out;
+  -moz-transition: background 1s ease-out;
+  -o-transition: background 1s ease-out;
+  -ms-transition: background 1s ease-out;
+  transition: background 1s ease-out;
+}
+
+.redlink:hover  {
+	/*background: linear-gradient(to right, rgba(202,20,23,0.0), rgba(192,121,18,0.0));*/
+	background: rgba(160, 8, 8, 1.0);
+	text-decoration:none;
+	-webkit-transition: background 0.3s;
+  -moz-transition: background 0.3s;
+  -o-transition: background 0.3s;
+  -ms-transition: background 0.3s;
+  transition: background 0.3s;
+}
+
+		/* Rainbow effect across nav */
+.oranlink  {
+	/*background: linear-gradient(to right, rgba(202,20,23,0.8), rgba(192,121,18,0.9));*/
+	background: rgba(188, 116, 0, 0.0);
+	margin: 5px;
+	-webkit-transition: background 1s ease-out;
+  -moz-transition: background 1s ease-out;
+  -o-transition: background 1s ease-out;
+  -ms-transition: background 1s ease-out;
+  transition: background 1s ease-out;
+}
+
+.oranlink:hover  {
+	/*background: linear-gradient(to right, rgba(202,20,23,0.0), rgba(192,121,18,0.0));*/
+	background: rgba(188, 116, 0, 1.0);
+	text-decoration:none;
+	-webkit-transition: background 0.3s;
+  -moz-transition: background 0.3s;
+  -o-transition: background 0.3s;
+  -ms-transition: background 0.3s;
+  transition: background 0.3s;
+}
+
+.yellink  {
+	/*background: linear-gradient(to right, rgba(202,20,23,0.8), rgba(192,121,18,0.9));*/
+	background: rgba(153, 135, 9, 0.0);
+	margin: 5px;
+	-webkit-transition: background 1s ease-out;
+  -moz-transition: background 1s ease-out;
+  -o-transition: background 1s ease-out;
+  -ms-transition: background 1s ease-out;
+  transition: background 1s ease-out;
+}
+
+.yellink:hover  {
+	/*background: linear-gradient(to right, rgba(202,20,23,0.0), rgba(192,121,18,0.0));*/
+	background: rgba(153, 135, 9, 1.0);
+	text-decoration:none;
+	-webkit-transition: background 0.3s;
+  -moz-transition: background 0.3s;
+  -o-transition: background 0.3s;
+  -ms-transition: background 0.3s;
+  transition: background 0.3s;
+}
+
+.greenink  {
+	/*background: linear-gradient(to right, rgba(202,20,23,0.8), rgba(192,121,18,0.9));*/
+	background: rgba(5, 104, 11, 0.0);
+	margin: 5px;
+	-webkit-transition: background 1s ease-out;
+  -moz-transition: background 1s ease-out;
+  -o-transition: background 1s ease-out;
+  -ms-transition: background 1s ease-out;
+  transition: background 1s ease-out;
+}
+
+.greenlink:hover  {
+	/*background: linear-gradient(to right, rgba(202,20,23,0.0), rgba(192,121,18,0.0));*/
+	background: rgba(5, 104, 11, 1.0);
+	text-decoration:none;
+	-webkit-transition: background 0.3s;
+  -moz-transition: background 0.3s;
+  -o-transition: background 0.3s;
+  -ms-transition: background 0.3s;
+  transition: background 0.3s;
+}
+
+.bluelink  {
+	/*background: linear-gradient(to right, rgba(202,20,23,0.8), rgba(192,121,18,0.9));*/
+	background: rgba(3, 70, 102, 0.0);
+	margin: 5px;
+	-webkit-transition: background 1s ease-out;
+  -moz-transition: background 1s ease-out;
+  -o-transition: background 1s ease-out;
+  -ms-transition: background 1s ease-out;
+  transition: background 1s ease-out;
+}
+
+.bluelink:hover  {
+	/*background: linear-gradient(to right, rgba(202,20,23,0.0), rgba(192,121,18,0.0));*/
+	background: rgba(3, 70, 102, 1.0);
+	text-decoration:none;
+	-webkit-transition: background 0.3s;
+  -moz-transition: background 0.3s;
+  -o-transition: background 0.3s;
+  -ms-transition: background 0.3s;
+  transition: background 0.3s;
+}
+
+nav li a {
+	color: white;
+	text-decoration:none;
+}
+
+nav li a:hover {
+	text-decoration: none;
+	/* background-color: #DD7700; */
+	color:white;	
+}
+
+#Line
+{
+	align-content: center;
+	background-color: black;
+	margin: auto;
+	width: 100%;
+	height: 123px;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color:black;
+    color: white;
+    font-size: 16px;
+	height: 75px;
+    border: none;
+    cursor: pointer;
+	margin: 10px 0 0 18px;
+    width: 75px;
+    padding: 10px;
+	background-image: url(../images/ExpandOptions.png);
+	background-repeat: no-repeat;
+	background-size: contain; 
+	z-index: 3;
+	
+	-webkit-transition: 0.2s;
+	transition: 0.2s;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: darkgrey;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+	height: 100px;
+    width: 55%;
+	z-index: 3;
+	background-color: black;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(67,75,86,1.00);
+    min-width: 200px;
+	min-height: 80px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 3;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #717272}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+/* Back to Top Button for Products page */
+
+.BackToTop
+{
+	z-index: 1;
+	box-shadow: 8px 5px 20px rgba(46,46,46,0.250);
+	
+	color:black;
+  	position: fixed;
+	text-align: center;
+    top: 10px;
+	background-color: darkgray;
+	margin: 0 3%;
+    width: 30%;
+    border-radius:10px;
+    padding: 10px;
+	
+	-webkit-transition: 0.2s;
+	transition: 0.2s;
+}
+
+.BackToTop:hover
+{
+	background-color:rgba(98,147,172,1.00);
+}
+
+.products
+{
+	margin: auto;
+    width: 100%;
+
+    padding: 20px;
+	color: white;
+	line-height: 24px;
+}
+
+section 
+{
+	width: 100%;
+	min-height: 250px;
+	float: left;
+	/* background-color: aliceblue; */
+}
+
+.banner
+{
+	background-color: white;
+	background-image: url(http://www.publicdomainpictures.net/pictures/170000/velka/abstract-colorful-paint-splats.jpg);
+	background-size: cover;
+	max-height: 100px;
+}
+
+.bannerAltA
+{
+	background-color: white;
+	background-image: url(https://upload.wikimedia.org/wikipedia/commons/0/04/Paint_of_many_colors_CHF-Innovation-Day-2017-052.jpg);
+	background-size: cover;
+	max-height: 100px;
+}
+
+.bannerAltB
+{
+	background-color: white;
+	background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/da/Claude_Monet%2C_Saint-Georges_majeur_au_cr%C3%A9puscule.jpg);
+	background-size: cover;
+	background-position: 0% 25%;
+	max-height: 100px;
+}
+
+.bannerAltC
+{
+	background-color: white;
+	background-image: url(https://upload.wikimedia.org/wikipedia/commons/7/7c/Tongren-thangka-paint.jpg);
+	background-size: cover;
+	max-height: 100px;
+	background-position: 0% 45%;
+}
+
+.bannerAltE
+{
+	background-color: white;
+	background-image: url(https://static.pexels.com/photos/159644/art-supplies-brushes-rulers-scissors-159644.jpeg);
+	background-size: cover;
+	max-height: 100px;
+	background-position: 0% 55%;
+}
+
+.buffer
+{
+	background-color: white;
+	height: 10px;
+}
+
+.Header
+{
+	font-size: 24pt;
+}
+
+.subhead
+{
+	font-size: 16pt;
+}
+
+article
+{
+	width: 100%;
+	min-height: 100px;
+	float: left;
+	background-color: white; 
+}
+
+article .columns
+{
+	width: 100%;
+	min-height: 100px;
+	float: left;
+	background-color: white; 
+}
+
+article .column:first-child
+{
+	color: white;
+	width: 100%;
+	min-height: 100px;
+	float: left;
+	background-color: black; 
+}
+
+
+article .column:last-child
+{
+	color: black;
+	width: 100%;
+	min-height: 100px;
+	float: left;
+	background-color: white; 
+}
+
+
+aside 
+{
+	background-color: whitesmoke;
+	width: 30%;
+	min-height: 240px;
+	float: left;
+}
+
+footer
+{
+	
+	width: 100%;
+	height: 100px;
+	float: left;
+	background-color: black;
+	border-radius: 0 0 5px 5px;
+	
+}
+
+footer p
+{
+
+	margin-left: 50%;
+	background-color: white;
+	width: 300px;
+	position: relative;
+	left: 7.0%;
+	transform: translateX(-50%);
+}
+
+footer .sm-YT 
+{
+	position: relative;
+	float: left;
+	left: 0%;
+	transform: translateX(-50%);
+	
+	color: black;
+	text-align: center;
+	line-height: 50px;
+	font-size: 30px;
+	
+	width: 50px;
+	height: 50px;
+	margin: 5px;
+	background-size: 100% 100%;
+	background-color: white;
+	border-radius: 50%;
+	-webkit-transition:.2s;
+	transition:.2s;
+}
+
+footer a.sm-YT:hover {
+		background-color: rgba(216,24,24,1.00);
+	color: white;
+}
+
+footer .sm-FB {
+	position: relative;
+	float: left;
+	left: 0%;
+	transform: translateX(-50%);
+	
+	color: black;
+	text-align: center;
+	line-height: 50px;
+	font-size: 30px;
+	width: 50px;
+	height: 50px;
+	margin: 5px;
+	background-size: 100% 100%;
+	background-color: white;
+	border-radius: 50%;
+	-webkit-transition:.2s;
+	transition:.2s;
+}
+
+
+footer a.sm-FB:hover {
+		background-color:rgba(69,118,198,1.00);
+	color: white;
+}
+
+footer .sm-IG {
+	position: relative;
+	float: left;
+	left: 0%;
+	transform: translateX(-50%);
+	
+	color: black;
+	text-align: center;
+	line-height: 50px;
+	font-size: 30px;
+	width: 50px;
+	height: 50px;
+	margin: 5px;
+	background-size: 100% 100%;
+	background-color: white;
+	border-radius: 50%;
+	-webkit-transition:.2s;
+	transition:.2s;
+}
+
+footer a.sm-IG:hover {
+		background-color:rgba(202,125,208,1.00);
+	color: white;
+}
+
+footer .sm-TT {
+	position: relative;
+	float: left;
+	left: 0%;
+	transform: translateX(-50%);
+	
+	color: black;
+	text-align: center;
+	line-height: 50px;
+	font-size: 30px;
+	width: 50px;
+	height: 50px;
+	margin: 5px;
+	background-size: 100% 100%;
+	background-color: white;
+	border-radius: 50%;
+	-webkit-transition:.2s;
+	transition:.2s;
+}
+
+footer a.sm-TT:hover {
+		background-color: rgba(106,153,229,1.00);
+	color: white;
+}
+
+footer li {
+	display: block;
+	color: white;
+	font-size: 20px;
+	float: left;	
+	padding: 1px;
+	margin: 5px 10px;
+}
+
+footer li a {
+	text-decoration: none;
+	color: white;
+	font-size: 15px;
+	float: left;	
+	display:block;
+	border-radius: 10px;
+	
+	margin: auto;
+	min-width: 70px;
+	padding: 2px;
+	text-align:center;
+
+	-o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  /* Hover transition property*/
+  transition:.5s;
+}
+
+form input[type=submit] {
+
+    padding:5px 15px;
+
+    background:#ccc;
+
+    border:0 none;
+
+    cursor:pointer;
+
+    -webkit-border-radius: 5px;
+
+    border-radius: 5px;
+
+}
+
+/* Media Screen for tablet at 640px */
+
+@media only screen and (min-width:640px)  							/* Media Screen for tablet at 640px */
+{
+	#wrapper
+{
+	width:100%;
+	border-radius: 30px 20px 0 0;
+}
+	
+	#Logo
+{
+	align-content: center;
+	float: left;
+	background-image:url(../images/logo.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	margin: 10px 0 0 12px; 
+	width: 161px;
+	height: 123px;
+}
+
+.BackToTop
+{
+	font-size: 16pt;
+	background-color: darkgray;
+	margin: 0 5%;
+    width: 30%;
+    padding: 10px;
+}	
+	
+header
+{
+	width:100%;
+	float:left;
+	height: 150px;
+	border-radius: 10px 10px 0 0; 
+	/* border-radius: 20px 20px 0 0; */
+}
+	
+#Line
+{
+	align-content: center;
+	background-color: black;
+	margin: auto;
+	width: 0%;
+	height: 0;
+}
+
+nav
+{
+	width:100%;
+	min-height: 90px;
+	float:left;
+	margin-bottom: 10px;
+	z-index: 3;
+
+}
+		
+nav ul {
+	padding-left: 17%;
+}
+	
+nav li {
+	display: inline-block;
+	color: white;
+	margin: 6px 1% 10px 1%;
+	padding: 10px 3%;
+	float: left;
+}	
+	
+	
+.dropdown
+{
+	width: 100%;
+	height: 0;
+	background-color: black;
+	z-index: 3;
+}
+	
+.dropbtn {
+    background-color:#000000 ;
+    color: white;
+    padding: 0px;
+    font-size: 0px;
+    border: none;
+    cursor: pointer;
+	z-index: 3;
+}
+	
+.dropdown-content {
+	width: 0;
+	height: 0;
+}
+	
+/* Dropdown Button */
+.dropbtn {
+    background-color: black;
+    color: white;
+    font-size: 16px;
+	height: 0;
+    border: none;
+    cursor: pointer;
+	margin: auto;
+    width: 0;
+    padding: 0;
+	background-image: url(../images/ExpandOptions.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	z-index: 3;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+	height: 0px;
+    width: 0;
+	z-index: 3;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    width: 0px;
+	height: 0px;
+    z-index: 3;
+}
+
+iframe
+{
+	max-height: 600px;
+}
+	
+.column iframe
+{
+	height: 400px;
+	width: 70%;
+	margin-left: 0%;
+}	
+	
+section 
+{
+	width: 100%;
+	min-height: 250px;
+	float: left;
+
+}
+
+article
+{
+	width: 100%;
+	min-height: 100px;
+	float: left;
+}
+	
+article p 
+{
+	margin: auto;
+	padding: 20px;
+		
+}	
+
+aside 
+{
+	width: 100%;
+	min-height: 240px;
+	max-width: 50%;
+	float: left;
+	
+}
+
+footer
+{
+	
+	width: 100%;
+	height: 100px;
+	float: left;
+	border-radius: 0 0 10px 10px;
+	
+}
+	
+.onefourth {
+	width: 256px;
+	min-height: 100px;
+	float:left;
+	color: #FFFFFF;
+	
+	
+}	
+	
+	
+} /* End @media */
+
+/* End 640px tablet */
+
+@media only screen and (min-width: 960px)      						 /* Full Screen Mode */
+{
+	#wrapper
+{
+	width:100%;
+	max-width: 1024px;
+	margin: auto;
+	margin-top: 10px;
+}
+
+header
+{
+	width:100%;
+	float:left;
+	height: 145px;
+
+}
+
+nav
+{
+	width:100%;
+	position: relative;
+	float:left;
+	z-index: 3;
+
+}
+	
+	nav ul{
+		padding: 0 0 0 14%;
+	}
+	
+nav li {
+	display: inline-block;
+	color: white;
+	margin: 8px 1% 0 1%;
+	margin-bottom: 10px;
+	padding: 10px 5% 10px 5%;
+	float: left;
+	
+	/* -webkit-transition:.2s; */
+	/* transition:.2s; */
+}
+
+iframe
+{
+	max-height: 900px;	
+}
+	
+.column iframe
+{
+	width: 100%;
+	margin-left: 0;
+}	
+
+section 
+{
+	width: 100%;
+	min-height: 250px;
+	float: left;
+}
+
+article
+{
+	width: 100%;
+	min-height: 100px;
+	float: left;
+
+	
+}
+
+aside 
+{
+	width: 100%;
+	min-height: 240px;
+	float: left;
+	
+}
+
+footer
+{
+	
+	width: 100%;
+	height: 100px;
+	float: left;
+	
+}
+	
+footer p
+	{
+		left: 20%;
+	}
+	
+} /* End 960px tablet */
+
+/* Headers */
+h1
+{
+	font-size: 30px;
+}
+
+h2
+{
+	font-size: 26px;
+	padding-left: 0px;
+}
+
+h3
+{
+	font-size: 24px;
+}
+
+h4
+{
+	font-size: 22px;
+}
+
+h5
+{
+	font-size: 20px;
+}
+
+h6
+{
+	font-size: 18px;
+}
+
+/* Buttons */
+
+a.button
+{
+	background-color: beige;
+	padding: 15px 16px;
+	font-size: 15px;
+	color: blanchedalmond;
+	margin-left: 25px;
+	border-radius: 15px;
+	
+	
+}
+
+a.hover /* Mouseover */
+{
+	background-color: bisque;
+}
+
+a.active /* While clicked on */
+{
+	
+}
+
+a.link /* Default color */
+{
+	color: black;
+	
+}
+
+a.visited /* Clicked on */
+{
+	
+}
+
+@media only screen and (max-width:640px)  							/* Media Screen for phone at 640px */
+{
+	footer p
+	{
+		left: 0%;
+		transform: translateX(-20vw);
+	}
+	
+	iframe
+	{
+		left: 0;
+	}
+	
+	ul
+	{
+		padding-left: 0;
+		padding-right: 10px;
+	}
+	
+	h2
+	{
+		position: relative;
+		margin: 10px;
+		left: -20px;
+	}
+	
+	
+}

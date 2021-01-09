@@ -1,0 +1,127 @@
+body
+{
+   font-family: 'Noto Sans', sans-serif;   
+}
+
+h3
+{
+    margin: 30px auto;
+    text-align: center;
+}
+
+button
+{
+    position: relative;
+    bottom: -110%;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+#Board
+{
+    margin: 0 auto;
+    background-color: white;
+
+    position: absolute;
+    width: 100vw;
+    max-width: 500px;
+    height: 100vw;
+    max-height: 500px;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+	display: inline-block;
+    list-style-type: none;
+    text-align: center;
+    
+    animation-name: Expand02;
+    animation-direction: normal;
+    animation-duration: 0.45s;
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+}
+
+.box
+{
+    width: 33%;
+    height: 33%;
+    position:absolute;
+    top: 0;
+    left: 0;
+    transform: scale(1);
+    text-align: center;
+    line-height: 300%;
+    
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+    
+    
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color:beige;
+}
+
+.X
+{
+   background: url(../images/X.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: aliceblue;
+    
+    animation-name: Expander;
+    animation-direction: normal;
+    animation-duration: 0.25s;
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+}
+
+.O
+{
+    background: url(../images/O.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: antiquewhite;
+    
+    animation-name: Expander;
+    animation-direction: normal;
+    animation-duration: 0.25s;
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+}
+
+#Counter
+{
+    position: absolute;
+    z-index: -3;
+    opacity: 0;
+}
+
+.Auto
+{
+    filter: invert(100%);
+}
+
+-webkit-@keyframes Expander {
+    0% {background-size: 0% 0%; background-position: center;}
+    100% {background-size: 100% 100%; background-position: center;}
+}
+
+@keyframes Expander {
+    0% {background-size: 0% 0%; background-position: center;}
+    100% {background-size: 100% 100%; background-position: center;}
+}
+
+-webkit-@keyframes Expand02 {
+    0% {transform:translate(-50%, -50%) scale(0);}
+    100% {transform:translate(0%, 0%) scale(1, 1);}
+}
+
+@keyframes Expand02 {
+    0% {transform:translateX(-50%) scale(0);}
+    100% {transform: translateX(-50%) scale(1, 1);}
+}

@@ -1,0 +1,342 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* whole website styling */
+
+* {box-sizing: border-box;}
+
+html,body{
+	margin: 0;
+	padding: 0;
+}
+
+#submit-form
+{
+	position: relative;
+	/*transform: translateY(-70%);
+	left: 50%;
+	transform: translateX(-50%);*/
+	width: 100vw;
+	margin: 0 auto;
+	margin-top: -400px;
+	margin-bottom: 90px;	
+}
+
+.ScreenWideBlock
+{
+	position: relative;
+	top: 50px;
+	width: 110vw;
+	background-color: rgba(162,162,162,1.00);
+	padding-top: 20px;
+	padding-right: 10vw;
+	padding-bottom: 5px;
+	margin: 50px 10px 5px -10px;
+}
+
+.ScreenWideBlock h2
+{
+	width: 80%;
+}
+
+.ScreenWideBlock button
+{
+	max-width: 300px;
+}
+
+input
+{
+	max-width: 800px;
+}
+
+
+
+
+/** Contact **/
+
+button
+ input{
+	 font-family: 'Roboto Slab', serif;
+	display: block;
+	padding: 10px;
+	height:30px;
+	width: 80%;
+	 max-width: 360px;
+	margin: 10px auto 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#buttons
+{
+	float:right;
+    position:relative;
+    left:-85%;
+	bottom: -10px;
+    text-align:left;
+}
+
+
+
+#name
+{
+	margin-top: 30px;
+}
+
+
+input[type=text], [type=email], [type=password], textarea{
+	font-family: 'Roboto Slab', serif;
+  min-width: 200px; /* this width is your initial width - padding-left - padding-right; */
+	width: 80%;
+	max-width: 600px; /* Shouldn't ever actually reach this value, max should be 480px */
+height:30px;
+  padding:0 8px;
+  /*border-radius: 50px;*/
+  font-size: 18px;
+  display: block;
+	margin: 20px auto;
+	border-radius: 8px;
+	border: none;
+	
+	
+}
+
+textarea{
+	resize: vertical;
+	font-family: 'Roboto Slab', serif;
+	min-height: 200px;
+	width: 80%;
+	max-width: 600px; /* Shouldn't ever actually reach this value, max should be 480px */
+	margin: 10px auto 20px;
+	margin-left: auto;
+	margin-right: auto;
+  padding: 8px;
+  /*border-radius: 50px;*/
+  font-size: 18px;
+  display: block;
+	line-height: 20px;
+}
+
+@media (min-width: 700px)
+{
+	textarea
+	{
+		width: 90%;
+	}
+	
+}
+
+button
+{
+	font-family: 'Roboto Slab', serif;
+	border: none;
+	position: relative;
+	margin: 30px auto 0px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 40%;
+	max-width: 300px;
+	height: 80px;
+	border-radius: 10px;
+	cursor: pointer;
+	font-size: 100%;
+	
+	transition: 0.3s;
+	-o-transition: 0.3s;
+	-webkit-transition: 0.3s;
+	-mozilla-transition: 0.3s;
+}
+
+button:hover
+{
+	background-color:rgba(255,0,4,1.00);
+	color: white;
+}
+
+#SocialMediaBar
+{
+	width: 100%;
+	margin: 10px auto;
+}
+
+.SocialMediaIcon
+{
+	display:inline;
+	width: 50px;
+	height: 50px;
+	margin-left: 12.5%;
+	float: left;
+	border-radius: 50%;
+	background-color: rgba(172,13,13,1.00);
+}
+
+.Cancel
+{
+	position: relative;
+	top: 15px;
+	right: 10px;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	float: right;
+}
+
+.cancel01
+{
+	position: relative;
+	top: 15px;
+	left: 0px;
+
+	
+	width: 40px;
+	height: 10px;
+	background-color: white;
+	transform: rotate(45deg);
+	border-radius: 5px;
+	
+}
+
+.cancel02
+{
+	position: relative;
+	top: 5px;
+	left: 0px;
+	width: 40px;
+	height: 10px;
+	background-color: white;
+	transform: rotate(-45deg);
+	border-radius: 5px;
+}
+
+.contactme{
+	text-align: center;
+	text-transform: none;
+	margin-bottom: 14px;
+	font-weight: 600;
+}
+	
+.subtletext{
+	color: grey;
+	font-size: 10pt;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.CenterMe
+{
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	width: 300px;
+}
+
+form
+{
+	top: 50vh;
+	margin: 300px 0 800px 0;
+}
+
+fieldset
+{
+	position: relative;
+	width: 80%;
+	max-width: 600px;
+	margin: 80px auto 80px;
+	border-radius: 20px;
+	border: none;
+	background: rgba(162,162,162,1.00);
+	box-shadow: 10px 10px 20px 2px #000000;
+	
+	
+}
+
+h1{
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	text-transform: uppercase;
+}
+
+h4
+{
+	text-align: center;
+}
+
+@media (max-width: 500px) {
+	#submit-form{
+		/*top: 100vh;*/
+		top: -50px;
+		width: 100%;
+		margin: 0 auto;
+		
+	}
+	
+	fieldset
+	{
+		top: 0;
+		border-radius: 0;
+		width: 100%;
+		box-shadow: none;
+		
+	}
+	
+	#name
+	{
+		margin-top: 90px;
+	}
+	
+	.Cancel
+	{
+		bottom: 65px;
+	}
+}
+
+
+@media (max-width: 768px) {
+	.main-logo{
+		max-width: 75%;
+		margin-top: 8px;
+	}
+	
+	.content{
+		margin-top: -48px;
+	}
+	
+	.g-recaptcha{
+		transform: scale(.75);
+	}
+	
+	.about-img{
+		display: block;
+		float: none;
+		margin: auto;
+	}
+	
+	.about-img img{
+		max-width: 75%;
+	}
+	
+	.content-about{
+		margin-bottom: 0px;
+		margin-top: 4px;
+	}
+	
+	.about-p{
+		max-width: 75%;
+	}
+	
+	h1{
+		text-align: center;
+	}
+	
+	.map-content{
+		width: 300px;
+	}
+	
+	.map-content ul li{
+		width: 195px;
+	}
+	
+	.map-content ul li a{
+		width: 195px;
+	}
+	
+}
