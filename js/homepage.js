@@ -77,6 +77,7 @@ function scaleBoxText()
 	for(i = 0; i < boxWords.length; i++)
 	{
 		boxWords[i].style.fontSize = (boxWidth/8) + "pt";
+		boxWords[i].style.lineHeight = (boxWidth/1.35) + "pt";
 	}
 	
 } // End of function scaleBoxText
