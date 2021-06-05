@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
+	<meta name="description" content="Christopher Smith: Computer Scientist/Digital Artist ">
+    <meta name="keywords" content="Chris,Smith,code,computer, Computer, Science, art, NY, Graphic Design, Web Design">
+    <meta name="author" content="Christopher Smith">
+    
+    <!-- Title is visible in the tab -->
+    <title>Chris Smith</title>
+    
+    <style>
+            body {
+      font-size: 1.2em;
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.4;
+      color: black;
+      width: 100%;
+      margin: 0;
+
+      position: relative;
+      left: 0;
+
+    }
+
+    /* Used to contain css modules holding name */
+    #nameArea
+    {
+        position: relative;
+        background-color:none;
+
+        width: 475px;
+        height: 220px;
+        margin: 0 auto;
+        top: 48vh;
+        transform: translateY(-50%);
+
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+    }
+
+    /* No background, used to contain name shape divs */
+    .letterdiv
+    {
+        position: relative;
+        background-color: none;
+        width: 100px;
+        height: 100px;
+        margin: 5px;
+        overflow: hidden;
+    }
+
+    .fillingHousing
+    {
+        position: relative;  
+    }
+
+    .letterfilling
+    {
+        background-color: black;
+        width: 20%;
+        height: 20%;
+        opacity: 0%;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        animation-name: slideDown; 
+        animation-duration: 0.3s;
+        animation-timing-function: ease-in;
+        animation-delay: 0s;
+        animation-iteration-count: 1;
+        animation-direction: forwards;
+        animation-fill-mode: forwards;   
+    }
+
+    .letter-leftwall
+    {
+        height: 100%;
+    }
+
+    .letter-rightwall
+    {
+        left: 80%;
+        height: 100%;
+    }
+
+    .letter-hline
+    {
+        top: 40%;
+        width: 100%;
+    }
+
+    .letter-vline
+    {
+        left: 40%;
+        height: 100%;
+    }
+
+    .letter-topwall
+    {
+        width: 100%;
+    }
+
+    .letter-bottomwall
+    {
+        top: 80%;
+        width: 100%;
+    }
+
+    .letter-r-upper
+    {
+        left: 80%;
+        height: 60%;
+    }
+
+    .letter-r-lower
+    {
+        left: 60%;
+        top: 40%;
+        height: 80%;
+        transform: rotate(-45deg);
+    }
+
+    .letter-s-upper
+    {
+        height: 60%;
+    }
+
+    .letter-s-lower
+    {
+        top: 40%;
+        height: 60%;
+        left: 80%;
+    }
+
+    .letterIsBlack
+    {
+        background-color: black;
+        width: 20px;
+    }
+
+    .letterI
+    {
+        width: 20px;
+    }
+
+    .letterIfilling
+    {
+        width: 100%;
+        height: 100%;
+    }
+
+    .slideUp
+    {
+        animation-name: slideUp;
+    }
+
+    .slideRight
+    {
+        animation-name: slideRight;
+    }
+
+    .growDown
+    {
+        animation-name: growDown;
+        top: 10%;
+    }
+
+    .delay01
+    {
+        animation-delay: 0.4s;
+        animation-timing-function: linear;
+    }
+
+    .delay02
+    {
+        animation-delay: 0.7s;
+        animation-timing-function: linear;
+    }
+
+    .delay025
+    {
+        animation-delay: 0.85s;
+        animation-timing-function: linear;
+    }
+
+    .delay03
+    {
+        animation-delay: 1.0s;
+        animation-timing-function: linear;
+    }
+
+    .delay035
+    {
+        animation-delay: 1.15s;
+        animation-timing-function: linear;
+    }
+
+    .delay04
+    {
+        animation-delay: 1.3s;
+        animation-timing-function: linear;
+    }
+
+    .delay05
+    {
+        animation-delay: 1.6s;
+        animation-timing-function: linear;
+    }
+
+    .delay06
+    {
+        animation-delay: 1.9s;
+        animation-timing-function: linear;
+    }
+
+    .delay07
+    {
+        animation-delay: 2.2s;
+        animation-timing-function: linear;
+    }
+
+    /* End of divs reserved for letters in name area */
+
+    /* Animations for letters and css within */
+    @-webkit-keyframes slideDown {
+        0%   {opacity: 0; transform: translateY(-100%);}
+        1%   {opacity: 1; transform: translateY(-100%);}
+        100% {opacity: 1; transform: translateY(0%);}
+    }
+
+    /* Standard syntax */
+    @keyframes slideDown {
+       0%   {opacity: 0; transform: translateY(-100%);}
+        1%   {opacity: 1; transform: translateY(-100%);}
+        100% {opacity: 1; transform: translateY(0%);}
+    }
+
+    @-webkit-keyframes slideUp {
+       0%   {opacity: 0; transform: translateY(100%);}
+        1%   {opacity: 1; transform: translateY(100%);}
+        100% {opacity: 1; transform: translateY(0%);}
+    }
+
+    @keyframes slideUp {
+       0%   {opacity: 0; transform: translateY(200%);}
+        1%   {opacity: 1; transform: translateY(200%);}
+        100% {opacity: 1; transform: translateY(0%);}
+    }
+
+    @-webkit-keyframes slideRight {
+       0%   {opacity: 0; transform: translateX(-100%);}
+        1%   {opacity: 1; transform: translateX(-100%);}
+        100% {opacity: 1; transform: translateX(0%);}
+    }
+
+    @keyframes slideRight {
+       0%   {opacity: 0; transform: translateX(-100%);}
+        1%   {opacity: 1; transform: translateX(-100%);}
+        100% {opacity: 1; transform: translateX(0%);}
+    }
+
+    @-webkit-keyframes growDown {
+       0%   {opacity: 0; transform: scaleY(0%) translateY(100%);}
+        1%   {opacity: 1; transform: scaleY(0%) translateY(100%);}
+        100% {opacity: 1; transform: scaleY(100%) translateY(100%);}
+    }
+
+    @keyframes growDown {
+       0%   {opacity: 0; transform: scaleY(0%) translateY(50%);}
+        1%   {opacity: 1; transform: scaleY(0%) translateY(50%);}
+        100% {opacity: 1; transform: scaleY(100%) translateY(50%);}
+    }
+    /* End of animations */
+
+    </style>
+    
+</head>
+
+<body> 
+	
+    <div id="nameArea">
+        <div class="fillingHousing">
+            <div class="letterdiv">
+                <div class="letterfilling letter-leftwall"></div>
+                <div class="letterfilling letter-topwall slideRight"></div>
+                <div class="letterfilling letter-bottomwall slideRight delay01"></div>
+            </div>
+        </div>
+        <div class="letterdiv">
+            <div class="letterfilling letter-leftwall delay01"></div>
+            <div class="letterfilling letter-hline slideRight delay02"></div>
+            <div class="letterfilling letter-rightwall delay03"></div>
+        </div>
+        <div class="letterdiv">
+            <div class="letterfilling letter-leftwall delay03"></div>
+            <div class="letterfilling letter-topwall slideRight delay03"></div>
+            <div class="letterfilling letter-hline slideRight delay04"></div>
+            <div class="letterfilling letter-r-upper delay04"></div>
+            <div class="letterfilling letter-r-lower growDown delay05"></div>
+        </div>
+        <div class="letterdiv letterI">
+            <div class="letterfilling letterIfilling delay04"></div>
+        </div>
+        <div class="letterdiv">
+            <div class="letterfilling letter-topwall slideRight delay04"></div>
+            <div class="letterfilling letter-s-upper delay04"></div>
+            <div class="letterfilling letter-hline slideRight delay05"></div>
+            <div class="letterfilling letter-s-lower growDown delay06"></div>
+            <div class="letterfilling letter-bottomwall slideRight delay05"></div>          
+        </div>
+        
+        <!-- Last name begins here -->
+        
+        <div class="letterdiv">
+            <div class="letterfilling letter-topwall slideRight delay01"></div>
+            <div class="letterfilling letter-s-upper delay01"></div>
+            <div class="letterfilling letter-hline slideRight delay02"></div>
+            <div class="letterfilling letter-s-lower growDown delay03"></div>
+            <div class="letterfilling letter-bottomwall slideRight delay02"></div>
+        </div>
+        <div class="letterdiv">
+            <div class="letterfilling letter-leftwall delay02"></div>
+            <div class="letterfilling letter-topwall slideRight delay02"></div>
+            <div class="letterfilling letter-vline delay025"></div>
+            <div class="letterfilling letter-rightwall delay03"></div>
+        </div>
+        <div class="letterdiv letterI">
+            <div class="letterfilling letterIfilling delay03"></div>
+        </div>
+        <div class="letterdiv">
+            <div class="letterfilling letter-topwall slideRight delay03"></div>
+            <div class="letterfilling letter-vline delay035"></div> 
+        </div>
+        <div class="letterdiv">
+        <div class="letterfilling letter-leftwall delay04"></div>
+            <div class="letterfilling letter-hline slideRight delay05"></div>
+            <div class="letterfilling letter-rightwall delay06"></div></div>
+     
+    </div>
+	
+</body>
