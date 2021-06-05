@@ -52,12 +52,19 @@ body {
     background-color: black;
     width: 20%;
     height: 20%;
-    opacity: 100%;
+    opacity: 0%;
     
     position: absolute;
     top: 0;
     left: 0;
     
+    animation-name: slideDown; 
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+	animation-direction: forwards;
+	animation-fill-mode: forwards;   
 }
 
 .letter-leftwall
@@ -126,5 +133,104 @@ body {
     width: 20px;
 }
 
+.letterI
+{
+    width: 20px;
+}
+
+.letterIfilling
+{
+    width: 100%;
+    height: 100%;
+}
+
+.slideUp
+{
+    animation-name: slideUp;
+}
+
+.slideRight
+{
+    animation-name: slideRight;
+}
+
+.growDown
+{
+    animation-name: growDown;
+    top: 10%;
+}
+
+.delay01
+{
+    animation-delay: 0.5s;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+}
+
+.delay02
+{
+    animation-delay: 0.8s;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+}
+
+.delay03
+{
+    animation-delay: 1.1s;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+}
+
 /* End of divs reserved for letters in name area */
+
+/* Animations for letters and css within */
+@-webkit-keyframes slideDown {
+    0%   {opacity: 0; transform: translateY(-100%);}
+	1%   {opacity: 1; transform: translateY(-100%);}
+    100% {opacity: 1; transform: translateY(0%);}
+}
+
+/* Standard syntax */
+@keyframes slideDown {
+   0%   {opacity: 0; transform: translateY(-100%);}
+	1%   {opacity: 1; transform: translateY(-100%);}
+    100% {opacity: 1; transform: translateY(0%);}
+}
+
+@-webkit-keyframes slideUp {
+   0%   {opacity: 0; transform: translateY(100%);}
+	1%   {opacity: 1; transform: translateY(100%);}
+    100% {opacity: 1; transform: translateY(0%);}
+}
+
+@keyframes slideUp {
+   0%   {opacity: 0; transform: translateY(200%);}
+	1%   {opacity: 1; transform: translateY(200%);}
+    100% {opacity: 1; transform: translateY(0%);}
+}
+
+@-webkit-keyframes slideRight {
+   0%   {opacity: 0; transform: translateX(-100%);}
+	1%   {opacity: 1; transform: translateX(-100%);}
+    100% {opacity: 1; transform: translateX(0%);}
+}
+
+@keyframes slideRight {
+   0%   {opacity: 0; transform: translateX(-100%);}
+	1%   {opacity: 1; transform: translateX(-100%);}
+    100% {opacity: 1; transform: translateX(0%);}
+}
+
+@-webkit-keyframes growDown {
+   0%   {opacity: 0; transform: scaleY(0%) translateY(100%);}
+	1%   {opacity: 1; transform: scaleY(0%) translateY(100%);}
+    100% {opacity: 1; transform: scaleY(100%) translateY(100%);}
+}
+
+@keyframes growDown {
+   0%   {opacity: 0; transform: scaleY(0%) translateY(50%);}
+	1%   {opacity: 1; transform: scaleY(0%) translateY(50%);}
+    100% {opacity: 1; transform: scaleY(100%) translateY(50%);}
+}
+/* End of animations */
 
