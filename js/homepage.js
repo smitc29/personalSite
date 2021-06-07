@@ -1,7 +1,6 @@
 /* Author: Christopher Smith */
 /* eslint-disable no-console */ //Enables console output
 
-
 $(document).ready(function() {
     //scaleBoxText();
 });
@@ -69,15 +68,15 @@ $(window).resize(function() {
 function scaleBoxText()
 {
 	// EDIT THIS for mobile site!!! It needs to be completely different for mobile users
-	var boxWidth = parseInt(document.getElementById("box01").clientWidth);
+	var boxWidth = parseInt(document.getElementById("nameArea").clientWidth);
 	var boxWords = document.getElementsByClassName("boxword");
 	
 	// Loop through and change every instance of boxWord font size to fit box best
 	var i = 0;
 	for(i = 0; i < boxWords.length; i++)
 	{
-		boxWords[i].style.fontSize = (boxWidth/8) + "pt";
-		boxWords[i].style.lineHeight = (boxWidth/1.35) + "pt";
+		boxWords[i].style.fontSize = (boxWidth * 0.06) + "pt";
+		//boxWords[i].style.lineHeight = (boxWidth/1.35) + "pt";
 	}
 	
 } // End of function scaleBoxText
