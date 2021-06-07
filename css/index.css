@@ -9,7 +9,6 @@ body {
   font-size: 1.2em;
   font-family: 'Roboto', sans-serif;
   line-height: 1.4;
-  color: black;
     
   position: relative;
   left: 0;
@@ -90,11 +89,12 @@ body {
     line-height: 220%;
 }
 
-nav a:hover
+#nameArea a:hover
 {
+    color: white;
     border-radius: 40px;
     background-color: #6BBEDB;
-    transition: 0.3s;
+    transition: 0.3s; 
 }
 
 /* No background, used to contain name shape divs */
@@ -164,7 +164,7 @@ nav a:hover
     {
         margin: 10px;
         padding: 0px 15px;
-        border-radius: 50px;%
+        border-radius: 50px;
     }
 }
 
@@ -195,5 +195,20 @@ nav a:hover
         width: 80%;
         left: 50%;
         transform: translateX(-50%);
+        top: 102%;
+    }
+    
+    #nameArea a
+    {
+        font-size: 4vw;
+    }
+}
+
+/* Mobile device that is portrait mode and tall enough to fit full nav */
+@media only screen and (max-width:500px) and (min-height:500px)
+{
+    #nameArea a
+    {
+        width: 80%;
     }
 }
