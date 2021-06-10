@@ -15,7 +15,7 @@ html, body {
   min-height: 100vh;
   margin: 0px;
   padding: 0px;
-  overflow-x: hidden;
+  
 }
 
 p
@@ -70,7 +70,7 @@ h3
     font-size: 30pt;
 }
 
-#nameArea nav
+#nameArea nav, #mobileNav nav
 {
     width: 100%;
     min-height: 60px;
@@ -99,7 +99,7 @@ h3
     line-height: 220%;
 }
 
-#nameArea a:hover
+#nameArea a:hover, #mobileNav a:hover
 {
     color: white;
     border-radius: 40px;
@@ -119,12 +119,58 @@ h3
 }
 /* End of name/title area */
 
+/* For sticky nav menu that follows user */
+#mobileNav
+{
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    
+    background: black;
+    display: flex;
+    align-content: center;
+}
+
+#mobileNav nav
+{
+    top: 20px;  
+}
+
+#mobileNav a
+{
+    color: white;
+    font-size: 18pt;
+    text-decoration-style: none;
+    text-decoration: none;
+    
+    padding: 0px 4%;
+    
+    background-color: none;
+    transition: 0.3s;
+    
+    border-radius: 40px;
+    margin: 4px 10px;
+    line-height: 220%;
+}
+
+#navShield
+{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 /* Generic code for various sections */
 main
 {
     width: 100%;
     min-height: 50px;
-    background-color: aquamarine;
+    background-color: dodgerblue;
     
     position: absolute;
     top: 100vh;
@@ -140,14 +186,14 @@ main
     position: relative;
     top: 0px;
     
-    background-color: dodgerblue;
+    background-color: white;
 }
 
 .blurb .buffer
 {
     width: 100%;
     background-color: none;
-    height: 50px;
+    height: 90px;
 }
 
 .blurb p
@@ -204,6 +250,25 @@ main
         top: 38vh;
     }
     
+    #mobileNav nav
+    {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        background-color: black;
+        
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    #mobileNav a
+    {
+        width: 30%;
+        margin: 2vh auto;
+        font-size: 22pt;
+    }
+    
 }
 /* End of 1000px tablet screen */
 
@@ -240,7 +305,20 @@ main
     
     .blurb .buffer
     {
-        min-height: 10px;
+        min-height: 50px;
+    }
+    
+    #Contact .buffer:nth-child(3)
+    {
+        min-height: 0vh;
+        height: 0vh;
+    }
+    
+    #mobileNav a
+    {
+        width: 80%;
+        margin: 1vh auto;
+        font-size: 18pt;
     }
 }
 
@@ -289,9 +367,24 @@ main
     .blurb .buffer
     {
         min-height: 0px;
-        height: 10px;
+        height: 50px;
         margin: 0 auto;
     }
+    
+    #Contact .buffer:nth-child(3)
+    {
+        min-height: 0vh;
+        height: 0vh;
+    }
+    
+    #mobileNav a
+    {
+        height: 15%;
+        line-height: 7vw;
+        margin: 1vh auto;
+        font-size: 18pt;
+    }
+    
 }
 
 /* Mobile device that is portrait mode and tall enough to fit full nav */
@@ -312,7 +405,7 @@ main
     .blurb .buffer
     {
         min-height: 0px;
-        height: 10px;
+        height: 50px;
         margin: 0 auto;
     }
 }
