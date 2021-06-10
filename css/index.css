@@ -1,11 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
-body {
+
+html, body {
+  scroll-behavior: smooth;
   background: white;
-}
-
-/* This bit is just to look pretty. Not relevant to the implementation */
-
-body {
   font-size: 1.2em;
   font-family: 'Roboto', sans-serif;
   line-height: 1.4;
@@ -15,10 +12,23 @@ body {
     
   width: 100%;
   height: 100%;
+  min-height: 100vh;
   margin: 0px;
   padding: 0px;
   overflow-x: hidden;
-    
+}
+
+p
+{
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+}
+
+h3
+{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin: 0 auto;
 }
 
 /* Used to contain css modules holding name */
@@ -107,8 +117,63 @@ body {
     margin: 5px;
     overflow: hidden;
 }
+/* End of name/title area */
 
+/* Generic code for various sections */
+main
+{
+    width: 100%;
+    min-height: 50px;
+    background-color: aquamarine;
+    
+    position: absolute;
+    top: 100vh;
+}
 
+.blurb
+{
+    width: 100%;
+    max-width: 1000px;
+    min-height: 100px;
+    
+    margin: 10px auto 20px;
+    position: relative;
+    top: 0px;
+    
+    background-color: dodgerblue;
+}
+
+.blurb .buffer
+{
+    width: 100%;
+    background-color: none;
+    height: 50px;
+}
+
+.blurb p
+{
+    text-align: left;
+    padding: 2%;
+}
+
+/* About section comes before anything else, needs extra priority */
+#About
+{
+    
+}
+
+#Contact
+{
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+#Contact .buffer:nth-child(3)
+{
+    min-height: 50vh;
+    height: 50vh;
+}
 
 /* Animations for letters and css within */
 @-webkit-keyframes slideDown {
@@ -166,6 +231,17 @@ body {
         padding: 0px 15px;
         border-radius: 50px;
     }
+    
+    .blurb p
+    {
+        font-size: 14pt;
+        padding: 20px 15px;
+    }
+    
+    .blurb .buffer
+    {
+        min-height: 10px;
+    }
 }
 
 /* Mobile 500px screen width here  */
@@ -202,6 +278,20 @@ body {
     {
         font-size: 4vw;
     }
+    
+    .blurb p
+    {
+        font-size: 14pt;
+        padding: 10px 15px;
+        margin: 0 auto;
+    }
+    
+    .blurb .buffer
+    {
+        min-height: 0px;
+        height: 10px;
+        margin: 0 auto;
+    }
 }
 
 /* Mobile device that is portrait mode and tall enough to fit full nav */
@@ -210,5 +300,19 @@ body {
     #nameArea a
     {
         width: 80%;
+    }
+    
+    .blurb p
+    {
+        font-size: 14pt;
+        padding: 10px 15px;
+        margin: 0 auto;
+    }
+    
+    .blurb .buffer
+    {
+        min-height: 0px;
+        height: 10px;
+        margin: 0 auto;
     }
 }
