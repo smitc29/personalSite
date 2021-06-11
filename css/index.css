@@ -267,7 +267,9 @@ main
 #Contact
 {
     display: flex;
+    justify-content:center;
     align-content: center;
+    flex-direction: column;
     flex-wrap: wrap;
 }
 
@@ -275,6 +277,76 @@ main
 {
     min-height: 50vh;
     height: 50vh;
+}
+
+.contactbubble
+{
+    position: relative;
+    top: 20vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#Contact .buffer
+{
+    min-height: 10vh;
+    height: 10vh;
+}
+
+#Contact a
+{
+    display: block;
+    text-align: center;
+    position: relative;
+    color: darkred;
+    transition: 0.3s;
+    font-size: 50pt;
+    
+    border-radius: 100px;    
+    width: 90px;
+    height: 90px;
+    padding: 10px;
+    margin: 1vh 2%;
+    
+    text-decoration: none;
+}
+
+#Contact a:hover
+{
+    color: white;
+    background-color: darkred;
+}
+
+#Contact a:nth-child(3n+2)
+{
+    color:forestgreen;
+}
+
+#Contact a:nth-child(3n+2):hover
+{
+    color: white;
+    background-color:forestgreen;
+}
+
+#Contact a:nth-child(3n)
+{
+    color:dodgerblue;
+}
+
+#Contact a:nth-child(3n):hover
+{
+    color:white;
+    background-color: dodgerblue;
+}
+
+#Contact a i
+{
+    position: relative;
+    top: 0%;
+    left: 0%;
+    margin: 0 auto;
 }
 
 /* Animations for letters and css within */
@@ -338,6 +410,16 @@ main
     #hamburger
     {
         display: block;
+    }
+    
+    #Contact a
+    {
+        margin: 1vh 5%;
+    }
+    
+    .contactbubble
+    {
+        top: 0;
     }
 }
 /* End of 1000px tablet screen */
