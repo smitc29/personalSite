@@ -70,7 +70,7 @@ h3
     font-size: 30pt;
 }
 
-#nameArea nav, #mobileNav nav
+#nameArea nav, #navbar nav
 {
     width: 100%;
     min-height: 60px;
@@ -99,7 +99,7 @@ h3
     line-height: 220%;
 }
 
-#nameArea a:hover, #mobileNav a:hover
+#nameArea a:hover, #navbar a:hover
 {
     color: white;
     border-radius: 40px;
@@ -120,7 +120,7 @@ h3
 /* End of name/title area */
 
 /* For sticky nav menu that follows user */
-#mobileNav
+#navbar
 {
     position: fixed;
     width: 100%;
@@ -132,12 +132,12 @@ h3
     align-content: center;
 }
 
-#mobileNav nav
+#navbar nav
 {
     top: 20px;  
 }
 
-#mobileNav a
+#navbar a
 {
     color: white;
     font-size: 18pt;
@@ -154,16 +154,76 @@ h3
     line-height: 220%;
 }
 
-#navShield
+#hamburger
 {
-    width: 100%;
-    height: 100vh;
-    background-color: white;
+    width: 15vw;
+    height: 15vw;
+    min-width: 75px;
+    min-height: 75px;
+    max-width: 130px;
+    max-height: 130px;
     
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 0px;
+    left: 0px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: none;
 }
+
+.ham
+{
+    width: 70%;
+    height: 15%;
+    background: black;
+    
+    position: absolute;
+    top: 17%;
+    left: 16%; 
+}
+
+.ham:nth-child(2)
+{
+    top: 41%;
+}
+
+.ham:nth-child(3)
+{
+    top: 65%;
+}
+
+.hamhock
+{
+    position: absolute;
+    top: 16%;
+    left: 17%;
+    height: 70%;
+    width: 70%;
+    background-color: white;
+    display: none;
+}
+
+.hamcore
+{
+    position: absolute;
+    height: 45%;
+    width: 45%;
+    top: 29%;
+    left: 29%;
+    background-color: black;
+    display: none;
+}
+
+.hidden
+{
+    opacity: 0;
+}
+
+#mobilenav
+{
+    opacity: 1;
+}
+
 
 /* Generic code for various sections */
 main
@@ -203,10 +263,6 @@ main
 }
 
 /* About section comes before anything else, needs extra priority */
-#About
-{
-    
-}
 
 #Contact
 {
@@ -250,7 +306,17 @@ main
         top: 38vh;
     }
     
-    #mobileNav nav
+    #navbar
+    {
+        background: none;
+    }
+    
+    #navbar #desknav
+    {
+        display: none;
+    }
+    
+    #navbar #mobilenav
     {
         position: fixed;
         width: 100%;
@@ -262,13 +328,17 @@ main
         text-align: center;
     }
     
-    #mobileNav a
+    #navbar a
     {
         width: 30%;
         margin: 2vh auto;
         font-size: 22pt;
     }
     
+    #hamburger
+    {
+        display: block;
+    }
 }
 /* End of 1000px tablet screen */
 
@@ -305,7 +375,7 @@ main
     
     .blurb .buffer
     {
-        min-height: 50px;
+        min-height: 100px;
     }
     
     #Contact .buffer:nth-child(3)
@@ -314,7 +384,7 @@ main
         height: 0vh;
     }
     
-    #mobileNav a
+    #navbar a
     {
         width: 80%;
         margin: 1vh auto;
@@ -367,7 +437,7 @@ main
     .blurb .buffer
     {
         min-height: 0px;
-        height: 50px;
+        height: 100px;
         margin: 0 auto;
     }
     
@@ -377,7 +447,7 @@ main
         height: 0vh;
     }
     
-    #mobileNav a
+    #navbar a
     {
         height: 15%;
         line-height: 7vw;
@@ -405,7 +475,7 @@ main
     .blurb .buffer
     {
         min-height: 0px;
-        height: 50px;
+        height: 90px;
         margin: 0 auto;
     }
 }
