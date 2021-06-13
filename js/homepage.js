@@ -29,3 +29,9 @@ function toggleNavMenu()
     $(".hamcore").fadeToggle();
     return false;
 }
+
+/* Ensures images don't appear until fully loaded */
+function LoadImages() {
+    
+
+}

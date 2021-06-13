@@ -31,6 +31,13 @@ h3
     margin: 0 auto;
 }
 
+a
+{
+    text-decoration: none;
+    color: dodgerblue;
+    font-weight: 400;
+}
+
 /* Used to contain css modules holding name */
 #nameArea
 {
@@ -97,6 +104,25 @@ h3
     border-radius: 40px;
     margin: 4px 10px;
     line-height: 220%;
+
+    opacity: 0;
+    animation-name: slideDown; 
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+	animation-direction: forwards;
+	animation-fill-mode: forwards;   
+}
+
+#nameArea a:nth-child(2)
+{
+    animation-delay: 0.1s;
+}
+
+#nameArea a:nth-child(3)
+{
+    animation-delay: 0.2s;
 }
 
 #nameArea a:hover, #navbar a:hover
@@ -259,10 +285,51 @@ main
 .blurb p
 {
     text-align: left;
-    padding: 2%;
+    padding: 2% 4%;
 }
 
 /* About section comes before anything else, needs extra priority */
+
+.projectBox
+{
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+    vertical-align: middle;
+    
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: lightgray;
+
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px gray, 0px 0px 10px gray;
+}
+
+.projectDetail
+{
+    width: 70%;
+}
+
+.projectDetail p
+{
+    margin-top: 0px;
+    padding: 2% 4%;
+}
+
+#project01
+{
+    background-image: url("../images/match3.jpg");
+}
+
+#project02
+{
+    background-image: url("../images/checkers.jpg");
+}
+
+#project03
+{
+    background-image: url("../images/benBisognoProfile.jpg");
+}
 
 #Contact
 {
@@ -279,14 +346,25 @@ main
     height: 50vh;
 }
 
-.contactbubble
+.infobubble
 {
     position: relative;
-    top: 20vh;
+    top: 6vh;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 25px;
+}
+
+.infobubble:nth-child(2n+1)
+{
+    flex-direction: row-reverse;
+}
+
+#Contact .infobubble
+{
+    top: 20vh;
 }
 
 #Contact .buffer
@@ -352,14 +430,14 @@ main
 /* Animations for letters and css within */
 @-webkit-keyframes slideDown {
     0%   {opacity: 0; transform: translateY(-100%);}
-	1%   {opacity: 1; transform: translateY(-100%);}
+	1%   {opacity: 0; transform: translateY(-100%);}
     100% {opacity: 1; transform: translateY(0%);}
 }
 
 /* Standard syntax */
 @keyframes slideDown {
    0%   {opacity: 0; transform: translateY(-100%);}
-	1%   {opacity: 1; transform: translateY(-100%);}
+	1%   {opacity: 0; transform: translateY(-100%);}
     100% {opacity: 1; transform: translateY(0%);}
 }
 
@@ -417,9 +495,19 @@ main
         margin: 1vh 5%;
     }
     
-    .contactbubble
+    .infobubble
     {
         top: 0;
+    }
+    
+    .projectBox
+    {
+        margin: 0 auto;
+    }
+    
+    .projectDetail
+    {
+        width: 100vw;
     }
 }
 /* End of 1000px tablet screen */
@@ -452,7 +540,7 @@ main
     .blurb p
     {
         font-size: 14pt;
-        padding: 20px 15px;
+        padding: 5px 15px;
     }
     
     .blurb .buffer
@@ -472,6 +560,24 @@ main
         margin: 1vh auto;
         font-size: 18pt;
     }
+    
+    .infobubble:nth-child(2n+1)
+    {
+        flex-direction: row;
+    }
+    
+    .projectBox
+    {
+        width: 75vw;
+        height: 75vw;
+    }
+    
+    .projectDetail
+    {
+        width: 80vw;
+        min-height: 40px;
+    }
+    
 }
 
 /* Mobile 500px screen width here  */
