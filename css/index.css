@@ -107,7 +107,7 @@ a
 
     opacity: 0;
     animation-name: slideDown; 
-    animation-duration: 0.3s;
+    animation-duration: 0.5s;
     animation-timing-function: ease-in;
     animation-delay: 0s;
     animation-iteration-count: 1;
@@ -256,7 +256,7 @@ main
 {
     width: 100%;
     min-height: 50px;
-    background-color: dodgerblue;
+    background-color: white; /* Make dodgerblue to stand out! */
     
     position: absolute;
     top: 100vh;
@@ -331,6 +331,11 @@ main
     background-image: url("../images/benBisognoProfile.jpg");
 }
 
+#project01bubble
+{
+    margin-top: -8vh;
+}
+
 #Contact
 {
     display: flex;
@@ -362,15 +367,79 @@ main
     flex-direction: row-reverse;
 }
 
+#Background h5
+{
+    
+    padding: 0px 4%;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 18pt;
+    line-height: 20pt;
+    font-family: 'Roboto Slab', serif;
+    color:darkslategray;
+}
+
+#Background a
+{
+    font-weight: 600;
+}
+
+#Background h5:nth-child(1)
+{
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 60px;
+    font-size: 18pt;
+    line-height: 22pt;
+    color: black;
+}
+
+
+#Background .projectBox
+{
+    border-radius: 400px;
+}
+
+#Background .infobubble:nth-child(2n+1)
+{
+    flex-direction: row;
+}
+
+#Background .projectBox
+{
+    background-color: white;
+}
+
+#school01
+{
+    background-image: url("../images/Logo-georgiaTech.jpg");
+}
+
+#school02
+{
+    background-image: url("../images/Logo-comptia.png");
+    background-position: -1px 1px;
+}
+
+#school03
+{
+    background-image: url("../images/Logo-suny.jpg");
+}
+
+#school04
+{
+    background-image: url("../images/Logo-brewster.png");
+    background-position: 0px 9px;
+}
+
 #Contact .infobubble
 {
-    top: 20vh;
+    top: 25vh;
 }
 
 #Contact .buffer
 {
     min-height: 10vh;
-    height: 10vh;
+    height: 14vh;
 }
 
 #Contact a
@@ -429,15 +498,17 @@ main
 
 /* Animations for letters and css within */
 @-webkit-keyframes slideDown {
-    0%   {opacity: 0; transform: translateY(-100%);}
-	1%   {opacity: 0; transform: translateY(-100%);}
+    0%   {opacity: 0; transform: translateY(-50%);}
+	1%   {opacity: 0; transform: translateY(-50%);}
+    45%  {opacity: 0;}
     100% {opacity: 1; transform: translateY(0%);}
 }
 
 /* Standard syntax */
 @keyframes slideDown {
-   0%   {opacity: 0; transform: translateY(-100%);}
-	1%   {opacity: 0; transform: translateY(-100%);}
+   0%   {opacity: 0; transform: translateY(-50%);}
+	1%   {opacity: 0; transform: translateY(-50%);}
+    45%  {opacity: 0;}
     100% {opacity: 1; transform: translateY(0%);}
 }
 
@@ -509,6 +580,11 @@ main
     {
         width: 100vw;
     }
+    
+        #project01bubble
+    {
+        margin-top: 1vh;
+    }
 }
 /* End of 1000px tablet screen */
 
@@ -572,10 +648,19 @@ main
         height: 75vw;
     }
     
-    .projectDetail
+    #Projects .projectDetail
     {
-        width: 80vw;
-        min-height: 40px;
+        display: none;
+    }
+    
+    #Projects p:nth-child(2)
+    {
+        margin-bottom: 30px;
+    }
+    
+    #Contact .infobubble
+    {
+        top: 0;
     }
     
 }
