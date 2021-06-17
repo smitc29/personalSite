@@ -125,14 +125,6 @@ a
     animation-delay: 0.2s;
 }
 
-#nameArea a:hover, #navbar a:hover
-{
-    color: white;
-    border-radius: 40px;
-    background-color: #6BBEDB;
-    transition: 0.3s; 
-}
-
 /* No background, used to contain name shape divs */
 .name
 {
@@ -485,7 +477,33 @@ main
     font-size: 20pt;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
+    transition: 0.3s;
+    
+    cursor: pointer;
+}
 
+@media (hover: hover) and (pointer: fine) {
+    #nameArea a:hover, #navbar a:hover
+    {
+        color: white;
+        border-radius: 40px;
+        background-color: #6BBEDB;
+        transition: 0.3s; 
+    }
+    
+  #Background button:hover
+    {
+        transition: 0.3s;
+        background-color: dodgerblue;
+        color: white;
+    }
+}
+
+
+.selected
+{
+    color: white;
+    background-color: darkblue;
 }
 
 #Contact .infobubble

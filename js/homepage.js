@@ -22,6 +22,8 @@ $(document).ready(function() {
     loadImages('work01img', './images/Logo-collins.jpg');
     loadImages('work02img', './images/Logo-Qualitest.png');
     loadImages('work03img', './images/Logo-iDTech.png');
+    loadImages('work04img', './images/Logo-fitzelle.jpg');
+    loadImages('work05img', './images/Logo-DragonLair.png');
     
 });
 
