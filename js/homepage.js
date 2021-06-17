@@ -1,9 +1,23 @@
 /* Author: Christopher Smith */
 /* eslint-disable no-console */ //Enables console output
 
+/* Runs on page load to ensure things are presented properly */
 $(document).ready(function() {
     //scaleBoxText();
     console.log(document.getElementById("hamburger"));
+    
+    // Set Project pictures
+    loadImages('proj01img', './images/match3.jpg');
+    loadImages('proj02img', './images/checkers.jpg');
+    loadImages('proj03img', './images/benBisognoProfile.jpg');
+    
+    
+    // Set Education pictures
+    loadImages('school01img', './images/Logo-georgiaTech.jpg');
+    loadImages('school02img', './images/Logo-comptia.png');
+    loadImages('school03img', './images/Logo-suny.jpg');
+    loadImages('school04img', './images/Logo-brewster.png');
+    
 });
 
 /* Toggles X icon and mobile nav menu on click  */
@@ -31,7 +45,15 @@ function toggleNavMenu()
 }
 
 /* Ensures images don't appear until fully loaded */
-function LoadImages() {
+function loadImages(myID, myURL) {
     
+    var img = new Image();
+    var imgUrl = myURL;
+    img.onload = function(){
+        // this gets run once the image has finished downloading
+        document.getElementById(myID).src = imgUrl;
+    }
+    img.src = imgUrl; // this causes the image to get downloaded in the background
+    console.log(img);
 
 }

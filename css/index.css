@@ -156,6 +156,14 @@ a
     background: black;
     display: flex;
     align-content: center;
+    
+    animation-name: FadeIn; 
+    animation-duration: 0.75s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+	animation-direction: forwards;
+	animation-fill-mode: forwards;
 }
 
 #navbar nav
@@ -303,6 +311,14 @@ main
 
     border-radius: 20px;
     box-shadow: 3px 3px 10px gray, 0px 0px 10px gray;
+    
+    overflow: hidden;
+}
+
+.projectBox img
+{
+    width: 100%;
+    height: 100%;
 }
 
 .projectDetail
@@ -314,21 +330,6 @@ main
 {
     margin-top: 0px;
     padding: 2% 4%;
-}
-
-#project01
-{
-    background-image: url("../images/match3.jpg");
-}
-
-#project02
-{
-    background-image: url("../images/checkers.jpg");
-}
-
-#project03
-{
-    background-image: url("../images/benBisognoProfile.jpg");
 }
 
 #project01bubble
@@ -409,26 +410,16 @@ main
     background-color: white;
 }
 
-#school01
+#school02 img
 {
-    background-image: url("../images/Logo-georgiaTech.jpg");
+    position: relative;
+    left: -1px;
 }
 
-#school02
+#school04 img
 {
-    background-image: url("../images/Logo-comptia.png");
-    background-position: -1px 1px;
-}
-
-#school03
-{
-    background-image: url("../images/Logo-suny.jpg");
-}
-
-#school04
-{
-    background-image: url("../images/Logo-brewster.png");
-    background-position: 0px 9px;
+    position: relative;
+    top: 9px;
 }
 
 #Contact .infobubble
@@ -510,6 +501,18 @@ main
 	1%   {opacity: 0; transform: translateY(-50%);}
     45%  {opacity: 0;}
     100% {opacity: 1; transform: translateY(0%);}
+}
+
+/* Standard syntax */
+@-webkit-keyframes FadeIn {
+   0%   {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+/* Standard syntax */
+@keyframes FadeIn {
+   0%   {opacity: 0;}
+    100% {opacity: 1;}
 }
 
 /* End of animations */
