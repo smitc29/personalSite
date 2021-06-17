@@ -18,6 +18,11 @@ $(document).ready(function() {
     loadImages('school03img', './images/Logo-suny.jpg');
     loadImages('school04img', './images/Logo-brewster.png');
     
+    // Set Employment pictures
+    loadImages('work01img', './images/Logo-collins.jpg');
+    loadImages('work02img', './images/Logo-Qualitest.png');
+    loadImages('work03img', './images/Logo-iDTech.png');
+    
 });
 
 /* Toggles X icon and mobile nav menu on click  */
@@ -37,6 +42,7 @@ function toggleNavMenu()
     nav.style.opacity = "1.0";
     console.log(nav.style.opacity);
     $("#mobilenav").fadeToggle("fast");
+    $("#hamburgerHelper").fadeToggle("fast");
     $("#mobilenav").css("opacity", "1.0");   
     $(".ham").fadeToggle();
     $(".hamhock").fadeToggle();

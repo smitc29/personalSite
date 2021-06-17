@@ -205,6 +205,22 @@ a
     display: none;
 }
 
+#hamburgerHelper
+{
+    width: 16vw;
+    height: 16vw;
+    min-width: 76px;
+    min-height: 76px;
+    max-width: 131px;
+    max-height: 131px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: none;
+    
+    background-color: black;
+}
+
 .ham
 {
     width: 70%;
@@ -213,7 +229,7 @@ a
     
     position: absolute;
     top: 17%;
-    left: 16%; 
+    left: 15.5%; 
 }
 
 .ham:nth-child(2)
@@ -229,8 +245,8 @@ a
 .hamhock
 {
     position: absolute;
-    top: 16%;
-    left: 17%;
+    top: 15%;
+    left: 15%;
     height: 70%;
     width: 70%;
     background-color: white;
@@ -241,9 +257,9 @@ a
 {
     position: absolute;
     height: 45%;
-    width: 45%;
-    top: 29%;
-    left: 29%;
+    width: 44%;
+    top: 28%;
+    left: 28%;
     background-color: black;
     display: none;
 }
@@ -385,17 +401,35 @@ main
     font-weight: 600;
 }
 
+#Background p
+{
+    margin-bottom: -10px;
+    margin-top: 0;
+
+}
+
 #Background h5:nth-child(1)
 {
     font-family: 'Montserrat', sans-serif;
-    margin-top: 60px;
     font-size: 18pt;
     line-height: 22pt;
     color: black;
 }
 
+#Background .schoolBub h5:nth-child(1)
+{
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 60px;
+}
 
-#Background .projectBox
+#Background .work h5:nth-child(1)
+{
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 20px;
+}
+
+
+#Background .work .projectBox
 {
     border-radius: 400px;
 }
@@ -410,16 +444,48 @@ main
     background-color: white;
 }
 
-#school02 img
+#school02img
 {
     position: relative;
     left: -1px;
 }
 
-#school04 img
+#school04img
 {
     position: relative;
-    top: 9px;
+    top: 5px;
+}
+
+#work03img
+{
+    position: relative;
+    width: 102%;
+    height: 102%;
+    top: -1%;
+    left: -1%;
+}
+
+#Background .infobubble:nth-child(2)
+{
+    width: 80%;
+    margin: 0 auto;
+    min-height: 120px;
+}
+
+#Background button
+{
+    width: 40%;
+    height: 50px;
+    margin: 0 auto;
+    
+    position: relative;   
+    top: 20px;
+    border-radius: 10px;
+    border: 1px black solid;
+    font-size: 20pt;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+
 }
 
 #Contact .infobubble
@@ -562,6 +628,8 @@ main
     #hamburger
     {
         display: block;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 0 0 10px 0;
     }
     
     #Contact a
@@ -588,6 +656,19 @@ main
     {
         margin-top: 1vh;
     }
+    
+    #Background .infobubble:nth-child(2)
+    {
+        width: 100%;
+        margin: 0 auto;
+        min-height: 120px;
+    }
+    
+    #Background button
+    {
+        font-weight: 500;
+        font-size: 15pt;
+    }
 }
 /* End of 1000px tablet screen */
 
@@ -600,7 +681,7 @@ main
         height: 200px;
         line-height: 40px;
         
-        top: 0;
+        top: 75px;
         transform: translateY(0);
     }
     
@@ -619,7 +700,7 @@ main
     .blurb p
     {
         font-size: 14pt;
-        padding: 5px 15px;
+        padding: 20px 15px;
     }
     
     .blurb .buffer
@@ -647,8 +728,8 @@ main
     
     .projectBox
     {
-        width: 75vw;
-        height: 75vw;
+        width: 60vw;
+        height: 60vw;
     }
     
     #Projects .projectDetail
@@ -666,11 +747,29 @@ main
         top: 0;
     }
     
+    #Background .infobubble:nth-child(2)
+    {
+        min-height: 150px;
+        margin-bottom: 30px;
+    }
+    
+    #Background button
+    {
+        width: 85vw;
+        font-size: 16pt;
+    }
+    
+    #Background p
+    {
+        margin-bottom: 0px;
+    }
+    
 }
 
 /* Mobile 500px screen width here  */
-@media only screen and (max-width:292px)  							/* Media Screen for tablet at 292px */
+@media only screen and (max-width:292px)  							/* Media Screen for phone at 292px */
 {
+    
     #nameArea h1
     {
         top: 45%;
@@ -744,7 +843,7 @@ main
     .blurb p
     {
         font-size: 14pt;
-        padding: 10px 15px;
+        padding: 10px 22px;
         margin: 0 auto;
     }
     

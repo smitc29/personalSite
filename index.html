@@ -41,7 +41,7 @@
         <nav>
             <a href="#About">Developer.</a>
             <a href="#Projects">Designer.</a>
-            <a href="#Experience">Digital Artist.</a> 
+            <a href="#Skills">Digital Artist.</a> 
         </nav>
         
     </div>
@@ -84,7 +84,7 @@
             <div class="buffer"></div>
         </div>
         
-        <div class="blurb" id="Experience">
+        <div class="blurb" id="Skills">
             <div class="buffer"></div>
             <p>Donec lobortis mattis velit at eleifend. Nulla sollicitudin velit in molestie molestie. Cras a lacus placerat, consectetur tellus id, egestas elit. Proin facilisis, magna non malesuada semper, justo purus consequat libero, quis vulputate purus dui et ante. Fusce erat urna, feugiat in malesuada non, consequat ut magna. Cras in ex velit. Nam ante erat, tincidunt a libero quis, tempor ornare dui. Nunc mi magna, ultrices vel efficitur nec, interdum rutrum felis. Quisque posuere nisi mi, quis hendrerit est dapibus elementum. Maecenas pharetra iaculis ex eget luctus. Sed rhoncus enim eu lacus fermentum porta.</p>
             <div class="buffer"></div>
@@ -93,6 +93,21 @@
         <div class="blurb" id="Background">
             <div class="buffer"></div>
             <div class="infobubble">
+                <button value="Employment">Hide Employment</button>
+                <button>Hide Education</button>
+            </div>
+            <div class="infobubble work">
+                <a target="_blank" href="https://omscs.gatech.edu/"><div class="projectBox" id="">
+                    <img id="work01img">
+                </div></a>
+                <div class="projectDetail">
+                    <h5><a target="_blank" href="https://omscs.gatech.edu/">Collins Aerospace</a></h5>
+                    <h5>Software Engineer, February 2021 - Present</h5>
+                    <p>- Engineered scripts to guarantee safety of aircraft and weapon systems
+                    </p><p>- Utilized ADA, Perl, and DOORS in addition to specialized software for aircraft</p> 
+                </div>     
+            </div>
+            <div class="infobubble schoolBub">
                 <a target="_blank" href="https://omscs.gatech.edu/"><div class="projectBox" id="school01">
                     <img id="school01img">
                 </div></a>
@@ -102,16 +117,40 @@
                     <h5>2021 - Present</h5> 
                 </div>     
             </div>
-            <div class="infobubble">
+            <div class="infobubble work">
+                <a target="_blank" href="https://omscs.gatech.edu/"><div class="projectBox" id="">
+                    <img id="work02img">
+                </div></a>
+                <div class="projectDetail">
+                    <h5><a target="_blank" href="https://omscs.gatech.edu/">Qualitest Group</a></h5>
+                    <h5>Software Engineer, August 2018 - September 2020</h5>
+                    <p>- Organized automated tests to validate security, integrity, and stability of web-based applications</p>
+                    <p>- Utilized Java, Python, and SQL in tandem with teams of over 20 to ensure regular updates </p>
+                    <p>- Generated tutorials and guides for projects using graphic design software for posterity</p> 
+                </div>     
+            </div>
+            <div class="infobubble schoolBub">
                 <a target="_blank" href="https://www.comptia.org/certifications/it-fundamentals"><div class="projectBox" id="school02">
                     <img id="school02img">
                 </div></a>
                 <div class="projectDetail">
                     <h5><a target="_blank" href="https://www.comptia.org/certifications/it-fundamentals">CompTIA IT Fundamentals Certification</a></h5>
-                    <h5>November 2020</h5>  
+                    <h5>November 2019</h5>  
                 </div>
             </div>
-            <div class="infobubble">
+            <div class="infobubble work">
+                <a target="_blank" href="https://omscs.gatech.edu/"><div class="projectBox" id="">
+                    <img id="work03img">
+                </div></a>
+                <div class="projectDetail">
+                    <h5><a target="_blank" href="https://omscs.gatech.edu/">iD Tech Camps</a></h5>
+                    <h5>Returning Instructor, June 2017/2018 - August 2017/2018</h5>
+                    <p>- Taught students aged 8-18 concepts of AI, Cybersecurity, Web Design and Game Development</p>
+                    <p>- Utilized Java, Python, C++, C#, JavaScript, HTML, CSS, Linux, Dual-boot systems, and Photoshop</p>
+                    <p>- Led students through hardware assembly of laptop/Raspberry Pi devices and teambuilding activities </p> 
+                </div>     
+            </div>
+            <div class="infobubble schoolBub">
                 <a target="_blank" href="https://suny.oneonta.edu/mathematics-computer-science-and-statistics/majors-programs/computer-science"><div class="projectBox" id="school03">
                     <img id="school03img">
                 </div></a>
@@ -122,13 +161,13 @@
                     <p></p>  
                 </div>
             </div>
-            <div class="infobubble">
+            <div class="infobubble schoolBub">
                 <a target="_blank" href="https://www.brewsterschools.org/Domain/11"><div class="projectBox" id="school04">
                     <img id="school04img">
                 </div></a>
                 <div class="projectDetail">
                     <h5><a target="_blank" href="https://www.brewsterschools.org/Domain/11">Brewster High School</a></h5>
-                    <h5>Honor's Degree, 2010-2014</h5>
+                    <h5>Honor's Degree, 2010 - 2014</h5>
                     <h5>Began coding and architecture studies</h5> 
                 </div>
             </div>
@@ -170,18 +209,19 @@
         <nav id="desknav">
             <a href="#About">About</a>
             <a href="#Projects">Projects</a>
-            <a href="#Experience">Experience</a> 
+            <a href="#Skills">Skills</a> 
             <a href="#Background">Background</a>
             <a href="#Contact">Contact</a>
         </nav>
         <nav id="mobilenav" style="display: none;">
             <a href="#About" onclick="toggleNavMenu()">About</a>
             <a href="#Projects" onclick="toggleNavMenu()">Projects</a>
-            <a href="#Experience" onclick="toggleNavMenu()">Experience</a> 
+            <a href="#Skills" onclick="toggleNavMenu()">Skills</a> 
             <a href="#Background" onclick="toggleNavMenu()">Background</a>
             <a href="#Contact" onclick="toggleNavMenu()">Contact</a>
         </nav>
         <div id="hamburger" onclick="toggleNavMenu()">
+            <div id="hamburgerHelper"></div>
             <div class="ham"></div>
             <div class="ham"></div>
             <div class="ham"></div>
