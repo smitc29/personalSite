@@ -282,7 +282,7 @@ main
 {
     width: 100%;
     max-width: 1000px;
-    min-height: 100px;
+    min-height: 90vh;
     
     margin: 10px auto 20px;
     position: relative;
@@ -303,6 +303,7 @@ main
     text-align: left;
     padding: 2% 4%;
 }
+
 
 /* About section comes before anything else, needs extra priority */
 
@@ -482,6 +483,7 @@ main
     cursor: pointer;
 }
 
+/* Designated section for rollover effects on divs */
 @media (hover: hover) and (pointer: fine) {
     #nameArea a:hover, #navbar a:hover
     {
@@ -497,13 +499,43 @@ main
         background-color: dodgerblue;
         color: white;
     }
-}
+    
+    #Contact a:hover
+    {
+        color: white;
+        background-color: darkred;
+    }
+
+    #Contact a:nth-child(3n+2):hover
+    {
+        color: white;
+        background-color:forestgreen;
+    }
+
+    #Contact a:nth-child(3n):hover
+    {
+        color:white;
+        background-color: dodgerblue;
+    }
+    
+    .blurb a
+    {
+        transition: 0.3s;
+    }
+    
+    .blurb a:hover
+    {
+        color: darkblue;
+        transition: 0.3s;
+    }
+    
+} /* end of designated rollover section */
 
 
 .selected
 {
     color: white;
-    background-color: darkblue;
+    background-color: black;
 }
 
 #Contact .infobubble
@@ -535,10 +567,10 @@ main
     text-decoration: none;
 }
 
-#Contact a:hover
+
+#Contact a:nth-child(3n)
 {
-    color: white;
-    background-color: darkred;
+    color:dodgerblue;
 }
 
 #Contact a:nth-child(3n+2)
@@ -546,22 +578,6 @@ main
     color:forestgreen;
 }
 
-#Contact a:nth-child(3n+2):hover
-{
-    color: white;
-    background-color:forestgreen;
-}
-
-#Contact a:nth-child(3n)
-{
-    color:dodgerblue;
-}
-
-#Contact a:nth-child(3n):hover
-{
-    color:white;
-    background-color: dodgerblue;
-}
 
 #Contact a i
 {
