@@ -95,8 +95,8 @@
         <div class="blurb" id="Background">
             <div class="buffer"></div>
             <div class="infobubble">
-                <button id="workButton" onclick="$('.work').slideToggle(); $('.schoolBub').slideDown(); $('#workButton').toggleClass('selected'); $('#schoolButton').removeClass('selected');">Hide Employment</button>
-                <button id="schoolButton" onclick="$('.schoolBub').slideToggle(); $('.work').slideDown();$('#schoolButton').toggleClass('selected'); $('#workButton').removeClass('selected');">Hide Education</button>
+                <button id="workButton" onclick="$('.work').slideToggle(); $('.schoolBub').slideDown(); $('#workButton').toggleClass('selected'); $('#schoolButton').removeClass('selected'); mobileShowExperience(this);">Education</button>
+                <button id="schoolButton" onclick="$('.schoolBub').slideToggle(); $('.work').slideDown();$('#schoolButton').toggleClass('selected'); $('#workButton').removeClass('selected'); mobileShowExperience(this);">Employment</button>
             </div>
             <div class="infobubble work">
                 <a target="_blank" href="https://www.collinsaerospace.com/"><div class="projectBox" id="">
@@ -126,8 +126,8 @@
                 <div class="projectDetail">
                     <h5><a target="_blank" href="https://qualitestgroup.com/">Qualitest Group</a></h5>
                     <h5>Software Engineer, August 2018 - September 2020</h5>
-                    <p>- Organized automated tests to validate security, integrity, and stability of web-based applications</p>
-                    <p>- Utilized Java, Python, and SQL in tandem with teams of over 20 to ensure regular updates </p>
+                    <p>- Organized automated tests validating security, integrity, and stability of applications</p>
+                    <p>- Utilized Java, Python, and SQL with teams of over 20 ensuring regular updates </p>
                     <p>- Generated tutorials and guides for projects using graphic design software for posterity</p> 
                 </div>     
             </div>
@@ -147,9 +147,9 @@
                 <div class="projectDetail">
                     <h5><a target="_blank" href="https://www.idtech.com/">iD Tech Camps</a></h5>
                     <h5>Returning Instructor, June 2017/2018 - August 2017/2018</h5>
-                    <p>- Taught students aged 8-18 concepts of AI, Cybersecurity, Web Design and Game Development</p>
-                    <p>- Utilized Java, Python, C++, C#, JavaScript, HTML, CSS, Linux, Dual-boot systems, and Photoshop</p>
-                    <p>- Led students through hardware assembly of laptop/Raspberry Pi devices and teambuilding activities </p> 
+                    <p>- Taught students aged 8-18 concepts of AI, Cybersecurity, and Game Development</p>
+                    <p>- Utilized Java, Python, C++, C#, JavaScript, HTML, CSS, Linux, and Photoshop</p>
+                    <p>- Led students through hardware assembly of computers and teambuilding activities </p> 
                 </div>     
             </div>
             <div class="infobubble work">
@@ -159,8 +159,8 @@
                 <div class="projectDetail">
                     <h5><a target="_blank" href="https://suny.oneonta.edu/mathematics-computer-science-and-statistics">SUNY Oneonta: Math & CS Department</a></h5>
                     <h5>Programmer / Analyst, January 2018 - June 2018</h5>
-                    <p>- Translated over 130 calculus questions from text into code, formatted files with LaTeX and Perl</p>
-                    <p>- Served as teaching assistant for professors, held regular office hours, enrolled in independent studies</p> 
+                    <p>- Translated over 130 formulae from text into code, formatted files with LaTeX and Perl</p>
+                    <p>- Served as teaching assistant, held regular office hours, enrolled in independent studies</p> 
                 </div>     
             </div>
             <div class="infobubble schoolBub">
@@ -181,8 +181,8 @@
                 <div class="projectDetail">
                     <h5><a target="_blank" href="https://suny.oneonta.edu/office-student-life-leadership/dragons-lair">SUNY Oneonta: Dragon's Lair</a></h5>
                     <h5>Associate / Designer, August 2015 - March 2018</h5>
-                    <p>- Provided technical support for 26 devices, handled finances, advised managers on financial decisions</p>
-                    <p>- Designed and distributed promotional content regularly (posters, desktop wallpapers, logos, etc.)</p> 
+                    <p>- Provided tech support for gaming devices, handled finances, advised managers </p>
+                    <p>- Designed and distributed promotional content (posters, desktop wallpapers, logos, etc.)</p> 
                 </div>     
             </div>
             <div class="infobubble schoolBub">
@@ -203,22 +203,34 @@
             
             <div class="infobubble">
                 <a target="_blank" href="mailto:smithchrisgraphics@gmail.com">
-                    <i class="fas fa-mail-bulk"></i>
+                    <div class="pushdown">
+                        <i class="fas fa-mail-bulk"></i>
+                    </div>    
                 </a>
                 <a target="_blank" href="https://www.hackerrank.com/smithchrisgraph1">
-                    <i class="fab fa-hackerrank"></i>
+                    <div class="pushdown">
+                        <i class="fab fa-hackerrank"></i>
+                    </div>    
                 </a>
                 <a target="_blank" href="https://www.linkedin.com/in/smithchrisgraphics/">
-                    <i class="fab fa-linkedin"></i>
+                    <div class="pushdown">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
                 </a>
                 <a target="_blank" href="https://www.behance.net/smitc29">
-                    <i class="fab fa-behance"></i>
+                    <div class="pushdown">
+                        <i class="fab fa-behance"></i>
+                    </div>
                 </a>
                 <a target="_blank" href="https://github.com/smitc29">
-                    <i class="fab fa-github"></i>
+                    <div class="pushdown">
+                        <i class="fab fa-github"></i>
+                    </div>
                 </a>
                 <a target="_blank" href="https://www.facebook.com/profile.php?id=100002191987102">
-                    <i class="fab fa-facebook-square"></i>
+                    <div class="pushdown">
+                        <i class="fab fa-facebook-square"></i>
+                    </div>
                 </a>
             
             </div>

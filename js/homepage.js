@@ -33,7 +33,7 @@ $(document).ready(function() {
 /* Adjust size of video player whenever browser window changes size with JQuery */
 $(window).resize(function() {
 
-	scaleBoxText();
+	console.log("Window has been resized!!!");
 	
 });
 
@@ -65,3 +65,24 @@ function loadImages(myID, myURL) {
     console.log(img);
 
 }
+/* End of function toggleNavMenu() */
+
+/* Causes screen to scroll down when user clicks experience buttons on mobile device */
+function mobileShowExperience(target)
+{
+    // If button is being deselected, don't move the page
+    if(target.classList.contains("selected") == false)
+    { 
+        return 0;
+        console.log(target.id + " is being deselected");
+    }
+      
+    var y = $(window).scrollTop();  // User's current y position on the page
+  
+    // Only scroll if we're on mobile view
+    if(window.innerWidth < 501)
+    {
+        $(window).scrollTop(y + 200);               
+    }
+        
+} /* End of function mobileShowExperience() */
