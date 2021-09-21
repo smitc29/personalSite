@@ -86,3 +86,12 @@ function mobileShowExperience(target)
     }
         
 } /* End of function mobileShowExperience() */
+
+
+function testfunction()
+{
+    console.log(1);
+    setTimeout(console.log(2),0);
+    setTimeout(console.log(3),10);
+    console.log(4);
+}
