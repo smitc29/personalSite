@@ -27,9 +27,6 @@ $(document).ready(function() {
     
 });
 
-/* Toggles X icon and mobile nav menu on click  */
-
-
 /* Adjust size of video player whenever browser window changes size with JQuery */
 $(window).resize(function() {
 
@@ -65,7 +62,7 @@ function loadImages(myID, myURL) {
     console.log(img);
 
 }
-/* End of function toggleNavMenu() */
+/* End of function loadImages() */
 
 /* Causes screen to scroll down when user clicks experience buttons on mobile device */
 function mobileShowExperience(target)
