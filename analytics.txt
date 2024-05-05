@@ -1,0 +1,17 @@
+
+Chris, add the following code to your site to glean stats abotu whoever's looking at it:
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YV5BT0K9LQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YV5BT0K9LQ');
+</script>
+
+
+
+

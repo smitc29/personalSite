@@ -1,0 +1,385 @@
+html, body {
+  scroll-behavior: smooth;
+  background: white;
+  font-size: 1.2em;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.3;
+    
+  position: relative;
+  left: 0;
+    
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  
+}
+
+.boundry
+{
+    position: relative;
+    margin: 40px auto 0;
+    
+    width: 500px;
+    height: 500px;
+    border: black solid 3px;
+    border-radius: 50%;  
+    overflow: hidden;
+    background-color: beige;
+}
+
+.eye
+{
+    position: absolute;
+    background-color: black;  
+    width: 10%;
+    height: 20%;
+    border-radius: 500px;
+}
+
+.leftEye
+{
+    top: 25%;
+    left: 30%;
+}
+
+.rightEye
+{
+    top: 25%;
+    right: 30%;
+}
+
+.mouth
+{
+    overflow: hidden;
+    position: absolute;
+    width: 46%;
+    height: 15%;
+    top: 60%;
+    left: 26%;
+        
+    background-color: beige;
+    border: black solid 5px;
+    border-radius: 0px 0px 80% 80%;  
+}
+
+.mouthCover
+{
+    position: absolute;
+    width: 50%;
+    height: 30%;
+    top: 40%;
+    left: 25%;
+    background-color: beige;
+    
+    opacity: 100%;
+    
+}
+
+/* Animations for letters and css within */
+@-webkit-keyframes slideDown {
+    0%   {opacity: 0; transform: translateY(-50%);}
+	1%   {opacity: 0; transform: translateY(-50%);}
+    45%  {opacity: 0;}
+    100% {opacity: 1; transform: translateY(0%);}
+}
+
+/* Standard syntax */
+@keyframes slideDown {
+   0%   {opacity: 0; transform: translateY(-50%);}
+	1%   {opacity: 0; transform: translateY(-50%);}
+    45%  {opacity: 0;}
+    100% {opacity: 1; transform: translateY(0%);}
+}
+
+/* Standard syntax */
+@-webkit-keyframes FadeIn {
+   0%   {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+/* Standard syntax */
+@keyframes FadeIn {
+   0%   {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+/* End of animations */
+
+@media only screen and (max-width:1000px)  							/* Media Screen for tablet at 1000px */
+{
+	#nameArea h1
+    {
+        font-size: 24pt;
+    }
+    
+    #nameArea
+    {
+        line-height: 20px;
+        top: 38vh;
+    }
+    
+    #navbar
+    {
+        background: none;
+    }
+    
+    #navbar #desknav
+    {
+        display: none;
+    }
+    
+    #navbar #mobilenav
+    {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        background-color: black;
+        
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    #navbar a
+    {
+        width: 30%;
+        margin: 2vh auto;
+        font-size: 22pt;
+    }
+    
+    #hamburger
+    {
+        display: block;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 0 0 10px 0;
+    }
+    
+    #Contact a
+    {
+        margin: 1vh 5%;
+    }
+    
+    .infobubble
+    {
+        top: 0;
+    }
+    
+    .projectBox
+    {
+        margin: 0 auto;
+    }
+    
+    .projectDetail
+    {
+        width: 100vw;
+    }
+    
+        #project01bubble
+    {
+        margin-top: 1vh;
+    }
+    
+    #Background .infobubble:nth-child(2)
+    {
+        width: 100%;
+        margin: 0 auto;
+        min-height: 120px;
+    }
+    
+    #Background button
+    {
+        font-weight: 500;
+        font-size: 15pt;
+    }
+    
+    #Background p
+    {
+        line-height: 1.4;
+    }
+}
+/* End of 1000px tablet screen */
+
+/* Mobile 500px screen width here  */
+@media only screen and (max-width:500px)  							/* Media Screen for tablet at 500px */
+{
+    #nameArea
+    {
+        width: 100%;
+        height: 200px;
+        line-height: 40px;
+        
+        top: 75px;
+        transform: translateY(0);
+    }
+    
+    #nameArea h1
+    {
+        font-size: 20pt;
+    }
+    
+    #nameArea a
+    {
+        margin: 10px;
+        padding: 0px 15px;
+        border-radius: 50px;
+    }
+    
+    .blurb p
+    {
+        font-size: 14pt;
+        padding: 20px 15px;
+    }
+    
+    .blurb .buffer
+    {
+        min-height: 100px;
+    }
+    
+    #Contact .buffer:nth-child(3)
+    {
+        min-height: 0vh;
+        height: 0vh;
+    }
+    
+    #navbar a
+    {
+        width: 80%;
+        margin: 1vh auto;
+        font-size: 18pt;
+    }
+    
+    .infobubble:nth-child(2n+1)
+    {
+        flex-direction: row;
+    }
+    
+    .projectBox
+    {
+        width: 60vw;
+        height: 60vw;
+    }
+    
+    #Projects .projectDetail
+    {
+        display: none;
+    }
+    
+    #Projects p:nth-child(2)
+    {
+        margin-bottom: 30px;
+    }
+    
+    #Contact .infobubble
+    {
+        top: 0;
+    }
+    
+    #Background .infobubble:nth-child(2)
+    {
+        min-height: 150px;
+        margin-bottom: 30px;
+    }
+    
+    #Background button
+    {
+        width: 85vw;
+        font-size: 16pt;
+    }
+    
+    #Background p
+    {
+        margin-bottom: 0px;
+    }
+    
+}
+
+/* Mobile 500px screen width here  */
+@media only screen and (max-width:292px)  							/* Media Screen for phone at 292px */
+{
+    
+    #nameArea h1
+    {
+        top: 45%;
+    }
+}
+
+/* Mobile device that is landscape mode */
+@media only screen and (max-height:500px) and (orientation : landscape)
+{
+    #nameArea
+    {
+        height: 50vh;
+        top: 0;
+        transform: translateY(0);
+        line-height: 100%;
+        width: 100%;
+        max-width: 100vw;
+    }
+    
+    #nameArea nav
+    {
+        width: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 102%;
+    }
+    
+    #nameArea a
+    {
+        font-size: 4vw;
+    }
+    
+    .blurb p
+    {
+        font-size: 14pt;
+        padding: 10px 15px;
+        margin: 0 auto;
+    }
+    
+    .blurb .buffer
+    {
+        min-height: 0px;
+        height: 100px;
+        margin: 0 auto;
+    }
+    
+    #Contact .buffer:nth-child(3)
+    {
+        min-height: 0vh;
+        height: 0vh;
+    }
+    
+    #navbar a
+    {
+        height: 15%;
+        line-height: 7vw;
+        margin: 1vh auto;
+        font-size: 18pt;
+    }
+    
+}
+
+/* Mobile device that is portrait mode and tall enough to fit full nav */
+@media only screen and (max-width:500px) and (min-height:500px)
+{
+    #nameArea a
+    {
+        width: 80%;
+    }
+    
+    .blurb p
+    {
+        font-size: 14pt;
+        padding: 10px 22px;
+        margin: 0 auto;
+    }
+    
+    .blurb .buffer
+    {
+        min-height: 0px;
+        height: 90px;
+        margin: 0 auto;
+    }
+}

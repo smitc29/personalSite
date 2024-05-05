@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>
+Match 3
+</title>
+    
+    <meta name="author" content="Christopher Smith">
+    <meta name="description" content="A panel switching game where players swap tiles to match 3 colors in a row ">
+    
+<link rel="icon" href="img/ace.ico">
+    
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans:700" rel="stylesheet">
+<meta charset="utf-8"/>
+
+<!-- Grab styling for game -->
+<link rel="stylesheet" href="css/match3.css">
+    
+<!-- Logic for game-->
+<script type="text/javascript" src="js/match3.js"></script> 
+<script type="text/javascript" src="js/match3misc.js"></script>
+    
+<!-- JQuery from Google -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+<body onload="setBoard()">   
+    
+    <h3 id="Message">0</h3>
+
+<span id="playspace">
+<div id="Board" >
+    
+    <!-- 1st row of squares -->
+    <div draggable="true" class="Square  Selected intro" id="[0][0]" onmousedown="Reaction(this)" onmouseup="switchMe(this)">
+    </div>
+    <div class="Square intro" id="[1][0]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="left: 12.5%; animation-delay: 0.1s;">
+    </div>
+    <div class="Square intro" id="[2][0]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="left: 25%; animation-delay: 0.2s;">
+    </div>
+    <div class="Square intro" id="[3][0]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="left: 37.5%; animation-delay: 0.3s;">
+    </div>
+    <div class="Square intro" id="[4][0]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="left: 50%; animation-delay: 0.4s;">
+    </div>
+    <div class="Square intro" id="[5][0]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="left: 62.5%; animation-delay: 0.5s;">
+    </div>
+    <div class="Square intro" id="[6][0]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="left: 75%; animation-delay: 0.6s;">
+    </div>
+    <div class="Square intro" id="[7][0]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="left: 87.5%; animation-delay: 0.7s;">
+    </div>
+    
+   <!-- 2nd row of squares -->
+    
+    <div class="Square intro" id="[0][1]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:12.5%; animation-delay: 0.1s;">
+    </div>
+    <div class=" Square intro" id="[1][1]" onmousedown="Reaction(this)" onmouseup="switchMe(this)"  style="top:12.5%; left: 12.5%; animation-delay: 0.2s;">
+    </div>
+    <div class="Square intro" id="[2][1]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:12.5%; left: 25%; animation-delay: 0.3s;">
+    </div>
+    <div class=" Square intro" id="[3][1]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:12.5%; left: 37.5%; animation-delay: 0.4s;">
+    </div>
+    <div class="Square intro" id="[4][1]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:12.5%; left: 50%; animation-delay: 0.5s;">
+    </div>
+    <div class=" Square intro" id="[5][1]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:12.5%; left: 62.5%; animation-delay: 0.6s;">
+    </div>
+    <div class="Square intro" id="[6][1]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:12.5%; left: 75%; animation-delay: 0.7s;">
+    </div>
+    <div class=" Square intro"  id="[7][1]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:12.5%; left: 87.5%; animation-delay: 0.8s;">
+    </div>
+    
+    <!-- 3rd row of squares -->
+    <div class=" Square intro" id="[0][2]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:25%; animation-delay: 0.2s;">
+    </div>
+    <div class="Square intro" id="[1][2]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:25%; left: 12.5%; animation-delay: 0.3s;">
+    </div>
+    <div class=" Square intro" id="[2][2]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:25%; left: 25%; animation-delay: 0.4s;">
+    </div>
+    <div class="Square intro  " id="[3][2]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:25%; left: 37.5%; animation-delay: 0.5s;">
+    </div>
+    <div class=" Square intro" id="[4][2]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:25%; left: 50%; animation-delay: 0.6s;">
+    </div>
+    <div class="Square intro  " id="[5][2]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:25%; left: 62.5%; animation-delay: 0.7s;">
+    </div>
+    <div class=" Square intro" id="[6][2]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:25%; left: 75%; animation-delay: 0.8s;">
+    </div>
+    <div class="Square intro  " id="[7][2]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:25%; left: 87.5%; animation-delay: 0.9s;">
+    </div>
+    
+   <!-- 4th row of squares -->
+    <div class="Square intro" id="[0][3]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:37.5%; animation-delay: 0.3s;">
+    </div>
+    <div class=" Square intro" id="[1][3]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:37.5%; left: 12.5%; animation-delay: 0.4s;">
+    </div>
+    <div class="Square intro" id="[2][3]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:37.5%; left: 25%; animation-delay: 0.5s;">
+    </div>
+    <div class=" Square intro" id="[3][3]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:37.5%; left: 37.5%; animation-delay: 0.6s;">
+    </div>
+    <div class="Square intro" id="[4][3]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:37.5%; left: 50%; animation-delay: 0.7s;">
+    </div>
+    <div class=" Square intro" id="[5][3]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:37.5%; left: 62.5%; animation-delay: 0.8s;">
+    </div>
+    <div class="Square intro" id="[6][3]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:37.5%; left: 75%; animation-delay: 0.9s;">
+    </div>
+    <div class=" Square intro" id="[7][3]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:37.5%; left: 87.5%; animation-delay: 1.0s;">
+    </div>
+    
+    <!-- 5th row of squares -->
+    <div class=" Square intro" id="[0][4]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:50%; animation-delay: 0.4s;">
+    </div>
+    <div class="Square intro" id="[1][4]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:50%; left: 12.5%; animation-delay: 0.5s;">
+    </div>
+    <div class=" Square intro" id="[2][4]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:50%; left: 25%; animation-delay: 0.6s;">
+    </div>
+    <div class="Square intro " id="[3][4]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:50%; left: 37.5%; animation-delay: 0.7s;">
+    </div>
+    <div class=" Square intro" id="[4][4]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:50%; left: 50%; animation-delay: 0.8s;">
+    </div>
+    <div class="Square intro" id="[5][4]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:50%; left: 62.5%; animation-delay: 0.9s;">
+    </div>
+    <div class=" Square intro" id="[6][4]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:50%; left: 75%; animation-delay: 1.0s;">
+    </div>
+    <div class="Square intro" id="[7][4]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:50%; left: 87.5%; animation-delay: 1.1s;">
+    </div>
+    
+   <!-- 6th row of squares -->
+    <div class="Square intro " id="[0][5]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:62.5%; animation-delay: 0.5s;">
+    </div>
+    <div class=" Square intro" id="[1][5]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:62.5%; left: 12.5%; animation-delay: 0.6s;">
+    </div>
+    <div class="Square intro " id="[2][5]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:62.5%; left: 25%; animation-delay: 0.7s;">
+    </div>
+    <div class=" Square intro" id="[3][5]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:62.5%; left: 37.5%; animation-delay: 0.8s;">
+    </div>
+    <div class="Square intro " id="[4][5]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:62.5%; left: 50%; animation-delay: 0.9s;">
+    </div>
+    <div class=" Square intro" id="[5][5]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:62.5%; left: 62.5%; animation-delay: 1.0s;">
+    </div>
+    <div class="Square intro " id="[6][5]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:62.5%; left: 75%; animation-delay: 1.1s;">
+    </div>
+    <div class=" Square intro" id="[7][5]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:62.5%; left: 87.5%; animation-delay: 1.2s;">
+    </div>
+  
+    <!-- 7th row of squares -->
+    <div class=" Square intro" id="[0][6]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:75%; animation-delay: 0.6s;">
+    </div>
+    <div class="Square intro " id="[1][6]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:75%; left: 12.5%; animation-delay: 0.7s;">
+    </div>
+    <div class=" Square intro" id="[2][6]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:75%; left: 25%; animation-delay: 0.8s;">
+    </div>
+    <div class="Square intro " id="[3][6]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:75%; left: 37.5%; animation-delay: 0.9s;">
+    </div>
+    <div class=" Square intro" id="[4][6]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:75%; left: 50%; animation-delay: 1.0s;">
+    </div>
+    <div class="Square intro " id="[5][6]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:75%; left: 62.5%; animation-delay: 1.1s;">
+    </div>
+    <div class=" Square intro" id="[6][6]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:75%; left: 75%; animation-delay: 1.2s;">
+    </div>
+    <div class="Square intro " id="[7][6]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:75%; left: 87.5%; animation-delay: 1.3s;">
+    </div>
+    
+   <!-- 8th row of squares -->
+    <div class="Square intro " id="[0][7]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:87.5%; animation-delay: 0.7s;">
+    </div>
+    <div class=" Square intro" id="[1][7]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:87.5%; left: 12.5%; animation-delay: 0.8s;">
+    </div>
+    <div class="Square intro " id="[2][7]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:87.5%; left: 25%; animation-delay: 0.9s;">
+    </div>
+    <div class=" Square intro" id="[3][7]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:87.5%; left: 37.5%; animation-delay: 1.0s;">
+    </div>
+    <div class="Square intro " id="[4][7]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:87.5%; left: 50%; animation-delay: 1.1s;">
+    </div>
+    <div class=" Square intro" id="[5][7]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:87.5%; left: 62.5%; animation-delay: 1.2s;">
+    </div>
+    <div class="Square intro " id="[6][7]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:87.5%; left: 75%; animation-delay: 1.3s;">
+    </div>
+    <div class=" Square intro" id="[7][7]" onmousedown="Reaction(this)" onmouseup="switchMe(this)" style="top:87.5%; left: 87.5%; animation-delay: 1.4s; ">
+    </div>
+  
+    
+    
+</div> <!-- End of Board -->
+   
+    <button onclick="hintsOn(0)">
+    Enable Hints
+    </button>
+    
+    <button onclick="RedWipe()" style="animation-delay: 0.1s; opacity: 0.5; border-color: white;">
+    Reset Board
+    </button>
+    
+    <button onclick="blueFreeze()" style="animation-delay: 0.2s; opacity: 0.5; border-color: white;">
+    Freeze Board
+    </button>
+    
+    <button onclick="hintsOn(3)" style="animation-delay: 0.3s; opacity: 1.0; opacity: 0.5; border-color: white;">
+    Prime Tile
+    </button>
+    
+    <button onclick="hintsOn(4)" style="animation-delay: 0.4s; opacity: 1.0; opacity: 0.5; border-color: white;">
+    Swap Tile
+    </button>
+    
+    <button onclick="hintsOn(5)" style="animation-delay: 0.5s; opacity: 1.0; opacity: 0.5; border-color: white;">
+    Drop Tiles
+    </button>
+    
+    <button onclick="makeWhites()" style="animation-delay: 0.6s; opacity: 1.0; opacity: 0.5; border-color: white;">
+    Wild Cards
+    </button>
+    
+    <!--<<button onclick="this.classList.toggle('Auto')" style="animation-delay: 0.6s;">
+    Black Autoplay
+    </button>
+    -->
+    
+    <div style="position: relative; top: 50px; margin: 0 auto 40px;"><h1>- FAQ -</h1></div>
+    <div style="position: relative; top: 20px;"><h2>How do I play?</h2></div>
+    <div style="position: relative; top: 20px; margin: 0 auto 40px; max-width: 90%;"><p>Click on a tile to select it. Clicking on an adjacent tile will swap the selected tile with the most recently-clicked tile. HOWEVER, these tiles will only swap places if you selected 2 adjacent tiles, and swapping these tiles creates a row or column of 3 or more of a color in a row. </p></div>
+    
+    <div style="position: relative;"><h2>What do all of those buttons on the bottom of the screen do?</h2></div>
+    <div style="position: relative; margin: 0 auto 20px; max-width: 90%;"><p>Each button provides a "skill" or power-up that can help you score more points if used carefully. The first button, which never expires, toggles outlines on tiles that can be moved to make a combo of 3 or more in a row. Each button is associated with 6 of the 8 possible tile colors, and matching tiles of a certain color restores the related button by about 5% per tile. The bigger your combo, the more points you can earn, and the faster your power-ups will become available. A button/power up will have a BLACK outline if it can be used. Clicking on a button toggles the skill, if it was clicked by accident. </p></div>
+    
+    <div style="position: relative;"><img src="img/MatchRed.png" width="15%" height="15%"></div>
+    <div style="position: relative; margin: 0 auto 20px; max-width: 90%;"><p> Red tiles appear extremely frequently, and allow for easier combos. Matching Red tiles restores the "Reset Board" button. This button allows you to change the tiles on the board at random, which is useful if there aren't many available combos or you're getting stuck. </p></div>
+    
+    <div style="position: relative;"><img src="img/MatchBlue.png" width="15%" height="15%"></div>
+    <div style="position: relative; margin: 0 auto 20px; max-width: 90%;"><p> Blue tiles are fairly common, and allow for easier combos. Matching Blue tiles restores the "Freeze Board" button. This button will start a timer for 10 seconds upon being clicked. While the board is "Frozen," and the timer is ticking down, any adjacent tiles can be swapped, regardless of whether or not a combo is made. In addition, no combo will be resolved while the timer is counting down. This button takes more combos to be restored, but it can allow you to score massive points if used properly. </p></div>
+    <div style="position: relative;"><img src="img/MatchOrange.png" width="15%" height="15%"></div>
+    <div style="position: relative; margin: 0 auto 20px; max-width: 90%;"><p> Orange tiles are somewhat uncommon. Matching Orange tiles restores the "Prime Tile" button. Upon clicking this button, it will change color. Clicking on a tile while this button has been activated will change every tile 2 or 4 spaces above, below, left, or right to the selected tile to the same color as the selected tile. This allows for easier matches, and greater combos. Combos do not immediately resolve after using this button. </p></div>
+    
+    <div style="position: relative;"><img src="img/MatchPurple.png" width="15%" height="15%"></div>
+    <div style="position: relative; margin: 0 auto 20px; max-width: 90%;"><p> Purple tiles are pretty rare. Matching Purple tiles restores the "Swap Tile" button. Upon clicking this button, it will change color. Clicking on a pair of tiles while this button has been activated will allow you to swap the location of two tiles, so long as it creates a matching combo of 3 or more. This skill recovers quickly. </p></div>
+    
+    <div style="position: relative;"><img src="img/MatchGreen.png" width="15%" height="15%"></div>
+    <div style="position: relative; margin: 0 auto 20px; max-width: 90%;"><p> Green tiles are kind of uncommon. Matching Green tiles restores the "Drop Tiles" button. Upon clicking this button, it will change color. Clicking on a tile while this button has been activated will briefly give the selected tile, and every tile below it, a Green background. Every tile with a green background will be dropped from the board, leaving any tiles in the same column as the selected tile to fall to the bottom of the column. While somewhat obtuse, it can be used to get out of a bind if used carefully. </p></div>
+    
+    <div style="position: relative;"><img src="img/MatchYellow.png" width="15%" height="15%"></div>
+    <div style="position: relative; margin: 0 auto 20px; max-width: 90%;"><p> Yellow tiles are very rare. Matching Yellow tiles restores the "Wild Cards" button. Upon clicking this button, three random tiles will become White/Rainbow tiles. Please see the following section for details. </p></div>
+    
+    <div style="position: relative;"><img src="img/MatchRainbow.png" width="15%" height="15%"></div>
+    <div style="position: relative; margin: 0 auto 20px; max-width: 90%;"><p> White/Rainbow tiles are extraordinarily rare. These tiles can be matched with any other color as if it were that color. In other words, if two tiles of the same color are lined up against this tile, or this color is sandwiched between two tiles of the same color, it will count as a combo and score. Try to use this carefully, as they're prone to setting off combos quickly after entering the playing field. </p></div>
+    
+    <div style="position: relative;"><img src="img/MatchBlack.png" width="15%" height="15%"></div>
+    <div style="position: relative; margin: 0 auto 40px; max-width: 90%;"><p> Black/Weight tiles are fairly rare. These tiles don't restore any special buttons or skills on their own, and come with a severe drawback: they can't be moved UPWARDS. Black tiles can be moved left, right, or down only, unless a special skill or button is used, such as "Freeze Board" or "Drop Tiles." When a Black Tile enters the bottom row of the playing field, it will drop off the grid, and a new tile will emerge from the top! </p></div>
+    
+    
+    </span>
+    
+    <!-- Unseen counter used to track current turn -->
+    <span id="Counter" style="display: none;">
+        1
+    </span>
+    
+    <span id="AutoplayMode" style="display: none;">
+        0
+    </span>
+
+</body>
+
+
+</html>

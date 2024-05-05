@@ -1,0 +1,194 @@
+@charset "utf-8";
+/* CSS Document */
+
+.glimmer
+{
+	position: absolute;
+	display: block;
+	opacity: 0.0;
+	
+	width: 2vw;
+	height: 2vw;
+	border-radius: 2vw;
+	background-color: aliceblue;
+	 filter: blur(1.17rem); 
+	
+	margin: 0 auto;
+	top: 35vw;
+	left: 1vw;
+	color: red;
+	
+	
+	animation-name: lightToRight; 
+    animation-duration: 3s;
+	animation-delay: 0s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+	animation-direction: forwards;
+	animation-fill-mode: forwards; 
+	
+}
+
+.glimmer:nth-child(2)
+{
+	top: 37vw;
+	left: 5vw;
+	animation-delay: 3.5s;
+}
+
+.glimmer:nth-child(3)
+{
+	top: 38vw;
+	left: 10vw;
+	animation-delay: 2.5s;
+}
+
+.glimmer:nth-child(4)
+{
+	top: 39vw;
+	left: 15vw;
+	animation-delay: 1.5s;
+}
+
+.glimmer:nth-child(5)
+{
+	top: 38.5vw;
+	left: 21vw;
+	animation-delay: 0.5s;
+}
+
+.glimmer:nth-child(6)
+{
+	top: 40vw;
+	left: 2vw;
+	animation-delay: 4s;
+}
+
+.glimmer:nth-child(7)
+{
+	top: 41vw;
+	left: 7vw;
+	animation-delay: 3.5s;
+}
+
+.glimmer:nth-child(8)
+{
+	top: 42vw;
+	left: 12vw;
+	animation-delay: 3s;
+}
+
+.glimmer:nth-child(9)
+{
+	top: 43vw;
+	left: 19vw;
+	animation-delay: 2.5s;
+}
+
+.glimmer:nth-child(10)
+{
+	top: 44vw;
+	left: 4vw;
+	animation-delay: 2s;
+}
+
+.glimmer:nth-child(11)
+{
+	top: 45vw;
+	left: 9vw;
+	animation-delay: 1.5s;
+}
+
+.glimmer:nth-child(12)
+{
+	top: 46vw;
+	left: 15.5vw;
+	animation-delay: 1s;
+}
+
+.glimmer:nth-child(13)
+{
+	top: 48vw;
+	left: 2vw;
+	animation-delay: 0.5s;
+}
+
+.glimmer:nth-child(14)
+{
+	top: 48vw;
+	left: 7vw;
+	animation-delay: 4.5s;
+}
+
+.glimmer:nth-child(15)
+{
+	top: 49vw;
+	left: 12vw;
+	animation-delay: 4s;
+}
+
+.glimmer:nth-child(16)
+{
+	top: 50vw;
+	left: 18vw;
+	animation-delay: 3.5s;
+}
+
+.glimmer:nth-child(17)
+{
+	top: 38vw;
+	left: 27vw;
+	animation-delay: 3s;
+}
+
+.glimmer:nth-child(18)
+{
+	top: 56vw;
+	left: 3vw;
+	animation-delay: 1.5s;
+	background-color: darkgreen;
+}
+
+.glimmer:nth-child(19)
+{
+	top: 53vw;
+	left: 8vw;
+	animation-delay: 2s;
+	background-color: darkgreen;
+}
+
+.glimmer:nth-child(20)
+{
+	top: 56vw;
+	left: 13vw;
+	animation-delay: 2.5s;
+	background-color: darkgreen;
+}
+
+
+@media only screen and (max-width:1024px)  							/* Media Screen for tablet at 1024px */
+{
+	.glimmer
+	{
+		opacity: 0.0;
+		filter: opacity(0) blur(1.17rem);
+	}
+}
+
+/* Animation for fadein/fadeout effect */
+@-webkit-keyframes lightToRight {
+   0%   {transform: translateX(-5%); opacity: 0;}
+	10%   {opacity: 0;}
+	50% {transform: translateX(0%); opacity: 1;}
+	90%   {opacity: 0;}
+	100%   {transform: translateX(5%); opacity: 0;}
+}
+
+/* Standard syntax */
+@keyframes lightToRight {
+   0%   {transform: translateX(-5%); opacity: 0;}
+	10%   {opacity: 0;}
+	50% {transform: translateX(0%); opacity: 1;}
+	90%   {opacity: 0;}
+	100%   {transform: translateX(5%); opacity: 0;}
+}
