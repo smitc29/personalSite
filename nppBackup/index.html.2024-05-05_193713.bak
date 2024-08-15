@@ -99,25 +99,14 @@
                 <button id="schoolButton" onclick="$('.schoolBub').slideToggle(); $('.work').slideDown();$('#schoolButton').toggleClass('selected'); $('#workButton').removeClass('selected'); mobileShowExperience(this);">Employment</button>
             </div>
             <div class="infobubble work">
-                <a target="_blank" href="https://www.ulsterboces.org/"><div class="projectBox" id="">
-                    <img id="work06img">
-                </div></a>
-                <div class="projectDetail">
-                    <h5><a target="_blank" href="https://www.ulsterboces.org/">Ulster BOCES</a></h5>
-                    <h5>Computer Applications Programmer, September 2021 - Present</h5>
-                    <p>- Wrote SQL scripts to export/import student data into databases for school districts </p>
-                    <p>- Developed website used for community events and cybersecurity conferences (DPSS) </p> 
-                </div>     
-            </div>
-            <div class="infobubble work">
                 <a target="_blank" href="https://www.collinsaerospace.com/"><div class="projectBox" id="">
                     <img id="work01img">
                 </div></a>
                 <div class="projectDetail">
                     <h5><a target="_blank" href="https://www.collinsaerospace.com/">Collins Aerospace</a></h5>
-                    <h5>Software Engineer, February 2021 - August 2021</h5>
-                    <p>- Engineered scripts to guarantee safety of aircraft and weapon systems</p>
-                    <p>- Utilized ADA, Perl, and DOORS in addition to specialized software for aircraft</p> 
+                    <h5>Software Engineer, February 2021 - Present</h5>
+                    <p>- Engineered scripts to guarantee safety of aircraft and weapon systems
+                    </p><p>- Utilized ADA, Perl, and DOORS in addition to specialized software for aircraft</p> 
                 </div>     
             </div>
             <div class="infobubble schoolBub">
@@ -235,7 +224,7 @@
                 </a>
                 <a target="_blank" href="https://github.com/smitc29">
                     <div class="pushdown">
-                        <i class="fab fa-github-alt"></i>
+                        <i class="fab fa-github"></i>
                     </div>
                 </a>
                 <a target="_blank" href="https://www.facebook.com/profile.php?id=100002191987102">
