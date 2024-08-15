@@ -24,6 +24,7 @@ $(document).ready(function() {
     loadImages('work03img', './images/Logo-iDTech.png');
     loadImages('work04img', './images/Logo-fitzelle.jpg');
     loadImages('work05img', './images/Logo-DragonLair.png');
+    loadImages('work06img', './images/Logo-UlsterBOCES.png');
     
 });
 
