@@ -1,0 +1,658 @@
+<html>
+<head>
+    <title>Logic Game</title>
+
+
+    <script src="./js/logicGame.js"></script>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+
+<style>
+
+body
+{
+    background-color:cadetblue;
+    position: relative;
+}
+
+#playingField, #dummyField, .tutorialRow
+{
+    position: relative;
+    top: 20vh;
+    
+    margin: 0 auto 40px;
+    padding-bottom: 40px;
+    max-width: 800px;
+    width: 80vw;
+    min-height: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+#dummyField, .tutorialRow
+{
+    top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    flex-wrap: wrap;
+}
+
+.logicColumn, .altColumn
+{
+    z-index: 0;
+    width: 15%;
+    max-width: 100px;
+    min-width: 80px;
+    /* border: red solid 2px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 0%;
+    padding-right: 4%;
+}
+
+.logicGate, .dummyGate
+{
+    /* z-index: -2; */
+    position: relative;
+    width: 100%;
+    height: 70px;
+    margin-top: 18px;
+    margin-bottom: 18px;
+    /* border: greenyellow solid 2px; */
+    background-size: cover;
+    background-repeat: round;
+    text-align:center;
+}
+
+.input, .dummyInput
+{
+    z-index: -2;
+    display: block;
+    position: relative;
+    background-size: cover;
+    background-repeat: round;
+    opacity: 50%;
+    cursor: pointer;
+}
+
+.highInput.constant, .lowInput.constant, .finalOutput.constant
+{
+    background-image: url(./img/constant.png);
+    background-color: none;
+}
+
+.highInput
+{
+
+    top: -50%;
+    left: -30%;
+    width: 45%;
+    height: 10%;
+    background-color: black;
+}
+
+.lowInput
+{
+
+    top: 0%;
+    left: -30%;
+    width: 45%;
+    height: 10%;
+    background-color: black;
+}
+
+.doubleInput
+{
+    position: absolute;
+    top: 65%;
+    left: -30%;
+    width: 45%;
+    height: 120%;
+    background-image: url(./img/outputDuo.png);
+}
+
+.doubleInput.constant
+{
+    background-image: url(./img/outputDuoConstant.png);   
+}
+
+.output, .dummyOutput
+{
+    z-index: -2;
+    display: block;
+    position: relative;
+    background-size: cover;
+    background-repeat: round;
+    opacity: 50%;
+    cursor: pointer;
+}
+
+.outputDuo
+{
+    top: -12%;
+    right: -94%;
+    width: 55%;
+    height: 120%;
+    background-image: url(./img/outputDuo.png);
+}
+
+.outputDuo.constant
+{
+    background-image: url(./img/outputDuoConstant.png);   
+}
+
+.outputUp
+{
+    bottom: -42%;
+    right: -94%;
+    width: 55%;
+    height: 70%;
+    background-image: url(./img/outputUp.png);
+}
+
+.outputUp.constant
+{
+    background-image: url(./img/outputUpConstant.png);   
+}
+
+.outputDown
+{
+    top: -15%;
+    right: -94%;
+    width: 55%;
+    height: 70%;
+    background-image: url(./img/outputDown.png);
+}
+
+.outputDown.constant
+{
+    background-image: url(./img/outputDownConstant.png);   
+}
+
+.finalOutput
+{
+    top: 45%;
+    right: -94%;
+    width: 45%;
+    height: 10%;
+    background-color: black;
+}
+
+.constant
+{
+    cursor: default;
+    opacity: 100%;
+    background-color: transparent;
+}
+
+.on, .active
+{
+    filter: invert(1);
+    opacity: 100%;
+}
+
+.off
+{
+    filter: invert(0);
+    opacity: 100%;
+}
+
+
+.andgate
+{
+    background-image: url(./img/gate_AND.png);
+}
+
+.orgate
+{
+    background-image: url(./img/gate_OR.png);
+}
+
+.xorgate
+{
+    background-image: url(./img/gate_XOR.png);
+}
+
+.nandgate
+{
+    background-image: url(./img/gate_NAND.png); 
+}
+
+.norgate
+{
+    background-image: url(./img/gate_NOR.png);
+}
+
+.nxorgate
+{
+    background-image: url(./img/gate_NXOR.png);
+}
+
+.result
+{
+    margin: auto;
+    /* width: 90%;
+    height: 100%; */
+    width: 70px;
+    height: 70px;
+    background-size:cover;
+    background-repeat:no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-height: 70px;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.pass
+{
+    background-image: url(./img/pass.png);
+}
+
+.fail
+{
+    background-image: url(./img/fail.png);
+}
+
+#controlPanel
+{
+    margin: 40px auto; 
+    padding: 8px; 
+    margin-bottom: -100px; 
+    width: 50%; 
+    max-width: 800px; 
+    border-radius: 12px; 
+    background-color: #4a7b7d; 
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap;
+}
+
+#controlPanel button, #controlPanel select, #controlPanel a
+{
+    padding: 2px 8px;
+    font-size: 12pt;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin: 5px;
+}
+
+#controlPanel a
+{
+    background-color: aliceblue;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    border-radius: 12px;
+    width: 10px;
+    height: 23px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 140%;
+    font-weight: bold;
+}
+
+main
+{
+    position: relative;
+    top: 20vh;
+    
+    margin: 0 auto 40px;
+    padding-bottom: 40px;
+    max-width: 800px;
+    width: 80vw;
+    min-height: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 150%;
+    font-weight: 400;
+    color: aliceblue;
+    
+}
+
+main h1
+{
+    text-align: center;
+    line-height: 120%;
+}
+
+main p
+{
+    font-size: 14pt;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, td, th {
+    color: black;
+  border: 1px solid black;
+  text-align: center;
+}
+
+th
+{
+    padding: 8px;
+    border-radius: 12%;
+}
+
+@media only screen and (min-width: 1400px) {
+
+
+}
+
+
+</style>
+
+</head>
+<body onload="prepBoard();">
+    
+    <div id="controlPanel" style="">
+        <select name="numColumns" id="numColumns">
+            <option value="2" onclick="prepBoard(2)">3 Gates</option>
+            <option value="3" onclick="prepBoard(3)">6 Gates</option>
+            <option value="4" onclick="prepBoard(4)">10 Gates</option>
+            <option value="5" onclick="prepBoard(5)">15 Gates</option>
+            <option value="6" onclick="prepBoard(6)">21 Gates</option>
+        </select>
+        <button id="negativeGates" onclick="toggleGates()">Enable Negative Gates</button>
+        <button onclick="prepBoard()">Generate New Circuit</button>        
+        <button onclick="prepBoard(1)">Show Sample Circuit</button>        
+        <button onclick="evaluateBoard()">Check Logic</button>
+        <a href="#title">?</a>
+
+    </div>
+
+    
+
+    <div id="playingField"></div>
+
+    <main>
+        <h1 id="title">Logic Gate Game</h1>
+        <div>
+        <p>
+            The goal of this game is to change the wires connecting each of the logic gates shown 
+            so that the circuit is fully connected without any logical contradictions. 
+        </p>
+        <div id="dummyField">
+            <div class="altColumn 0">
+                <div class="dummyGate orgate" id="">
+                    <div class="dummyOutput outputUp"></div>
+                    <span class="dummyInput highInput"></span>
+                    <div class="doubleInput dummyInput constant"></div>
+                    <div class="result"></div>
+                </div>
+                <div class="dummyGate xorgate" id="">
+                    <div class="dummyOutput outputDown"></div>
+                    <span class="dummyInput lowInput"></span>
+                <div class="result"></div></div>
+            </div>
+            <div class="altColumn 1">
+                    <div class="dummyGate andgate" id="">
+                        <div class="dummyOutput finalOutput constant active"></div>
+                        <div class="result"></div>
+                    </div>
+            </div>
+        </div>
+        <p>
+            Clicking on a wire will change it to be ON or OFF. 
+            A wire is ON if it is white, a wire is OFF if it is black.
+            Gray wires haven't been set ON or OFF yet, 
+            and you'll need to set them t complete the circuit.   
+        </p>
+        <p>
+            Wires that are dotted lines cannot be changed, 
+            so you will need to work around them in order to make
+            a functional circuit. Click on the "Check Logic" button
+            to see if your work is correct! Continue reading
+            to see how different logic gates work. 
+        </p>
+        </div>
+        <div>
+            <div class="tutorialRow" id="" style="flex-wrap: wrap;">
+                <div class="" id="" style="background-image: url(./img/gate_AND.png); background-repeat: round; width: 85px; height: 70px; margin: 20px; margin-top: 25px;"></div>
+                <table>
+                    <tr>
+                        <th>Input A</th>
+                        <th>Input B</th>
+                        <th>Result</th>
+                    </tr>
+                    <tr>
+                        <td style="color: white;">ON</td>
+                        <td style="color: white;">ON</td>
+                        <td style="color: white;">ON</td>
+                    </tr>
+                    <tr>
+                        <td>off</td>
+                        <td style="color: white;">ON</td>
+                        <td>off</td>
+                    </tr>
+                    <tr>
+                        <td style="color: white;">ON</td>
+                        <td>off</td>
+                        <td>off</td>
+                    </tr>
+                    <tr>
+                        <td>off</td>
+                        <td>off</td>
+                        <td>off</td>
+                    </tr>
+                </table>
+            </div>
+            <p>
+                AND gates only produce a positive output (ON) 
+                if both of the wires going in on the left side are positive (ON).
+                Note that the order of the wires doesn't matter when taking into 
+                account the output, we just need to examine how the inputs interact
+                with each other.
+            </p>
+        </div>
+        <div>
+            <div class="tutorialRow" id="" style="flex-wrap: wrap;">
+                <div class="" id="" style="background-image: url(./img/gate_OR.png); background-repeat: round; width: 85px; height: 70px; margin: 20px; margin-top: 25px;"></div>
+                <table>
+                    <tr>
+                        <th>Input A</th>
+                        <th>Input B</th>
+                        <th>Result</th>
+                    </tr>
+                    <tr>
+                        <td style="color: white;">ON</td>
+                        <td style="color: white;">ON</td>
+                        <td style="color: white;">ON</td>
+                    </tr>
+                    <tr>
+                        <td>off</td>
+                        <td style="color: white;">ON</td>
+                        <td style="color: white;">ON</td>
+                    </tr>
+                    <tr>
+                        <td style="color: white;">ON</td>
+                        <td>off</td>
+                        <td style="color: white;">ON</td>
+                    </tr>
+                    <tr>
+                        <td>off</td>
+                        <td>off</td>
+                        <td>off</td>
+                    </tr>
+                </table>
+            </div>
+            <p>
+                OR gates produce a positive output (ON) 
+                if even one of the wires going in on the left side is positive (ON).
+                This means there are 3 possible scenarios where an "OR" gate
+                will produce a positive output. 
+            </p>
+        </div>
+        <div>
+            <div class="tutorialRow" id="" style="flex-wrap: wrap;">
+                <div class="" id="" style="background-image: url(./img/gate_XOR.png); background-repeat: round; width: 85px; height: 70px; margin: 20px; margin-top: 25px;"></div>
+                <table>
+                    <tr>
+                        <th>Input A</th>
+                        <th>Input B</th>
+                        <th>Result</th>
+                    </tr>
+                    <tr>
+                        <td style="color: white;">ON</td>
+                        <td style="color: white;">ON</td>
+                        <td>off</td>
+                    </tr>
+                    <tr>
+                        <td>off</td>
+                        <td style="color: white;">ON</td>
+                        <td style="color: white;">ON</td>
+                    </tr>
+                    <tr>
+                        <td style="color: white;">ON</td>
+                        <td>off</td>
+                        <td style="color: white;">ON</td>
+                    </tr>
+                    <tr>
+                        <td>off</td>
+                        <td>off</td>
+                        <td>off</td>
+                    </tr>
+                </table>
+            </div>
+            <p>
+                XOR gates are a little complicated. 
+                If EXACTLY one of the input wires is positive, the gate will 
+                produce a positive (ON) output.
+                If BOTH of the input wires are positive, the gate will 
+                leave a negative/dead (OFF) output. 
+            </p>
+        </div>
+        <div>
+            <div class="tutorialRow" id="" style="flex-wrap: wrap;">
+                <div class="" id="" style="background-image: url(./img/gate_NAND.png); background-repeat: round; width: 100px; height: 70px; margin: 20px; margin-top: 25px;"></div>
+                <table>
+                    <tr>
+                        <th>Input A</th>
+                        <th>Input B</th>
+                        <th>Result</th>
+                    </tr>
+                    <tr>
+                        <td style="color: white;">ON</td>
+                        <td style="color: white;">ON</td>
+                        <td>off</td>
+                    </tr>
+                    <tr>
+                        <td>off</td>
+                        <td style="color: white;">ON</td>
+                        <td style="color: white;">ON</td>
+                    </tr>
+                    <tr>
+                        <td style="color: white;">ON</td>
+                        <td>off</td>
+                        <td style="color: white;">ON</td>
+                    </tr>
+                    <tr>
+                        <td>off</td>
+                        <td>off</td>
+                        <td style="color: white;">ON</td>
+                    </tr>
+                </table>
+            </div>
+            <p>
+                NAND gates are the logical opposite of an "AND" gate;
+                NAND gates only produce a positive (ON) output when
+                at least one of the input wires is OFF/negative.
+                These gates and other "Negative" gates will only appear
+                if you have toggled the "Enable Negative Gates" button
+                at the top of this page.
+                
+            </p>
+        </div>
+        <div>
+            <div class="tutorialRow" id="" style="flex-wrap: wrap;">
+                <div class="" id="" style="background-image: url(./img/gate_NOR.png); background-repeat: round; width: 100px; height: 70px; margin: 20px; margin-top: 25px;"></div>
+                <table>
+                    <tr>
+                        <th>Input A</th>
+                        <th>Input B</th>
+                        <th>Result</th>
+                    </tr>
+                    <tr>
+                        <td style="color: white;">ON</td>
+                        <td style="color: white;">ON</td>
+                        <td>ON</td>
+                    </tr>
+                    <tr>
+                        <td>off</td>
+                        <td style="color: white;">ON</td>
+                        <td>ON</td>
+                    </tr>
+                    <tr>
+                        <td style="color: white;">ON</td>
+                        <td>off</td>
+                        <td>ON</td>
+                    </tr>
+                    <tr>
+                        <td>off</td>
+                        <td>off</td>
+                        <td style="color: white;">ON</td>
+                    </tr>
+                </table>
+            </div>
+            <p>
+                NOR gates will only produce a positive output (ON) 
+                if BOTH one of the wires going in on the left side are negative (OFF).
+                They are similar to AND gates in that regard; it requires 2 specific inputs
+                in order for the gate to produce a positive (ON) output. 
+            </p>
+        </div>
+        <div>
+            <div class="tutorialRow" id="" style="flex-wrap: wrap;">
+                <div class="" id="" style="background-image: url(./img/gate_NXOR.png); background-repeat: round; width: 100px; height: 70px; margin: 20px; margin-top: 25px;"></div>
+                <table>
+                    <tr>
+                        <th>Input A</th>
+                        <th>Input B</th>
+                        <th>Result</th>
+                    </tr>
+                    <tr>
+                        <td style="color: white;">ON</td>
+                        <td style="color: white;">ON</td>
+                        <td style="color: white;">ON</td>
+                    </tr>
+                    <tr>
+                        <td>off</td>
+                        <td style="color: white;">ON</td>
+                        <td>off</td>
+                    </tr>
+                    <tr>
+                        <td style="color: white;">ON</td>
+                        <td>off</td>
+                        <td>off</td>
+                    </tr>
+                    <tr>
+                        <td>off</td>
+                        <td>off</td>
+                        <td style="color: white;">ON</td>
+                    </tr>
+                </table>
+            </div>
+            <p>
+                XNOR gates are a little complicated, much like the XOR gate. 
+                If the input wires match, the gate will 
+                produce a positive (ON) output.
+                If the input wires are different from each other, the gate will 
+                leave a negative/dead (OFF) output. 
+            </p>
+        </div>
+
+
+    </main>
+
+</body>
+
+
+</html>
